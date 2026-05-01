@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Practice Cards</title>
+    <meta
+      name="description"
+      content="Practice Data Analytics and Data Science interviews with flip cards."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Markdown + syntax highlight (CDN). -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github-dark.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <div class="brand__text">
+          <div class="brand__title">Interview Practice Cards</div>
+          <div class="brand__subtitle">Data Analytics / Data Science</div>
+          <p class="brand__tagline" id="brandTagline">
+            Flip cards, search & filter—your progress saves in this browser.
+          </p>
+        </div>
+      </div>
+
+      <div class="header__rule" aria-hidden="true"></div>
+
+      <div class="headerRow">
+        <nav class="tabs" aria-label="Categories">
+          <button class="tab" data-tab="All" aria-selected="true">All</button>
+        <button class="tab" data-tab="SQL">SQL</button>
+        <button class="tab" data-tab="Statistics">Statistics</button>
+        <button class="tab" data-tab="ML">ML</button>
+        <button class="tab" data-tab="Product">Product</button>
+        <button class="tab" data-tab="Python">Python</button>
+        <button class="tab" data-tab="GenAI">GenAI</button>
+        <button class="tab" data-tab="HowTo">How it works</button>
+        <button class="tab" data-tab="Sources">Sources</button>
+        <button class="tab" data-tab="About">About</button>
+        </nav>
+
+        <div class="headerControls" aria-label="Controls">
+          <div class="lang">
+            <span class="lang__label" id="langLabel">Language</span>
+            <button id="langToggle" class="btn btn--secondary btn--sm" type="button" aria-label="Toggle language">
+              EN
+            </button>
+          </div>
+
+          <div class="lang">
+            <span class="lang__label" id="themeLabel">Theme</span>
+            <button id="themeToggle" class="btn btn--secondary btn--sm" type="button" aria-label="Toggle theme">
+              Dark
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <div class="topbar">
+          <label class="control control--grow">
+            <span class="control__label" id="searchLabel">Search</span>
+            <input id="search" type="search" placeholder="SQL joins, A/B tests, metrics…" />
+          </label>
+
+          <div class="topbar__actions">
+            <button id="filtersBtn" class="btn btn--secondary" type="button">Filters</button>
+          </div>
+        </div>
+
+        <div class="stats" aria-live="polite">
+          <div class="pill" id="countPill">0 questions</div>
+          <div class="pill pill--muted" id="progressPill">0% known</div>
+        </div>
+
+        <div class="progress" aria-label="Progress">
+          <div class="progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress__bar" id="progressBar" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div class="cardWrap" id="cardWrap">
+          <article class="card" id="card" aria-label="Practice card">
+            <div class="card__inner" id="cardInner">
+              <section class="card__face card__face--front">
+                <div class="cardTop">
+                  <div class="meta">
+                    <span class="badge" id="badgeCategory">—</span>
+                    <span class="badge badge--muted" id="badgeDifficulty">—</span>
+                  </div>
+                  <div class="small" id="tags"> </div>
+                </div>
+                <h2 class="question" id="question">Loading…</h2>
+                <div class="cardNav" aria-label="Navigation">
+                  <button id="prev" class="btn btn--secondary" type="button">Prev</button>
+                  <button id="randomQuestion" class="btn btn--secondary" type="button">Random</button>
+                  <button id="flip" class="btn" type="button">Flip</button>
+                  <button id="next" class="btn btn--secondary" type="button">Next</button>
+                </div>
+                <div class="hint small" id="hintFront">
+                  Tip: click “Flip” or press Space.
+                </div>
+              </section>
+
+              <section class="card__face card__face--back">
+                <div class="answerHeader">
+                  <div class="meta">
+                    <span class="badge badge--success" id="stateBadge">New</span>
+                  </div>
+                  <div class="answerActions">
+                    <button id="markLearning" class="btn btn--warn" type="button">
+                      Learning
+                    </button>
+                    <button id="markRevisit" class="btn btn--dangerSoft" type="button">
+                      Revisit
+                    </button>
+                    <button id="markKnown" class="btn btn--success" type="button">
+                      Known
+                    </button>
+                  </div>
+                </div>
+
+                <div class="answerBlock">
+                  <h3 class="sectionTitle" id="answerTitle">Answer</h3>
+                  <div id="answer" class="md"></div>
+                </div>
+
+                <div class="answerBlock" id="theoryBlock">
+                  <h3 class="sectionTitle" id="theoryTitle">Theory / Notes</h3>
+                  <div id="theory" class="md"></div>
+                </div>
+
+                <div class="answerBlock" id="codeBlock">
+                  <h3 class="sectionTitle" id="codeTitle">Code</h3>
+                  <div id="code"></div>
+                </div>
+
+                <div class="footerLine small" id="sourceLine"></div>
+              </section>
+            </div>
+          </article>
+        </div>
+
+        <div class="small tip" id="shortcutsTip">
+          Shortcuts: <kbd>←</kbd>/<kbd>→</kbd> navigate, <kbd>Space</kbd> flip, <kbd>S</kbd> shuffle.
+        </div>
+
+        <section class="sources" id="sourcesView" aria-label="Sources" hidden>
+          <h2 class="sources__title" id="sourcesTitle">Sources</h2>
+          <p class="small" id="sourcesIntro">
+            This app uses original Q&A written for practice. The links below are provided for transparency and further reading.
+          </p>
+
+          <div class="sources__grid" id="sourcesList">
+            <a class="sourceCard" href="https://datalemur.com" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">DataLemur</div>
+              <div class="sourceCard__meta">SQL & Analytics interview practice</div>
+            </a>
+            <a
+              class="sourceCard"
+              href="https://www.synergisticit.com/data-science-interview-questions-answers/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div class="sourceCard__title">SynergisticIT</div>
+              <div class="sourceCard__meta">Data Science interview questions (reference)</div>
+            </a>
+            <a class="sourceCard" href="https://sqlbolt.com" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">SQLBolt</div>
+              <div class="sourceCard__meta">Short, interactive SQL lessons (great warm-up)</div>
+            </a>
+            <a class="sourceCard" href="https://mode.com/sql-tutorial/" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">Mode SQL Tutorial</div>
+              <div class="sourceCard__meta">Clean explanations + practice (analytics style SQL)</div>
+            </a>
+            <a class="sourceCard" href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">Google ML Crash Course</div>
+              <div class="sourceCard__meta">Friendly ML fundamentals with exercises</div>
+            </a>
+            <a class="sourceCard" href="https://pandas.pydata.org/docs/" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">pandas Docs</div>
+              <div class="sourceCard__meta">Canonical reference for data wrangling in Python</div>
+            </a>
+            <a class="sourceCard" href="https://scikit-learn.org/stable/" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">scikit-learn Docs</div>
+              <div class="sourceCard__meta">Practical ML, metrics, and model selection guides</div>
+            </a>
+            <a class="sourceCard" href="https://www.kaggle.com/learn" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">Kaggle Learn</div>
+              <div class="sourceCard__meta">Bite-sized lessons (pandas, SQL, ML, CV, NLP)</div>
+            </a>
+            <a class="sourceCard" href="https://www.openintro.org/book/os/" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">OpenIntro Statistics</div>
+              <div class="sourceCard__meta">Free, well-structured stats book (great clarity)</div>
+            </a>
+            <a class="sourceCard" href="https://seeing-theory.brown.edu" target="_blank" rel="noreferrer">
+              <div class="sourceCard__title">Seeing Theory</div>
+              <div class="sourceCard__meta">Beautiful interactive intuition for probability & stats</div>
+            </a>
+          </div>
+
+          <div class="sources__note small" id="sourcesNote">
+            Note: we link to sources instead of copying content to respect authors’ rights and site terms.
+          </div>
+        </section>
+
+        <section class="sources" id="howToView" aria-label="How it works" hidden>
+          <h2 class="sources__title" id="howToTitle">How it works</h2>
+          <div class="howto">
+            <div class="howto__step">
+              <div class="howto__emoji">1</div>
+              <div>
+                <div class="howto__title" id="howToS1T">Pick a topic</div>
+                <div class="small" id="howToS1B">Choose SQL / Python / ML, and start with Easy using Learning Path.</div>
+              </div>
+            </div>
+            <div class="howto__step">
+              <div class="howto__emoji">2</div>
+              <div>
+                <div class="howto__title" id="howToS2T">Practice</div>
+                <div class="small" id="howToS2B">Read the question, try to answer out loud, then flip the card.</div>
+              </div>
+            </div>
+            <div class="howto__step">
+              <div class="howto__emoji">3</div>
+              <div>
+                <div class="howto__title" id="howToS3T">Track progress</div>
+                <div class="small" id="howToS3B">Mark cards as Learning or Known. The progress bar updates automatically.</div>
+              </div>
+            </div>
+            <div class="howto__step">
+              <div class="howto__emoji">⌨️</div>
+              <div>
+                <div class="howto__title" id="howToS4T">Keyboard shortcuts</div>
+                <div class="small" id="howToS4B">←/→ navigate, Space flip, S shuffle.</div>
+              </div>
+            </div>
+            <div class="howto__step">
+              <div class="howto__emoji">🎨</div>
+              <div>
+                <div class="howto__title" id="howToS5T">Language & theme</div>
+                <div class="small md" id="howToS5B"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sources" id="aboutView" aria-label="About" hidden>
+          <h2 class="sources__title" id="aboutTitle">Objective</h2>
+          <p class="small" id="aboutBody">
+            This app is a friendly, low-pressure way to practice Data Analytics / Data Science interview questions, build
+            confidence, and track progress over time.
+          </p>
+
+          <div class="sources__grid">
+            <a
+              class="sourceCard sourceCard--cta"
+              id="contactCard"
+              href="https://laurash96.github.io/portfolio-LSH/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div class="sourceCard__row">
+                <div class="sourceCard__icon" aria-hidden="true">✉️</div>
+                <div class="sourceCard__content">
+                  <div class="sourceCard__title" id="contactTitle">Contact me</div>
+                  <div class="sourceCard__meta" id="contactMeta">Portfolio / projects / experience</div>
+                </div>
+                <div class="sourceCard__arrow" id="contactCta" aria-hidden="true">Open →</div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <div class="modal" id="filtersModal" aria-hidden="true">
+          <div class="modal__backdrop" data-close="true"></div>
+          <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="filtersTitle">
+            <div class="modal__header">
+              <div class="modal__title" id="filtersTitle">Filters</div>
+              <button id="filtersClose" class="btn btn--ghost" type="button">Close</button>
+            </div>
+
+            <div class="modal__body">
+              <div class="controlsModal">
+                <label class="control control--inline">
+                  <span class="control__label" id="pathLabel">Learning path</span>
+                  <input id="pathToggle" type="checkbox" />
+                </label>
+
+                <label class="control">
+                  <span class="control__label" id="difficultyLabel">Difficulty</span>
+                  <select id="difficulty">
+                    <option value="All">All</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                  </select>
+                </label>
+
+                <label class="control">
+                  <span class="control__label" id="statusLabel">Status</span>
+                  <select id="status">
+                    <option value="All">All</option>
+                    <option value="New">New</option>
+                    <option value="Learning">Learning</option>
+                    <option value="Revisit">Revisit</option>
+                    <option value="Known">Known</option>
+                  </select>
+                </label>
+
+                <div class="control control--row">
+                  <button id="shuffle" class="btn btn--secondary" type="button">Shuffle</button>
+                  <button id="reloadQuestions" class="btn btn--secondary" type="button">Reload</button>
+                  <button id="resetProgress" class="btn btn--ghost" type="button">Reset progress</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>Made with love by Lau (</span>
+        <a class="footer__link" href="https://github.com/laurash96" target="_blank" rel="noreferrer">laurash96</a>
+        <span>) </span>
+        <span>♥</span>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+

@@ -1,0 +1,842 @@
+[
+  {
+    "id": "sql-001",
+    "category": "SQL",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["joins", "aggregation"],
+    "question_en": "You have a table `orders(user_id, order_id, created_at, amount)`. How do you compute total spend per user in 2025, sorted descending?",
+    "question_es": "Tienes una tabla `orders(user_id, order_id, created_at, amount)`. ¿Cómo obtienes el total gastado por usuario en 2025, ordenado de mayor a menor?",
+    "answer_en": "Filter to 2025, group by `user_id`, and sum `amount`.",
+    "answer_es": "Agrupa por `user_id`, filtra por año y suma `amount`.",
+    "theory_en": "- If `created_at` is a timestamp, filter using a range (often better than applying functions to the column).\n- If `amount` can be null, decide whether to treat it as 0.",
+    "theory_es": "- Si `created_at` es timestamp, filtra con un rango (mejor que aplicar funciones al campo en algunos motores).\n- Si hay nulos en `amount`, decide si tratarlos como 0.",
+    "code": [
+      {
+        "lang": "sql",
+        "snippet": "SELECT\n  user_id,\n  SUM(amount) AS total_amount\nFROM orders\nWHERE created_at >= '2025-01-01'\n  AND created_at <  '2026-01-01'\nGROUP BY 1\nORDER BY 2 DESC;"
+      }
+    ],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "sql-002",
+    "category": "SQL",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["filtering", "nulls"],
+    "question_en": "What’s the difference between `WHERE` and `HAVING`?",
+    "question_es": "¿Cuál es la diferencia entre `WHERE` y `HAVING`?",
+    "answer_en": "`WHERE` filters rows before aggregation; `HAVING` filters groups after aggregation.",
+    "answer_es": "`WHERE` filtra filas antes de agregar; `HAVING` filtra grupos después de agregar.",
+    "theory_en": "- Most engines require aggregates in `HAVING` (e.g., `HAVING COUNT(*) > 1`).",
+    "theory_es": "- En muchos motores, `HAVING` se usa con agregados (p. ej., `HAVING COUNT(*) > 1`).",
+    "code": [
+      {
+        "lang": "sql",
+        "snippet": "SELECT user_id, COUNT(*) AS n\nFROM orders\nWHERE amount IS NOT NULL\nGROUP BY 1\nHAVING COUNT(*) >= 3;"
+      }
+    ],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "sql-003",
+    "category": "SQL",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["joins", "left-join"],
+    "question_en": "How do you find users who have never placed an order?",
+    "question_es": "¿Cómo encuentras usuarios que nunca han hecho un pedido?",
+    "answer_en": "Left join users to orders and keep rows where the order side is NULL.",
+    "answer_es": "Haz un left join de usuarios a pedidos y quédate con los casos donde el lado de pedidos sea NULL.",
+    "theory_en": "- Prefer `LEFT JOIN ... WHERE orders.user_id IS NULL` over `NOT IN` when nulls can appear.",
+    "theory_es": "- Prefiere `LEFT JOIN ... WHERE orders.user_id IS NULL` sobre `NOT IN` si pueden existir nulos.",
+    "code": [
+      {
+        "lang": "sql",
+        "snippet": "SELECT u.user_id\nFROM users u\nLEFT JOIN orders o\n  ON o.user_id = u.user_id\nWHERE o.user_id IS NULL;"
+      }
+    ],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "sql-004",
+    "category": "SQL",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["window-functions", "ranking"],
+    "question_en": "You need the most recent order per user. Write a query that returns one row per user with their latest order_id and created_at.",
+    "question_es": "Necesitas el pedido más reciente por usuario. Escribe una query que devuelva una fila por usuario con su último order_id y created_at.",
+    "answer_en": "Use a window function to rank orders per user and keep rank = 1.",
+    "answer_es": "Usa una función de ventana para rankear pedidos por usuario y quédate con rank = 1.",
+    "theory_en": "- Use `ROW_NUMBER()` for a single latest row. Use `RANK()` if ties should keep multiple rows.",
+    "theory_es": "- Usa `ROW_NUMBER()` para una sola fila. Usa `RANK()` si empates deben devolver varias filas.",
+    "code": [
+      {
+        "lang": "sql",
+        "snippet": "WITH ranked AS (\n  SELECT\n    user_id,\n    order_id,\n    created_at,\n    ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY created_at DESC) AS rn\n  FROM orders\n)\nSELECT user_id, order_id, created_at\nFROM ranked\nWHERE rn = 1;"
+      }
+    ],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "sql-005",
+    "category": "SQL",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["retention", "cohorts"],
+    "question_en": "Define Day-1 retention as: users active on day D and also active on day D+1. Given `events(user_id, event_date)`, compute overall Day-1 retention per date.",
+    "question_es": "Define retención Día-1 como: usuarios activos en el día D y también en D+1. Dado `events(user_id, event_date)`, calcula la retención Día-1 por fecha.",
+    "answer_en": "Self-join activity by user between D and D+1, then divide retained users by active users on day D.",
+    "answer_es": "Haz un self-join por usuario entre D y D+1, y divide usuarios retenidos por usuarios activos en el día D.",
+    "theory_en": "- Make sure activity is unique per user per day (use `DISTINCT`).\n- Guard against division by zero.",
+    "theory_es": "- Asegura unicidad por usuario por día (usa `DISTINCT`).\n- Evita división por cero.",
+    "code": [
+      {
+        "lang": "sql",
+        "snippet": "WITH daily AS (\n  SELECT DISTINCT user_id, event_date\n  FROM events\n), base AS (\n  SELECT event_date AS d, COUNT(DISTINCT user_id) AS active_users\n  FROM daily\n  GROUP BY 1\n), retained AS (\n  SELECT a.event_date AS d, COUNT(DISTINCT a.user_id) AS retained_users\n  FROM daily a\n  JOIN daily b\n    ON a.user_id = b.user_id\n   AND b.event_date = a.event_date + INTERVAL '1 day'\n  GROUP BY 1\n)\nSELECT\n  b.d,\n  b.active_users,\n  COALESCE(r.retained_users, 0) AS retained_users,\n  COALESCE(r.retained_users, 0)::float / NULLIF(b.active_users, 0) AS day1_retention\nFROM base b\nLEFT JOIN retained r\n  ON r.d = b.d\nORDER BY 1;"
+      }
+    ],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "stats-001",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["ab-testing", "p-value", "power"],
+    "question_en": "In an A/B test, what does a p-value of 0.03 mean? Does it imply the effect is large?",
+    "question_es": "En un A/B test, ¿qué significa un p-value de 0.03? ¿Implica que el efecto es grande?",
+    "answer_en": "Under the null hypothesis, the probability of observing a result as extreme (or more) as the one seen is ~3%. It does not imply a large effect size.",
+    "answer_es": "Bajo la hipótesis nula, ver un resultado tan extremo (o más) como el observado tendría probabilidad ~3%. No implica que el efecto sea grande.",
+    "theory_en": "- A p-value does not measure effect size.\n- Use confidence intervals to communicate magnitude and uncertainty.\n- With large samples, tiny effects can be “statistically significant”.",
+    "theory_es": "- El p-value no mide tamaño de efecto.\n- El tamaño de efecto y su incertidumbre se ven mejor con intervalos de confianza.\n- Con muestras grandes, efectos pequeños pueden ser “significativos”.",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "stats-002",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["mean", "median", "outliers"],
+    "question_en": "When would you prefer median over mean?",
+    "question_es": "¿Cuándo prefieres la mediana sobre la media?",
+    "answer_en": "When the distribution is skewed or has outliers, because the median is more robust.",
+    "answer_es": "Cuando la distribución es sesgada o tiene outliers, porque la mediana es más robusta.",
+    "theory_en": "- Typical example: income, session duration, purchase amount.",
+    "theory_es": "- Ejemplo típico: ingresos, duración de sesión, monto de compra.",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "stats-003",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["confidence-interval", "interpretation"],
+    "question_en": "What does a 95% confidence interval mean in plain language?",
+    "question_es": "¿Qué significa un intervalo de confianza del 95% en lenguaje sencillo?",
+    "answer_en": "If we repeated the same sampling process many times, 95% of the computed intervals would contain the true parameter.",
+    "answer_es": "Si repitiéramos el muestreo muchas veces, el 95% de los intervalos calculados contendrían el verdadero parámetro.",
+    "theory_en": "- It is not: “95% probability the parameter is in this specific interval”.",
+    "theory_es": "- No es: “95% de probabilidad de que el parámetro esté en este intervalo específico”.",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "stats-004",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["ab-testing", "multiple-testing", "false-positives"],
+    "question_en": "You run 20 independent A/B tests at α = 0.05. Roughly how many false positives do you expect, and how can you control this risk?",
+    "question_es": "Ejecutas 20 A/B tests independientes con α = 0.05. ¿Cuántos falsos positivos esperas aproximadamente y cómo controlas ese riesgo?",
+    "answer_en": "Expected false positives ≈ 20 × 0.05 = 1. Control via Bonferroni/Holm, or FDR methods (e.g., Benjamini–Hochberg), plus pre-registration and clear decision rules.",
+    "answer_es": "Falsos positivos esperados ≈ 20 × 0.05 = 1. Controla con Bonferroni/Holm o métodos de FDR (p. ej., Benjamini–Hochberg), además de pre-registro y reglas claras.",
+    "theory_en": "- Pick correction based on whether you care about FWER (strict) vs FDR (more power).",
+    "theory_es": "- Elige corrección según si te importa FWER (estricto) vs FDR (más potencia).",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "ml-001",
+    "category": "ML",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["classification", "metrics", "imbalance"],
+    "question_en": "You have a highly imbalanced classification problem (fraud). Why can accuracy be misleading, and what metrics would you use?",
+    "question_es": "Tienes un problema altamente desbalanceado (fraude). ¿Por qué accuracy puede ser engañosa y qué métricas usarías?",
+    "answer_en": "When positives are rare, a model that always predicts “not fraud” can still have high accuracy. Use precision/recall, F1, PR-AUC, and cost/threshold-based metrics.",
+    "answer_es": "Si la clase positiva es rara, un modelo que siempre predice “no fraude” puede tener accuracy alta. Usaría precisión/recall, F1, PR-AUC, y métricas orientadas a costo.",
+    "theory_en": "- PR-AUC is often more informative than ROC-AUC when the positive class is rare.\n- Threshold selection is part of the problem (precision vs recall trade-off).\n- Consider costs: false negatives vs false positives.",
+    "theory_es": "- PR-AUC suele ser más informativa que ROC-AUC cuando el positivo es raro.\n- Ajustar el umbral es parte del problema (trade-off precisión vs recall).\n- Considera costos: falsos negativos vs falsos positivos.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "from sklearn.metrics import precision_recall_curve, auc\n\nproba = model.predict_proba(X_val)[:, 1]\nprecision, recall, thresholds = precision_recall_curve(y_val, proba)\npr_auc = auc(recall, precision)\nprint('PR-AUC:', pr_auc)"
+      }
+    ],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "ml-002",
+    "category": "ML",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["overfitting", "generalization"],
+    "question_en": "What is overfitting, and how do you reduce it?",
+    "question_es": "¿Qué es overfitting y cómo lo reduces?",
+    "answer_en": "Overfitting is when a model learns noise in the training data and performs poorly on new data. Reduce it with regularization, simpler models, more data, cross-validation, early stopping, and better features.",
+    "answer_es": "Overfitting es cuando el modelo aprende ruido del entrenamiento y rinde mal en datos nuevos. Se reduce con regularización, modelos más simples, más datos, cross-validation, early stopping y mejores features.",
+    "theory_en": "- Look for a large gap between training and validation performance.",
+    "theory_es": "- Suele verse como un gap grande entre entrenamiento y validación.",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "ml-003",
+    "category": "ML",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["leakage", "evaluation"],
+    "question_en": "Give an example of data leakage and how to prevent it.",
+    "question_es": "Da un ejemplo de data leakage y cómo prevenirlo.",
+    "answer_en": "Leakage happens when training uses information not available at prediction time (e.g., using future outcomes, aggregations computed using the full dataset, or target-derived features). Prevent with time-aware splits, building features using only past data, and fitting preprocessing only on training folds.",
+    "answer_es": "Leakage ocurre cuando el entrenamiento usa información que no estaría disponible al predecir (p. ej., usar información futura, agregaciones con todo el dataset, o features derivadas del target). Se previene con splits temporales, features solo con pasado y ajustando preprocessing solo en folds de entrenamiento.",
+    "theory_en": "- Always ask: “Would I know this value at inference time for a brand-new user?”",
+    "theory_es": "- Pregunta clave: “¿Sabría este valor en inferencia para un usuario nuevo?”",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "product-001",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["metrics", "north-star"],
+    "question_en": "If a key metric drops 10% week-over-week, how would you investigate it?",
+    "question_es": "Si una métrica clave cae 10% semana a semana, ¿cómo lo investigarías?",
+    "answer_en": "Validate tracking first, then segment (channel, country, device, cohorts), pinpoint when it started, and correlate with releases/external changes. Prioritize hypotheses and analyses.",
+    "answer_es": "Validaría instrumentación, segmentaría (canal, país, dispositivo, cohortes), identificaría el inicio exacto, y cruzaría con releases/cambios externos. Luego priorizaría hipótesis y análisis.",
+    "theory_en": "- First confirm it’s real (data quality).\n- Segment to isolate the driver.\n- Correlate with changes (product, pricing, traffic, tracking).",
+    "theory_es": "- Primero confirma que es real (calidad de datos).\n- Segmentación para aislar el driver.\n- Correlaciona con cambios (producto, pricing, tráfico, tracking).",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "product-002",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["funnels", "diagnosis"],
+    "question_en": "A signup funnel conversion drops. What slices and checks do you run first?",
+    "question_es": "Baja la conversión de un funnel de registro. ¿Qué segmentaciones y chequeos haces primero?",
+    "answer_en": "Check instrumentation, then slice by platform/device/browser, traffic source, geo, new vs returning, and identify the exact step that regressed. Correlate with releases and incident logs.",
+    "answer_es": "Revisa instrumentación, luego segmenta por plataforma/dispositivo/navegador, fuente de tráfico, geo, nuevos vs recurrentes, e identifica el paso exacto que cayó. Correlaciona con releases e incidentes.",
+    "theory_en": "- Start with the smallest set of slices that can isolate the change quickly.",
+    "theory_es": "- Empieza con pocas segmentaciones que aislen rápido el cambio.",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "product-003",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["experimentation", "guardrails"],
+    "question_en": "You propose a growth experiment that increases signups but increases refund rate. How do you decide whether to ship it?",
+    "question_es": "Propones un experimento de growth que sube registros pero sube la tasa de reembolsos. ¿Cómo decides si lanzarlo?",
+    "answer_en": "Use a clear objective function: compare incremental value of signups vs incremental cost of refunds and support, check long-term cohorts, and use guardrail metrics (refunds, complaints). If net value is positive and risks are acceptable, ship with monitoring/rollout.",
+    "answer_es": "Define una función objetivo: compara valor incremental de registros vs costo incremental de reembolsos/soporte, revisa cohortes a largo plazo y usa métricas guardrail (reembolsos, quejas). Si el valor neto es positivo y el riesgo es aceptable, lanza con monitoreo/rollout.",
+    "theory_en": "- A/B tests should include guardrails to avoid “winning” by harming user trust.",
+    "theory_es": "- Los A/B tests deben tener guardrails para evitar “ganar” dañando confianza.",
+    "code": [],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "py-001",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["pandas", "groupby"],
+    "question_en": "In pandas, how do you compute the mean `amount` per `user_id` and keep the top 5 users?",
+    "question_es": "En pandas, ¿cómo calculas el promedio de `amount` por `user_id` y te quedas con los top 5 usuarios?",
+    "answer_en": "Group by `user_id`, take the mean, sort, and `head(5)`.",
+    "answer_es": "Haz `groupby` con `mean`, ordena y toma `head(5)`.",
+    "theory_en": "- Watch out for nulls: `mean()` ignores them by default.\n- Use `as_index=False` or `reset_index()` for a clean DataFrame.",
+    "theory_es": "- Ojo con nulos: `mean()` los ignora por defecto.\n- Puedes resetear índice para un DataFrame final.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "import pandas as pd\n\nout = (\n  df.groupby('user_id', as_index=False)['amount']\n    .mean()\n    .sort_values('amount', ascending=False)\n    .head(5)\n)\nprint(out)"
+      }
+    ],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "py-002",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["python", "complexity"],
+    "question_en": "What’s the time complexity of checking membership in a Python `set` vs a `list`, and why?",
+    "question_es": "¿Cuál es la complejidad de tiempo de buscar pertenencia en un `set` vs una `list` en Python, y por qué?",
+    "answer_en": "`x in set` is average-case O(1) due to hashing; `x in list` is O(n) because it scans elements.",
+    "answer_es": "`x in set` es O(1) en promedio por hashing; `x in list` es O(n) porque recorre elementos.",
+    "theory_en": "- Worst case for hashing can degrade, but in practice sets are very fast for membership.",
+    "theory_es": "- El peor caso puede degradar, pero en práctica `set` es muy rápido para pertenencia.",
+    "code": [
+      { "lang": "python", "snippet": "seen = set(ids)\nif user_id in seen:\n    ...\n" }
+    ],
+    "source": { "label": "Internal", "url": "" }
+  },
+  {
+    "id": "found-001",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["foundations", "role"],
+    "question_en": "In one sentence, what is Data Science?",
+    "question_es": "En una frase, ¿qué es Data Science?",
+    "answer_en": "Data Science is the practice of turning data into decisions by combining domain context, statistics, and software to produce reliable insights and models.",
+    "answer_es": "Data Science es convertir datos en decisiones combinando contexto de negocio, estadística y software para producir insights y modelos confiables.",
+    "theory_en": "- In interviews, emphasize end-to-end: problem framing → data → analysis/modeling → communication/impact.",
+    "theory_es": "- En entrevistas, resalta el proceso end-to-end: framing → datos → análisis/modelo → comunicación/impacto.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "found-002",
+    "category": "ML",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["foundations", "ml"],
+    "question_en": "What’s the difference between Data Science and Machine Learning?",
+    "question_es": "¿Cuál es la diferencia entre Data Science y Machine Learning?",
+    "answer_en": "Data Science is broader (problem framing, data pipelines, analysis, experimentation, communication). Machine Learning is a subset focused on building predictive/decision algorithms from data.",
+    "answer_es": "Data Science es más amplio (framing, pipelines, análisis, experimentación, comunicación). Machine Learning es un subconjunto enfocado en construir algoritmos predictivos/decisionales a partir de datos.",
+    "theory_en": "- Many DS roles do little ML; many ML roles are mostly modeling + deployment. Clarify by role.",
+    "theory_es": "- Muchos roles de DS hacen poco ML; muchos roles de ML son modelado + despliegue. Depende del rol.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "stats-005",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["distributions", "normal"],
+    "question_en": "What is a normal distribution, and why is it used so often?",
+    "question_es": "¿Qué es una distribución normal y por qué se usa tanto?",
+    "answer_en": "A normal distribution is symmetric, bell-shaped, fully described by mean and standard deviation. It appears often due to the Central Limit Theorem and is mathematically convenient.",
+    "answer_es": "Una normal es simétrica, con forma de campana, descrita por media y desviación estándar. Aparece mucho por el Teorema Central del Límite y es matemáticamente conveniente.",
+    "theory_en": "- Many real metrics are not normal; use it as an approximation, and validate with plots/tests.",
+    "theory_es": "- Muchas métricas reales no son normales; úsala como aproximación y valida con gráficos/tests.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-004",
+    "category": "ML",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["bias-variance", "modeling"],
+    "question_en": "In ML, what does “bias” mean?",
+    "question_es": "En ML, ¿qué significa “bias”?",
+    "answer_en": "Bias is systematic error from overly strong assumptions (an overly simple model), which can cause underfitting—high error even on training data.",
+    "answer_es": "Bias es error sistemático por supuestos demasiado fuertes (modelo muy simple), lo que puede causar underfitting—error alto incluso en entrenamiento.",
+    "theory_en": "- Don’t confuse with societal bias. In the bias–variance trade-off: high bias → underfit; high variance → overfit.",
+    "theory_es": "- No confundir con sesgo social. En bias–variance: alto bias → underfit; alta varianza → overfit.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-005",
+    "category": "ML",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["naive-bayes", "classification"],
+    "question_en": "What is Naive Bayes, and when does it work well?",
+    "question_es": "¿Qué es Naive Bayes y cuándo funciona bien?",
+    "answer_en": "Naive Bayes is a probabilistic classifier using Bayes’ rule with a strong conditional-independence assumption between features. It works well for high-dimensional sparse data (e.g., text) and as a fast baseline.",
+    "answer_es": "Naive Bayes es un clasificador probabilístico con la regla de Bayes y un supuesto fuerte de independencia condicional entre features. Funciona bien en datos dispersos y de alta dimensión (p. ej. texto) y como baseline rápido.",
+    "theory_en": "- The independence assumption is “wrong but useful”; performance can still be strong in practice.",
+    "theory_es": "- El supuesto de independencia es “incorrecto pero útil”; aun así puede rendir muy bien.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "stats-006",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["experimentation", "ab-testing"],
+    "question_en": "What is the goal of running an A/B test?",
+    "question_es": "¿Cuál es el objetivo de un A/B test?",
+    "answer_en": "To estimate the causal impact of a change by randomly assigning users to variants and comparing outcomes, while controlling for confounders via randomization.",
+    "answer_es": "Estimar el impacto causal de un cambio asignando usuarios aleatoriamente a variantes y comparando resultados, controlando confusores mediante aleatorización.",
+    "theory_en": "- Define a primary metric, guardrails, sample size/power, and stopping rules before launching.",
+    "theory_es": "- Define métrica principal, guardrails, tamaño de muestra/potencia y reglas de parada antes de lanzar.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-006",
+    "category": "ML",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["regression", "interpretation"],
+    "question_en": "What is linear regression?",
+    "question_es": "¿Qué es la regresión lineal?",
+    "answer_en": "A model that predicts a continuous target as a linear combination of features, typically fit by minimizing squared error (with possible regularization).",
+    "answer_es": "Un modelo que predice un objetivo continuo como combinación lineal de features, usualmente ajustado minimizando el error cuadrático (con posible regularización).",
+    "theory_en": "- Assumptions for inference differ from using it purely for prediction; mention both if asked.",
+    "theory_es": "- Las suposiciones para inferencia difieren de usarlo solo para predicción; menciona ambos si preguntan.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "product-004",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["process", "analytics"],
+    "question_en": "What are the main steps in a data analytics project?",
+    "question_es": "¿Cuáles son los pasos principales de un proyecto de analítica?",
+    "answer_en": "Define the problem and success metric, get and clean data, explore/EDA, build analysis or model, validate, communicate results, and operationalize (dashboards, pipelines, experiments).",
+    "answer_es": "Define el problema y métrica de éxito, obtiene y limpia datos, explora/EDA, construye análisis o modelo, valida, comunica resultados y operacionaliza (dashboards, pipelines, experimentos).",
+    "theory_en": "- A strong answer ties each step to a deliverable and to stakeholder decisions.",
+    "theory_es": "- Una buena respuesta liga cada paso a un entregable y a decisiones de stakeholders.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-007",
+    "category": "ML",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["neural-nets", "backpropagation"],
+    "question_en": "What is backpropagation (in one minute)?",
+    "question_es": "¿Qué es backpropagation (en un minuto)?",
+    "answer_en": "Backpropagation efficiently computes gradients of the loss w.r.t. each weight in a neural network using the chain rule, enabling gradient-based optimization (e.g., SGD/Adam).",
+    "answer_es": "Backprop calcula eficientemente gradientes de la pérdida respecto a cada peso usando la regla de la cadena, permitiendo optimización por gradiente (p. ej. SGD/Adam).",
+    "theory_en": "- Forward pass computes outputs; backward pass propagates error signals layer by layer.\n- It’s an algorithm for gradient computation, not the optimizer itself.",
+    "theory_es": "- El forward pass calcula salidas; el backward pass propaga errores capa por capa.\n- Es un algoritmo para calcular gradientes, no el optimizador.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-008",
+    "category": "ML",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["clustering", "kmeans"],
+    "question_en": "How does k-means clustering work, and what are its main limitations?",
+    "question_es": "¿Cómo funciona k-means y cuáles son sus limitaciones principales?",
+    "answer_en": "It iteratively assigns points to the nearest centroid and recomputes centroids to minimize within-cluster squared distance. Limitations: needs K, sensitive to initialization/outliers, assumes roughly spherical clusters, and struggles with different densities.",
+    "answer_es": "Asigna puntos al centroide más cercano y recalcula centroides iterativamente para minimizar la distancia cuadrática intra-cluster. Limitaciones: requiere K, es sensible a inicialización/outliers, asume clusters “esféricos” y sufre con densidades distintas.",
+    "theory_en": "- Use k-means++ initialization and multiple restarts.\n- Consider scaling features and alternatives (GMM, DBSCAN) when shapes/densities differ.",
+    "theory_es": "- Usa inicialización k-means++ y múltiples reinicios.\n- Considera escalar features y alternativas (GMM, DBSCAN) si las formas/densidades difieren.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "py-003",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["nlp", "ecosystem"],
+    "question_en": "For text analytics, why do many teams choose Python?",
+    "question_es": "Para analítica de texto, ¿por qué muchos equipos eligen Python?",
+    "answer_en": "Python has a large, mature ecosystem for NLP and ML (tokenizers, embeddings, transformers, sklearn, PyTorch) and integrates well with data/ML tooling.",
+    "answer_es": "Python tiene un ecosistema grande y maduro para NLP y ML (tokenización, embeddings, transformers, sklearn, PyTorch) e integra bien con tooling de datos/ML.",
+    "theory_en": "- The “best” language depends on team stack; emphasize ecosystem + deployment + productivity.",
+    "theory_es": "- El “mejor” lenguaje depende del stack del equipo; resalta ecosistema + despliegue + productividad.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "stats-007",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["distributions", "skewness", "uniform"],
+    "question_en": "What’s the difference between a skewed distribution and a uniform distribution?",
+    "question_es": "¿Cuál es la diferencia entre una distribución sesgada y una uniforme?",
+    "answer_en": "Skewed distributions are asymmetric with a long tail on one side; uniform distributions assign (approximately) equal probability across a range.",
+    "answer_es": "Las distribuciones sesgadas son asimétricas con una cola larga; las uniformes asignan (aprox.) probabilidad igual a lo largo de un rango.",
+    "theory_en": "- Skewness affects which summary stats are stable (median often better than mean).",
+    "theory_es": "- El sesgo afecta qué estadísticos resumen son estables (mediana suele ser mejor que media).",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-009",
+    "category": "ML",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["reinforcement-learning", "mdp"],
+    "question_en": "What is reinforcement learning (high level)?",
+    "question_es": "¿Qué es reinforcement learning (alto nivel)?",
+    "answer_en": "A learning setup where an agent interacts with an environment, takes actions, receives rewards, and learns a policy to maximize long-term cumulative reward (often modeled as an MDP).",
+    "answer_es": "Un esquema donde un agente interactúa con un entorno, toma acciones, recibe recompensas y aprende una política para maximizar la recompensa acumulada a largo plazo (a menudo como un MDP).",
+    "theory_en": "- Key concepts: state, action, reward, policy, value function, exploration vs exploitation.",
+    "theory_es": "- Conceptos clave: estado, acción, recompensa, política, función de valor, exploración vs explotación.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "stats-008",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["sampling", "cluster-sampling"],
+    "question_en": "What is cluster sampling, and when would you use it?",
+    "question_es": "¿Qué es el muestreo por conglomerados (cluster sampling) y cuándo lo usarías?",
+    "answer_en": "You divide the population into clusters (e.g., schools, cities), randomly sample clusters, then measure units within those clusters. It’s useful when listing individuals is hard but clusters are easy to sample.",
+    "answer_es": "Divides la población en clusters (p. ej. colegios, ciudades), muestras clusters al azar y luego mides unidades dentro. Sirve cuando listar individuos es difícil pero los clusters son fáciles de muestrear.",
+    "theory_en": "- It increases correlation within sampled data; account for design effects in variance/CI calculations.",
+    "theory_es": "- Aumenta la correlación dentro del muestreo; ajusta varianzas/IC por el diseño (design effects).",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "stats-009",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["why-stats", "inference"],
+    "question_en": "Why do Data Scientists need statistics?",
+    "question_es": "¿Por qué Data Science necesita estadística?",
+    "answer_en": "Statistics helps quantify uncertainty, design experiments, avoid false conclusions, and generalize from samples to populations—critical for trustworthy decisions.",
+    "answer_es": "La estadística permite cuantificar incertidumbre, diseñar experimentos, evitar conclusiones falsas y generalizar de muestras a poblaciones—clave para decisiones confiables.",
+    "theory_en": "- In interviews, mention uncertainty, bias, power, confidence intervals, and causal reasoning.",
+    "theory_es": "- En entrevistas, menciona incertidumbre, sesgos, potencia, intervalos de confianza y causalidad.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-010",
+    "category": "ML",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["decision-trees", "interpretability"],
+    "question_en": "What is a decision tree?",
+    "question_es": "¿Qué es un árbol de decisión?",
+    "answer_en": "A model that recursively splits the feature space using if/then rules to reduce impurity (classification) or error (regression), producing an interpretable set of decisions.",
+    "answer_es": "Un modelo que divide recursivamente el espacio de features con reglas if/then para reducir impureza (clasificación) o error (regresión), produciendo decisiones interpretables.",
+    "theory_en": "- Trees can overfit; pruning, depth limits, and ensembles (Random Forest, GBM) help.",
+    "theory_es": "- Pueden overfit; poda, límites de profundidad y ensambles (Random Forest, GBM) ayudan.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "stats-010",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["p-value", "hypothesis-testing"],
+    "question_en": "What is a p-value, and what is a common misinterpretation?",
+    "question_es": "¿Qué es un p-value y cuál es una mala interpretación común?",
+    "answer_en": "A p-value is the probability (under the null) of observing results at least as extreme as the data. A common mistake is treating it as the probability that the null is true.",
+    "answer_es": "Un p-value es la probabilidad (bajo la nula) de observar resultados al menos tan extremos como los datos. Un error común es interpretarlo como la probabilidad de que la nula sea verdadera.",
+    "theory_en": "- Always pair with effect size + confidence interval; significance ≠ importance.",
+    "theory_es": "- Acompáñalo con tamaño de efecto + intervalo de confianza; significancia ≠ importancia.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-011",
+    "category": "ML",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["metrics", "confusion-matrix"],
+    "question_en": "What is a confusion matrix used for?",
+    "question_es": "¿Para qué sirve una matriz de confusión?",
+    "answer_en": "It summarizes classification outcomes (TP, FP, TN, FN), making it easy to compute metrics like precision, recall, specificity, and F1.",
+    "answer_es": "Resume resultados de clasificación (VP, FP, VN, FN), facilitando métricas como precisión, recall, especificidad y F1.",
+    "theory_en": "- Use it to understand which type of error matters more for the business problem.",
+    "theory_es": "- Úsala para entender qué error importa más para el problema de negocio.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-012",
+    "category": "ML",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["deep-learning", "ml"],
+    "question_en": "How is deep learning different from “traditional” machine learning?",
+    "question_es": "¿En qué se diferencia deep learning del machine learning “tradicional”?",
+    "answer_en": "Deep learning uses multi-layer neural networks that learn hierarchical representations (often from raw data) and shines with large data/compute; traditional ML often relies more on manual feature engineering and simpler models.",
+    "answer_es": "Deep learning usa redes neuronales profundas que aprenden representaciones jerárquicas (a menudo desde datos crudos) y brilla con muchos datos/cómputo; ML tradicional depende más de feature engineering manual y modelos más simples.",
+    "theory_en": "- DL isn’t always better: for small tabular datasets, tree ensembles often win.",
+    "theory_es": "- DL no siempre es mejor: en tabulares pequeños, ensambles de árboles suelen ganar.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "ml-013",
+    "category": "ML",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["metrics", "precision", "recall"],
+    "question_en": "What’s the difference between precision and recall?",
+    "question_es": "¿Cuál es la diferencia entre precisión y recall?",
+    "answer_en": "Precision answers: “Of predicted positives, how many were correct?” Recall answers: “Of all actual positives, how many did we catch?”",
+    "answer_es": "Precisión: “de los positivos predichos, ¿cuántos eran correctos?” Recall: “de los positivos reales, ¿cuántos detectamos?”",
+    "theory_en": "- Choose based on cost: prioritize recall when missing positives is expensive (fraud), precision when false alarms are expensive.",
+    "theory_es": "- Elige según costo: prioriza recall si perder positivos es caro (fraude), precisión si falsas alarmas son caras.",
+    "code": [],
+    "source": {
+      "label": "SynergisticIT (topic list)",
+      "url": "https://www.synergisticit.com/data-science-interview-questions-answers/"
+    }
+  },
+  {
+    "id": "sql-006",
+    "category": "SQL",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["window-functions", "moving-average"],
+    "question_en": "How do you compute a 7-day moving average of daily active users (DAU)?",
+    "question_es": "¿Cómo calculas un promedio móvil de 7 días de usuarios activos diarios (DAU)?",
+    "answer_en": "Aggregate to one row per date, then use a window function over the last 7 days.",
+    "answer_es": "Agrega a una fila por fecha y usa una función de ventana sobre los últimos 7 días.",
+    "theory_en": "- Define whether the window is inclusive of the current day.\n- Use `ROWS BETWEEN` when you have one row per day.",
+    "theory_es": "- Define si la ventana incluye el día actual.\n- Usa `ROWS BETWEEN` cuando tienes una fila por día.",
+    "code": [
+      {
+        "lang": "sql",
+        "snippet": "WITH dau AS (\n  SELECT event_date::date AS d, COUNT(DISTINCT user_id) AS dau\n  FROM events\n  GROUP BY 1\n)\nSELECT\n  d,\n  dau,\n  AVG(dau) OVER (ORDER BY d ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) AS dau_7d_ma\nFROM dau\nORDER BY 1;"
+      }
+    ],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "sql-007",
+    "category": "SQL",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["performance", "indexes"],
+    "question_en": "A SQL query is slow on a large table. What are your first steps to debug performance?",
+    "question_es": "Una query SQL es lenta en una tabla grande. ¿Cuáles son tus primeros pasos para depurar performance?",
+    "answer_en": "Check the query plan, confirm filters/join keys are indexed, reduce scanned rows, avoid functions on indexed columns, and validate join cardinalities.",
+    "answer_es": "Revisa el plan de ejecución, confirma índices en filtros/keys, reduce filas escaneadas, evita funciones sobre columnas indexadas y valida cardinalidades de joins.",
+    "theory_en": "- Look for full table scans, big sorts, and hash joins on huge inputs.\n- Consider pre-aggregations/materialized views for repeated heavy queries.",
+    "theory_es": "- Busca full table scans, sorts grandes y hash joins con inputs enormes.\n- Considera pre-agregaciones/materialized views para queries repetidas.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "sql-008",
+    "category": "SQL",
+    "difficulty": "Easy",
+    "company": ["General"],
+    "tags": ["distinct", "count"],
+    "question_en": "What’s the difference between `COUNT(*)`, `COUNT(col)`, and `COUNT(DISTINCT col)`?",
+    "question_es": "¿Cuál es la diferencia entre `COUNT(*)`, `COUNT(col)` y `COUNT(DISTINCT col)`?",
+    "answer_en": "`COUNT(*)` counts rows, `COUNT(col)` counts non-null values, and `COUNT(DISTINCT col)` counts unique non-null values.",
+    "answer_es": "`COUNT(*)` cuenta filas, `COUNT(col)` cuenta valores no nulos y `COUNT(DISTINCT col)` cuenta valores únicos no nulos.",
+    "theory_en": "- Be careful with joins: duplicates can inflate counts.",
+    "theory_es": "- Cuidado con joins: los duplicados pueden inflar conteos.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "stats-011",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["clt", "sampling"],
+    "question_en": "What is the Central Limit Theorem (CLT), and why is it useful?",
+    "question_es": "¿Qué es el Teorema Central del Límite (TCL) y por qué es útil?",
+    "answer_en": "For many i.i.d. variables with finite variance, the sample mean approaches a normal distribution as sample size grows. It enables approximate inference even when the original distribution isn’t normal.",
+    "answer_es": "Para muchas variables i.i.d. con varianza finita, la media muestral tiende a una normal al crecer el tamaño de muestra. Permite inferencia aproximada aunque la distribución original no sea normal.",
+    "theory_en": "- Independence and finite variance matter.\n- Convergence can be slow for heavy-tailed distributions.",
+    "theory_es": "- Importan independencia y varianza finita.\n- La convergencia puede ser lenta con colas pesadas.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "stats-012",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["type-i", "type-ii", "power"],
+    "question_en": "What are Type I and Type II errors? How do they relate to power?",
+    "question_es": "¿Qué son errores Tipo I y Tipo II? ¿Cómo se relacionan con la potencia?",
+    "answer_en": "Type I is a false positive (rejecting a true null) with probability α. Type II is a false negative with probability β. Power is 1−β.",
+    "answer_es": "Tipo I es falso positivo (rechazar una nula verdadera) con probabilidad α. Tipo II es falso negativo con probabilidad β. Potencia es 1−β.",
+    "theory_en": "- Reducing α often increases β unless sample size increases.\n- Power depends on effect size, variance, α, and sample size.",
+    "theory_es": "- Reducir α suele aumentar β si no aumenta la muestra.\n- Potencia depende de tamaño de efecto, varianza, α y muestra.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "stats-013",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["selection-bias", "confounding"],
+    "question_en": "Explain confounding with an example, and how you would address it.",
+    "question_es": "Explica confusión (confounding) con un ejemplo y cómo la abordarías.",
+    "answer_en": "A confounder influences both treatment and outcome (e.g., marketing targets high-value users, making treatment look better). Address with randomization, stratification, regression adjustment, matching, or causal methods (DID, IV) depending on context.",
+    "answer_es": "Un confusor influye en tratamiento y resultado (p. ej., marketing se dirige a usuarios de alto valor y hace ver mejor el tratamiento). Se aborda con aleatorización, estratificación, ajuste por regresión, matching o métodos causales (DID, IV) según el caso.",
+    "theory_en": "- The best fix is experimental design; statistical fixes require assumptions.",
+    "theory_es": "- La mejor solución es diseño experimental; arreglos estadísticos requieren supuestos.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "ml-014",
+    "category": "ML",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["regularization", "l1", "l2"],
+    "question_en": "What’s the difference between L1 and L2 regularization?",
+    "question_es": "¿Cuál es la diferencia entre regularización L1 y L2?",
+    "answer_en": "L1 adds an absolute-value penalty and can drive coefficients to zero (feature selection). L2 adds a squared penalty and shrinks coefficients smoothly (stability).",
+    "answer_es": "L1 agrega penalización absoluta y puede llevar coeficientes a cero (selección). L2 agrega penalización cuadrática y encoge coeficientes de forma suave (estabilidad).",
+    "theory_en": "- Elastic Net mixes both.\n- Regularization strength is a hyperparameter tuned via validation.",
+    "theory_es": "- Elastic Net mezcla ambas.\n- La fuerza de regularización se ajusta con validación.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "ml-015",
+    "category": "ML",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["cross-validation", "model-selection"],
+    "question_en": "Why do we use cross-validation, and when is it not appropriate?",
+    "question_es": "¿Por qué usamos cross-validation y cuándo no es apropiado?",
+    "answer_en": "It estimates generalization performance and supports hyperparameter tuning. It’s not appropriate when data has time dependence (use time splits) or leakage across folds (e.g., same user in multiple folds).",
+    "answer_es": "Estima desempeño de generalización y ayuda a ajustar hiperparámetros. No es apropiado con dependencia temporal (usa splits temporales) o leakage entre folds (p. ej. mismo usuario en varios folds).",
+    "theory_en": "- GroupKFold for user-level data, TimeSeriesSplit for time series.",
+    "theory_es": "- GroupKFold para datos por usuario, TimeSeriesSplit para series de tiempo.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "ml-016",
+    "category": "ML",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["roc", "pr-auc", "thresholds"],
+    "question_en": "ROC-AUC vs PR-AUC: when would you prefer each, and why?",
+    "question_es": "ROC-AUC vs PR-AUC: ¿cuándo prefieres cada una y por qué?",
+    "answer_en": "ROC-AUC is useful for balanced classes and compares TPR vs FPR. PR-AUC focuses on precision/recall and is more informative for rare positives (fraud, abuse) where FPR can look deceptively small.",
+    "answer_es": "ROC-AUC sirve en clases balanceadas (TPR vs FPR). PR-AUC se enfoca en precisión/recall y es más informativa con positivos raros (fraude) donde FPR puede verse engañosamente pequeña.",
+    "theory_en": "- In production you still pick a threshold based on cost/constraints; AUC is not the threshold.",
+    "theory_es": "- En producción igual eliges umbral según costo/constraints; AUC no es el umbral.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "product-005",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["north-star", "metrics"],
+    "question_en": "What makes a good North Star metric? Give an example.",
+    "question_es": "¿Qué hace buena a una métrica North Star? Da un ejemplo.",
+    "answer_en": "It captures long-term customer value, is sensitive to product improvements, and is hard to game. Example: “weekly active teams creating ≥1 project” for a collaboration tool.",
+    "answer_es": "Captura valor de cliente a largo plazo, responde a mejoras de producto y es difícil de “jugar”. Ejemplo: “equipos activos semanalmente que crean ≥1 proyecto” en una herramienta colaborativa.",
+    "theory_en": "- Pair it with input metrics and guardrails (quality, support load, refunds).",
+    "theory_es": "- Acompáñala con métricas input y guardrails (calidad, soporte, reembolsos).",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "product-006",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": ["General"],
+    "tags": ["causality", "experiments"],
+    "question_en": "An experiment shows a lift on the primary metric but a drop on a guardrail. How do you decide what to do next?",
+    "question_es": "Un experimento sube la métrica principal pero baja una guardrail. ¿Cómo decides qué hacer?",
+    "answer_en": "Quantify trade-offs (net value), check if the guardrail change is real (power/CI), analyze segments, and consider mitigations. If guardrail harm is meaningful, don’t ship broadly—iterate or roll out with constraints.",
+    "answer_es": "Cuantifica el trade-off (valor neto), valida si la guardrail es real (potencia/IC), analiza segmentos y mitigaciones. Si el daño es significativo, no lances masivamente—itera o haz rollout con restricciones.",
+    "theory_en": "- Guardrails exist to prevent “local wins” that hurt trust or long-term value.",
+    "theory_es": "- Las guardrails evitan “ganar” localmente dañando confianza o valor a largo plazo.",
+    "code": [],
+    "source": { "label": "Common interview topics", "url": "" }
+  },
+  {
+    "id": "py-004",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": ["General"],
+    "tags": ["pandas", "vectorization"],
+    "question_en": "Why is vectorization in pandas/numpy usually faster than Python loops?",
+    "question_es": "¿Por qué vectorizar en pandas/numpy suele ser más rápido que loops en Python?",
+    "answer_en": "Vectorized operations run in optimized C/BLAS code and reduce Python-level overhead, enabling better cache usage and fewer interpreter steps.",
+    "answer_es": "Operaciones vectorizadas corren en código optimizado (C/BLAS) y reducen overhead de Python, aprovechando mejor cachés y menos pasos del intérprete.",
+    "theory_en": "- Prefer `df['x'] + 1` over iterating rows.\n- Use `.apply` carefully; it can still be slow.",
+    "theory_es": "- Prefiere `df['x'] + 1` a iterar filas.\n- Usa `.apply` con cuidado; puede ser lento.",
+    "code": [
+      { "lang": "python", "snippet": "df['log_amount'] = np.log1p(df['amount'])\n# vs looping over rows\n" }
+    ],
+    "source": { "label": "Common interview topics", "url": "" }
+  }
+]
+
