@@ -5,6 +5,7 @@ const QUESTION_BANK_URLS = [
   "./data/banks/statistics.json",
   "./data/banks/product.json",
   "./data/banks/genai.json",
+  "./data/banks/softskills.json",
 ];
 const STORAGE_KEY = "ipc_progress_v1";
 const LANG_KEY = "ipc_lang_v1";
@@ -118,6 +119,7 @@ const I18N = {
       Product: "Product 🧭",
       Python: "Python 🐍",
       GenAI: "GenAI ✨🤖",
+      SoftSkills: "Soft skills 🤝",
       About: "About 💌",
       HowTo: "How it works 👋",
       Sources: "Sources 🔗",
@@ -167,7 +169,7 @@ const I18N = {
     },
     howto: {
       s1t: "Pick a topic",
-      s1b: "Choose SQL / Python / ML, and start with Easy using Learning Path.",
+      s1b: "Choose SQL / Python / ML / Soft skills, and start with Easy using Learning Path.",
       s2t: "Practice",
       s2b: "Read the question, try to answer out loud, then flip the card.",
       s3t: "Track progress",
@@ -198,6 +200,9 @@ const I18N = {
     difficulty: {
       all: "All",
     },
+    categories: {
+      SoftSkills: "Soft skills",
+    },
     empty: {
       title: "No questions match these filters.",
       body: "Try changing tabs/filters or clearing the search.",
@@ -216,7 +221,7 @@ const I18N = {
     },
     sidebar: {
       howTo: [
-        "Pick a tab (SQL, Statistics, ML…).",
+        "Pick a tab (SQL, Statistics, ML, Soft skills…).",
         "Filter by difficulty and search by keywords.",
         "Flip the card and track your status.",
       ],
@@ -233,6 +238,7 @@ const I18N = {
       Product: "Producto 🧭",
       Python: "Python 🐍",
       GenAI: "GenAI ✨🤖",
+      SoftSkills: "Soft skills 🤝",
       About: "Objetivo 💌",
       HowTo: "Cómo usar 👋",
       Sources: "Fuentes 🔗",
@@ -282,7 +288,7 @@ const I18N = {
     },
     howto: {
       s1t: "Elige un tema",
-      s1b: "Selecciona SQL / Python / ML, y empieza por Easy con Learning Path.",
+      s1b: "Selecciona SQL / Python / ML / Soft skills, y empieza por Easy con Learning Path.",
       s2t: "Practica",
       s2b: "Lee la pregunta, intenta responder en voz alta y luego voltea la tarjeta.",
       s3t: "Sigue tu progreso",
@@ -314,6 +320,9 @@ const I18N = {
     difficulty: {
       all: "Todas",
     },
+    categories: {
+      SoftSkills: "Habilidades blandas",
+    },
     empty: {
       title: "No hay preguntas con estos filtros.",
       body: "Prueba a cambiar pestaña/filtros o limpiar la búsqueda.",
@@ -332,7 +341,7 @@ const I18N = {
     },
     sidebar: {
       howTo: [
-        "Elige una pestaña (SQL, Estadística, ML…).",
+        "Elige una pestaña (SQL, Estadística, ML, Soft skills…).",
         "Filtra por dificultad y busca por keywords.",
         "Voltea la tarjeta y marca tu estado.",
       ],
@@ -390,6 +399,12 @@ function saveSettings() {
 
 function t() {
   return I18N[lang] ?? I18N.en;
+}
+
+function categoryBadgeLabel(cat) {
+  if (!cat) return "—";
+  const map = /** @type {Record<string,string>} */ (t().categories ?? {});
+  return map[cat] ?? cat;
 }
 
 function clampIndex(i) {
@@ -693,7 +708,7 @@ function render() {
   const item = filtered[activeIndex];
   const state = getState(item);
 
-  els.badgeCategory().textContent = item.category ?? "—";
+  els.badgeCategory().textContent = categoryBadgeLabel(item.category);
   els.badgeDifficulty().textContent = item.difficulty ?? "—";
   els.tags().textContent = (item.tags ?? []).map((t) => `#${t}`).join(" ");
   els.question().textContent = getLocalizedField(item, "question");
@@ -770,17 +785,12 @@ function setActiveTab(tab) {
   els.card().classList.remove("is-flipped");
   render();
 
-  // Ensure informational content is visible after DOM updates.
+  // Keep Sources / HowTo / About visually near the footer (not scrolled to the top of the page).
   requestAnimationFrame(() => {
-    if (tab === "Sources" && els.sourcesView()) {
-      els.sourcesView().scrollIntoView({ block: "start", behavior: "smooth" });
-    }
-    if (tab === "HowTo" && els.howToView()) {
-      els.howToView().scrollIntoView({ block: "start", behavior: "smooth" });
-    }
-    if (tab === "About" && els.aboutView()) {
-      els.aboutView().scrollIntoView({ block: "start", behavior: "smooth" });
-    }
+    if (tab !== "Sources" && tab !== "HowTo" && tab !== "About") return;
+    const wrap = document.querySelector(".bottomInfo");
+    if (!wrap) return;
+    wrap.scrollIntoView({ block: "end", inline: "nearest", behavior: "smooth" });
   });
 }
 

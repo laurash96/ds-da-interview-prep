@@ -1,45 +1,882 @@
 [
-  { "id": "pr-e-001", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["metrics"], "question_en": "What is a KPI?", "question_es": "¿Qué es un KPI?", "answer_en": "A key performance indicator: a metric tied to a business goal used to track progress.", "answer_es": "Indicador clave: métrica ligada a un objetivo de negocio para medir progreso.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-002", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["north-star"], "question_en": "What is a North Star metric?", "question_es": "¿Qué es una métrica North Star?", "answer_en": "A single high-level metric that captures long-term customer value and guides teams.", "answer_es": "Métrica única de alto nivel que captura valor a largo plazo y guía equipos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-003", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["funnels"], "question_en": "What is a funnel?", "question_es": "¿Qué es un funnel?", "answer_en": "A sequence of steps users go through (view → signup → purchase) used to measure drop-off.", "answer_es": "Secuencia de pasos (ver → registro → compra) para medir drop-off.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-004", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["segmentation"], "question_en": "Why segment metrics?", "question_es": "¿Por qué segmentar métricas?", "answer_en": "To find which users/contexts drive changes and avoid misleading averages.", "answer_es": "Para encontrar qué usuarios/contextos explican cambios y evitar promedios engañosos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-005", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["retention"], "question_en": "What is retention?", "question_es": "¿Qué es retención?", "answer_en": "The share of users who come back and are active again after a given time window.", "answer_es": "Proporción de usuarios que regresan y están activos tras una ventana de tiempo.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-006", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["ab-testing"], "question_en": "What is an A/B test used for in product?", "question_es": "¿Para qué sirve un A/B test en producto?", "answer_en": "To estimate the causal impact of a change on a metric by random assignment.", "answer_es": "Para estimar impacto causal de un cambio por asignación aleatoria.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-007", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["guardrails"], "question_en": "What is a guardrail metric?", "question_es": "¿Qué es una métrica guardrail?", "answer_en": "A metric you monitor to prevent harmful trade-offs while optimizing the primary metric.", "answer_es": "Métrica para prevenir trade-offs dañinos mientras optimizas la principal.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-008", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["data-quality"], "question_en": "First check when a metric suddenly changes?", "question_es": "¿Primer chequeo cuando cambia una métrica?", "answer_en": "Instrumentation/data quality: tracking, pipeline freshness, schema changes, and dashboards.", "answer_es": "Calidad/instrumentación: tracking, frescura, cambios de schema y dashboards.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-009", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["stakeholders"], "question_en": "How do you communicate results to stakeholders?", "question_es": "¿Cómo comunicas resultados a stakeholders?", "answer_en": "Lead with the decision, then key numbers, uncertainty, assumptions, and recommended next steps.", "answer_es": "Empieza por la decisión, luego números clave, incertidumbre, supuestos y próximos pasos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-010", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["activation"], "question_en": "What is activation?", "question_es": "¿Qué es activación?", "answer_en": "A user reaching the first meaningful value moment (e.g., first project created).", "answer_es": "Usuario llegando al primer momento de valor (p. ej. primer proyecto).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-011", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["cohorts"], "question_en": "Why use cohorts?", "question_es": "¿Por qué usar cohortes?", "answer_en": "To separate user groups by start time and track retention/behavior over time.", "answer_es": "Para separar grupos por fecha de inicio y seguir retención/comportamiento.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-012", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["definitions"], "question_en": "DAU vs MAU?", "question_es": "¿DAU vs MAU?", "answer_en": "Daily active users vs monthly active users; define “active” consistently.", "answer_es": "Usuarios activos diarios vs mensuales; define “activo” consistentemente.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-013", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["latency"], "question_en": "Why does latency matter?", "question_es": "¿Por qué importa la latencia?", "answer_en": "It affects user experience, conversion, and retention; slow products leak users.", "answer_es": "Afecta experiencia, conversión y retención; productos lentos pierden usuarios.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-014", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["definitions"], "question_en": "Leading vs lagging indicators?", "question_es": "¿Indicadores leading vs lagging?", "answer_en": "Leading predict future outcomes; lagging measure results after the fact.", "answer_es": "Leading predicen futuro; lagging miden resultados después.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-015", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["experiments"], "question_en": "What is an MDE?", "question_es": "¿Qué es MDE?", "answer_en": "Minimum detectable effect: the smallest lift your test is powered to detect.", "answer_es": "Mínimo efecto detectable: el lift mínimo que el test puede detectar.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-e-016", "category": "Product", "difficulty": "Easy", "company": ["General"], "tags": ["prioritization"], "question_en": "Simple way to prioritize ideas?", "question_es": "¿Forma simple de priorizar ideas?", "answer_en": "Use an impact/effort framework (ICE/RICE) and sanity-check assumptions.", "answer_es": "Usa impacto/esfuerzo (ICE/RICE) y valida supuestos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "pr-m-001", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["metric-drop"], "question_en": "A key metric drops 10% WoW. How do you investigate?", "question_es": "Cae una métrica 10% WoW. ¿Cómo investigas?", "answer_en": "Validate tracking, segment (geo/device/channel), pinpoint start time, correlate with releases/incidents, form hypotheses, and quantify drivers.", "answer_es": "Valida tracking, segmenta, ubica inicio, correlaciona con releases/incidentes, hipótesis y cuantifica drivers.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-002", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["funnel-drop"], "question_en": "Signup conversion drops. What do you check first?", "question_es": "Baja conversión de registro. ¿Qué revisas primero?", "answer_en": "Instrumentation + step-level funnel, then slices (platform/browser), and recent changes.", "answer_es": "Instrumentación + funnel por pasos, luego slices y cambios recientes.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-003", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["north-star"], "question_en": "What makes a good North Star metric?", "question_es": "¿Qué hace buena a una North Star?", "answer_en": "Reflects long-term value, is sensitive to product improvements, and is hard to game.", "answer_es": "Refleja valor a largo plazo, responde a mejoras y es difícil de manipular.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-004", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["dashboards"], "question_en": "What makes a good dashboard?", "question_es": "¿Qué hace bueno un dashboard?", "answer_en": "Clear questions, stable definitions, few key charts, segments, alerts, and links to drill-down.", "answer_es": "Preguntas claras, definiciones estables, pocas gráficas clave, segmentos, alertas y drill-down.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-005", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["experiments"], "question_en": "How do you design an A/B test end-to-end?", "question_es": "¿Cómo diseñas un A/B test end-to-end?", "answer_en": "Hypothesis, primary metric + guardrails, sample size/power, randomization unit, duration, logging, analysis plan.", "answer_es": "Hipótesis, métrica principal+guardrails, muestra/potencia, unidad de randomización, duración, logging y plan.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-006", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["experiments"], "question_en": "How do you pick guardrails?", "question_es": "¿Cómo eliges guardrails?", "answer_en": "Pick metrics representing user harm or long-term value (refunds, complaints, latency, churn).", "answer_es": "Elige métricas de daño o valor a largo plazo (reembolsos, quejas, latencia, churn).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-007", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["segmentation"], "question_en": "How do you choose segments without p-hacking?", "question_es": "¿Cómo eliges segmentos sin p-hacking?", "answer_en": "Predefine key segments, limit the number, correct for multiple testing, and validate on holdout.", "answer_es": "Predefine segmentos, limita cantidad, corrige múltiples pruebas y valida en holdout.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-008", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["trade-offs"], "question_en": "What do you do when metrics disagree?", "question_es": "¿Qué haces cuando métricas se contradicen?", "answer_en": "Check definitions, pick a hierarchy (primary/guardrails), quantify trade-offs, and align with goals.", "answer_es": "Revisa definiciones, jerarquía, cuantifica trade-offs y alinea con objetivos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-009", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["retention"], "question_en": "Cohort retention vs rolling retention?", "question_es": "¿Retención por cohorte vs rolling retention?", "answer_en": "Cohort: return on exact day/week. Rolling: return on or after a day (easier to interpret for long horizons).", "answer_es": "Cohorte: regreso en día exacto. Rolling: regreso en o después (más interpretable a largo plazo).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-010", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["seasonality"], "question_en": "How do you account for seasonality in metrics?", "question_es": "¿Cómo manejas estacionalidad en métricas?", "answer_en": "Compare to prior periods (WoW/YoY), use control charts/baselines, and segment by calendar effects.", "answer_es": "Compara vs periodos previos, usa baselines y segmenta por efectos de calendario.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-011", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["instrumentation"], "question_en": "How do you validate event tracking?", "question_es": "¿Cómo validas tracking de eventos?", "answer_en": "Define schema, test end-to-end, compare client/server logs, monitor drops and duplicates.", "answer_es": "Define schema, prueba end-to-end, compara logs, monitorea caídas y duplicados.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-012", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["launch"], "question_en": "What’s a safe rollout strategy?", "question_es": "¿Estrategia segura de rollout?", "answer_en": "Start small (1%), monitor guardrails, ramp gradually, keep rollback plan.", "answer_es": "Empieza pequeño, monitorea guardrails, aumenta gradual y plan de rollback.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-013", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["pricing"], "question_en": "How do you evaluate a pricing change?", "question_es": "¿Cómo evalúas un cambio de pricing?", "answer_en": "Use experiments if possible; track revenue, conversion, churn, refunds, and long-term cohorts.", "answer_es": "Si se puede, experimento; mide revenue, conversión, churn, reembolsos y cohortes.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-014", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["unit-economics"], "question_en": "What are unit economics?", "question_es": "¿Qué son unit economics?", "answer_en": "Per-unit revenue and cost (LTV, CAC, margin) to assess sustainability.", "answer_es": "Ingresos y costos por unidad (LTV, CAC, margen) para evaluar sostenibilidad.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-015", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["experiments"], "question_en": "What’s an SRM and why does it matter?", "question_es": "¿Qué es SRM y por qué importa?", "answer_en": "Sample ratio mismatch: allocation differs from expected; can indicate broken randomization.", "answer_es": "Sample ratio mismatch: la asignación difiere de lo esperado; puede indicar randomización rota.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-m-016", "category": "Product", "difficulty": "Medium", "company": ["General"], "tags": ["metrics"], "question_en": "How do you define an ‘active user’ metric?", "question_es": "¿Cómo defines ‘usuario activo’?", "answer_en": "Tie it to meaningful value actions (not just opens), pick window, and keep consistent across reporting.", "answer_es": "Acciones de valor (no solo abrir), define ventana y mantén consistencia.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "pr-h-001", "category": "Product", "difficulty": "Hard", "company": ["General"], "tags": ["trade-offs"], "question_en": "Primary metric up but guardrail down. Ship or not?", "question_es": "Sube métrica principal pero baja guardrail. ¿Lanzas o no?", "answer_en": "Quantify net value, validate significance/CI, analyze segments, mitigate harms; avoid broad ship if guardrail impact is meaningful.", "answer_es": "Cuantifica valor neto, valida IC, segmenta, mitiga daños; evita lanzamiento amplio si el daño es significativo.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-h-002", "category": "Product", "difficulty": "Hard", "company": ["General"], "tags": ["causality"], "question_en": "How do you debug a metric with strong selection bias?", "question_es": "¿Cómo depuras una métrica con sesgo de selección fuerte?", "answer_en": "Look for confounders, define comparable cohorts, use experiments/quasi-experiments, and avoid naive comparisons.", "answer_es": "Busca confusores, cohortes comparables, experimentos/cuasi-experimentos y evita comparaciones ingenuas.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-h-003", "category": "Product", "difficulty": "Hard", "company": ["General"], "tags": ["measurement"], "question_en": "How do you prevent metric gaming?", "question_es": "¿Cómo previenes ‘gaming’ de métricas?", "answer_en": "Choose metrics tied to value, add guardrails, audit incentives, and monitor for distribution shifts/edge behaviors.", "answer_es": "Métricas ligadas a valor, guardrails, auditar incentivos y monitorear shifts/comportamientos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-h-004", "category": "Product", "difficulty": "Hard", "company": ["General"], "tags": ["experiments"], "question_en": "Design an experiment when you can’t randomize.", "question_es": "Diseña un experimento cuando no puedes aleatorizar.", "answer_en": "Use quasi-experiments: DID, synthetic controls, regression discontinuity, or phased rollouts with careful assumptions.", "answer_es": "Usa cuasi-experimentos: DID, controles sintéticos, discontinuidad o rollouts por fases.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-h-005", "category": "Product", "difficulty": "Hard", "company": ["General"], "tags": ["long-term"], "question_en": "How do you evaluate long-term impact vs short-term lift?", "question_es": "¿Cómo evalúas impacto a largo plazo vs lift corto plazo?", "answer_en": "Track cohorts over time, monitor guardrails, and use holdouts/long-run experiments when feasible.", "answer_es": "Sigue cohortes, monitorea guardrails y usa holdouts/experimentos largos si se puede.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-h-006", "category": "Product", "difficulty": "Hard", "company": ["General"], "tags": ["counterfactual"], "question_en": "What is the counterfactual in product experiments?", "question_es": "¿Qué es el contrafactual en experimentos?", "answer_en": "What would have happened to the same users without the change; randomization approximates it.", "answer_es": "Lo que habría pasado sin el cambio; randomización lo aproxima.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-h-007", "category": "Product", "difficulty": "Hard", "company": ["General"], "tags": ["attribution"], "question_en": "What are common attribution pitfalls?", "question_es": "¿Pitfalls comunes de atribución?", "answer_en": "Last-click bias, missing channels, selection bias, and ignoring incrementality; use experiments when possible.", "answer_es": "Sesgo last-click, canales faltantes, sesgo de selección e ignorar incrementalidad; usa experimentos si puedes.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "pr-h-008", "category": "Product", "difficulty": "Hard", "company": ["General"], "tags": ["okrs"], "question_en": "How do you align metrics to OKRs without creating perverse incentives?", "question_es": "¿Cómo alineas métricas a OKRs sin incentivos perversos?", "answer_en": "Use a small set of outcome metrics with guardrails, review regularly, and tie incentives to balanced scorecards.", "answer_es": "Pocas métricas outcome con guardrails, revisión frecuente e incentivos balanceados.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } }
+  {
+    "id": "pr-e-001",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "metrics"
+    ],
+    "question_en": "What is a KPI?",
+    "question_es": "¿Qué es un KPI?",
+    "answer_en": "A key performance indicator: a metric tied to a business goal used to track progress. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Indicador clave: métrica ligada a un objetivo de negocio para medir progreso. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a KPI?”.\n- **Anchor your definition**: Your short answer covers: A key performance indicator: a metric tied to a business goal used to track progress.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es un KPI?”.\n- **Ancla tu definición**: tu respuesta corta resume: Indicador clave: métrica ligada a un objetivo de negocio para medir progreso.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-002",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "north-star"
+    ],
+    "question_en": "What is a North Star metric?",
+    "question_es": "¿Qué es una métrica North Star?",
+    "answer_en": "A single high-level metric that captures long-term customer value and guides teams. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Métrica única de alto nivel que captura valor a largo plazo y guía equipos. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a North Star metric?”.\n- **Anchor your definition**: Your short answer covers: A single high-level metric that captures long-term customer value and guides teams.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es una métrica North Star?”.\n- **Ancla tu definición**: tu respuesta corta resume: Métrica única de alto nivel que captura valor a largo plazo y guía equipos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-003",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "funnels"
+    ],
+    "question_en": "What is a funnel?",
+    "question_es": "¿Qué es un funnel?",
+    "answer_en": "A sequence of steps users go through (view → signup → purchase) used to measure drop-off. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Secuencia de pasos (ver → registro → compra) para medir drop-off. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a funnel?”.\n- **Anchor your definition**: Your short answer covers: A sequence of steps users go through (view → signup → purchase) used to measure drop-off.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es un funnel?”.\n- **Ancla tu definición**: tu respuesta corta resume: Secuencia de pasos (ver → registro → compra) para medir drop-off.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-004",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "segmentation"
+    ],
+    "question_en": "Why segment metrics?",
+    "question_es": "¿Por qué segmentar métricas?",
+    "answer_en": "To find which users/contexts drive changes and avoid misleading averages. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Para encontrar qué usuarios/contextos explican cambios y evitar promedios engañosos. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why segment metrics?”.\n- **Anchor your definition**: Your short answer covers: To find which users/contexts drive changes and avoid misleading averages.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué segmentar métricas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para encontrar qué usuarios/contextos explican cambios y evitar promedios engañosos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-005",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "retention"
+    ],
+    "question_en": "What is retention?",
+    "question_es": "¿Qué es retención?",
+    "answer_en": "The share of users who come back and are active again after a given time window. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Proporción de usuarios que regresan y están activos tras una ventana de tiempo. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is retention?”.\n- **Anchor your definition**: Your short answer covers: The share of users who come back and are active again after a given time window.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es retención?”.\n- **Ancla tu definición**: tu respuesta corta resume: Proporción de usuarios que regresan y están activos tras una ventana de tiempo.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-006",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ab-testing"
+    ],
+    "question_en": "What is an A/B test used for in product?",
+    "question_es": "¿Para qué sirve un A/B test en producto?",
+    "answer_en": "To estimate the causal impact of a change on a metric by random assignment. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Para estimar impacto causal de un cambio por asignación aleatoria. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is an A/B test used for in product?”.\n- **Anchor your definition**: Your short answer covers: To estimate the causal impact of a change on a metric by random assignment.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Para qué sirve un A/B test en producto?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para estimar impacto causal de un cambio por asignación aleatoria.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-007",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "guardrails"
+    ],
+    "question_en": "What is a guardrail metric?",
+    "question_es": "¿Qué es una métrica guardrail?",
+    "answer_en": "A metric you monitor to prevent harmful trade-offs while optimizing the primary metric. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Métrica para prevenir trade-offs dañinos mientras optimizas la principal. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a guardrail metric?”.\n- **Anchor your definition**: Your short answer covers: A metric you monitor to prevent harmful trade-offs while optimizing the primary metric.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es una métrica guardrail?”.\n- **Ancla tu definición**: tu respuesta corta resume: Métrica para prevenir trade-offs dañinos mientras optimizas la principal.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-008",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "data-quality"
+    ],
+    "question_en": "First check when a metric suddenly changes?",
+    "question_es": "¿Primer chequeo cuando cambia una métrica?",
+    "answer_en": "Instrumentation/data quality: tracking, pipeline freshness, schema changes, and dashboards. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Calidad/instrumentación: tracking, frescura, cambios de schema y dashboards. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “First check when a metric suddenly changes?”.\n- **Anchor your definition**: Your short answer covers: Instrumentation/data quality: tracking, pipeline freshness, schema changes, and dashboards.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Primer chequeo cuando cambia una métrica?”.\n- **Ancla tu definición**: tu respuesta corta resume: Calidad/instrumentación: tracking, frescura, cambios de schema y dashboards.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-009",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "stakeholders"
+    ],
+    "question_en": "How do you communicate results to stakeholders?",
+    "question_es": "¿Cómo comunicas resultados a stakeholders?",
+    "answer_en": "Lead with the decision, then key numbers, uncertainty, assumptions, and recommended next steps. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Empieza por la decisión, luego números clave, incertidumbre, supuestos y próximos pasos. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you communicate results to stakeholders?”.\n- **Anchor your definition**: Your short answer covers: Lead with the decision, then key numbers, uncertainty, assumptions, and recommended next steps.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo comunicas resultados a stakeholders?”.\n- **Ancla tu definición**: tu respuesta corta resume: Empieza por la decisión, luego números clave, incertidumbre, supuestos y próximos pasos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-010",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "activation"
+    ],
+    "question_en": "What is activation?",
+    "question_es": "¿Qué es activación?",
+    "answer_en": "A user reaching the first meaningful value moment (e.g., first project created). Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Usuario llegando al primer momento de valor (p. ej. primer proyecto). Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is activation?”.\n- **Anchor your definition**: Your short answer covers: A user reaching the first meaningful value moment (e.g., first project created). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es activación?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usuario llegando al primer momento de valor (p. ej. primer proyecto). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-011",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "cohorts"
+    ],
+    "question_en": "Why use cohorts?",
+    "question_es": "¿Por qué usar cohortes?",
+    "answer_en": "To separate user groups by start time and track retention/behavior over time. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Para separar grupos por fecha de inicio y seguir retención/comportamiento. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why use cohorts?”.\n- **Anchor your definition**: Your short answer covers: To separate user groups by start time and track retention/behavior over time.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué usar cohortes?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para separar grupos por fecha de inicio y seguir retención/comportamiento.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-012",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "definitions"
+    ],
+    "question_en": "DAU vs MAU?",
+    "question_es": "¿DAU vs MAU?",
+    "answer_en": "Daily active users vs monthly active users; define “active” consistently. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Usuarios activos diarios vs mensuales; define “activo” consistentemente. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “DAU vs MAU?”.\n- **Anchor your definition**: Your short answer covers: Daily active users vs monthly active users; define “active” consistently.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿DAU vs MAU?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usuarios activos diarios vs mensuales; define “activo” consistentemente.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-013",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "latency"
+    ],
+    "question_en": "Why does latency matter?",
+    "question_es": "¿Por qué importa la latencia?",
+    "answer_en": "It affects user experience, conversion, and retention; slow products leak users. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Afecta experiencia, conversión y retención; productos lentos pierden usuarios. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why does latency matter?”.\n- **Anchor your definition**: Your short answer covers: It affects user experience, conversion, and retention; slow products leak users.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué importa la latencia?”.\n- **Ancla tu definición**: tu respuesta corta resume: Afecta experiencia, conversión y retención; productos lentos pierden usuarios.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-014",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "definitions"
+    ],
+    "question_en": "Leading vs lagging indicators?",
+    "question_es": "¿Indicadores leading vs lagging?",
+    "answer_en": "Leading predict future outcomes; lagging measure results after the fact. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Leading predicen futuro; lagging miden resultados después. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Leading vs lagging indicators?”.\n- **Anchor your definition**: Your short answer covers: Leading predict future outcomes; lagging measure results after the fact.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Indicadores leading vs lagging?”.\n- **Ancla tu definición**: tu respuesta corta resume: Leading predicen futuro; lagging miden resultados después.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-015",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "experiments"
+    ],
+    "question_en": "What is an MDE?",
+    "question_es": "¿Qué es MDE?",
+    "answer_en": "Minimum detectable effect: the smallest lift your test is powered to detect. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Mínimo efecto detectable: el lift mínimo que el test puede detectar. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is an MDE?”.\n- **Anchor your definition**: Your short answer covers: Minimum detectable effect: the smallest lift your test is powered to detect.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es MDE?”.\n- **Ancla tu definición**: tu respuesta corta resume: Mínimo efecto detectable: el lift mínimo que el test puede detectar.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-e-016",
+    "category": "Product",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "prioritization"
+    ],
+    "question_en": "Simple way to prioritize ideas?",
+    "question_es": "¿Forma simple de priorizar ideas?",
+    "answer_en": "Use an impact/effort framework (ICE/RICE) and sanity-check assumptions. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Usa impacto/esfuerzo (ICE/RICE) y valida supuestos. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Simple way to prioritize ideas?”.\n- **Anchor your definition**: Your short answer covers: Use an impact/effort framework (ICE/RICE) and sanity-check assumptions.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Forma simple de priorizar ideas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa impacto/esfuerzo (ICE/RICE) y valida supuestos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-001",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "metric-drop"
+    ],
+    "question_en": "A key metric drops 10% WoW. How do you investigate?",
+    "question_es": "Cae una métrica 10% WoW. ¿Cómo investigas?",
+    "answer_en": "Validate tracking, segment (geo/device/channel), pinpoint start time, correlate with releases/incidents, form hypotheses, and quantify drivers.",
+    "answer_es": "Valida tracking, segmenta, ubica inicio, correlaciona con releases/incidentes, hipótesis y cuantifica drivers. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “A key metric drops 10% WoW. How do you investigate?”.\n- **Anchor your definition**: Your short answer covers: Validate tracking, segment (geo/device/channel), pinpoint start time, correlate with releases/incidents, form hypotheses, and quantify dr.... Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “Cae una métrica 10% WoW. ¿Cómo investigas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Valida tracking, segmenta, ubica inicio, correlaciona con releases/incidentes, hipótesis y cuantifica drivers.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-002",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "funnel-drop"
+    ],
+    "question_en": "Signup conversion drops. What do you check first?",
+    "question_es": "Baja conversión de registro. ¿Qué revisas primero?",
+    "answer_en": "Instrumentation + step-level funnel, then slices (platform/browser), and recent changes. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Instrumentación + funnel por pasos, luego slices y cambios recientes. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Signup conversion drops. What do you check first?”.\n- **Anchor your definition**: Your short answer covers: Instrumentation + step-level funnel, then slices (platform/browser), and recent changes.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “Baja conversión de registro. ¿Qué revisas primero?”.\n- **Ancla tu definición**: tu respuesta corta resume: Instrumentación + funnel por pasos, luego slices y cambios recientes.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-003",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "north-star"
+    ],
+    "question_en": "What makes a good North Star metric?",
+    "question_es": "¿Qué hace buena a una North Star?",
+    "answer_en": "Reflects long-term value, is sensitive to product improvements, and is hard to game. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Refleja valor a largo plazo, responde a mejoras y es difícil de manipular. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What makes a good North Star metric?”.\n- **Anchor your definition**: Your short answer covers: Reflects long-term value, is sensitive to product improvements, and is hard to game.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué hace buena a una North Star?”.\n- **Ancla tu definición**: tu respuesta corta resume: Refleja valor a largo plazo, responde a mejoras y es difícil de manipular.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-004",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "dashboards"
+    ],
+    "question_en": "What makes a good dashboard?",
+    "question_es": "¿Qué hace bueno un dashboard?",
+    "answer_en": "Clear questions, stable definitions, few key charts, segments, alerts, and links to drill-down. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Preguntas claras, definiciones estables, pocas gráficas clave, segmentos, alertas y drill-down. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What makes a good dashboard?”.\n- **Anchor your definition**: Your short answer covers: Clear questions, stable definitions, few key charts, segments, alerts, and links to drill-down.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué hace bueno un dashboard?”.\n- **Ancla tu definición**: tu respuesta corta resume: Preguntas claras, definiciones estables, pocas gráficas clave, segmentos, alertas y drill-down.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-005",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "experiments"
+    ],
+    "question_en": "How do you design an A/B test end-to-end?",
+    "question_es": "¿Cómo diseñas un A/B test end-to-end?",
+    "answer_en": "Hypothesis, primary metric + guardrails, sample size/power, randomization unit, duration, logging, analysis plan. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Hipótesis, métrica principal+guardrails, muestra/potencia, unidad de randomización, duración, logging y plan. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you design an A/B test end-to-end?”.\n- **Anchor your definition**: Your short answer covers: Hypothesis, primary metric + guardrails, sample size/power, randomization unit, duration, logging, analysis plan.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo diseñas un A/B test end-to-end?”.\n- **Ancla tu definición**: tu respuesta corta resume: Hipótesis, métrica principal+guardrails, muestra/potencia, unidad de randomización, duración, logging y plan.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-006",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "experiments"
+    ],
+    "question_en": "How do you pick guardrails?",
+    "question_es": "¿Cómo eliges guardrails?",
+    "answer_en": "Pick metrics representing user harm or long-term value (refunds, complaints, latency, churn). Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Elige métricas de daño o valor a largo plazo (reembolsos, quejas, latencia, churn). Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you pick guardrails?”.\n- **Anchor your definition**: Your short answer covers: Pick metrics representing user harm or long-term value (refunds, complaints, latency, churn). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo eliges guardrails?”.\n- **Ancla tu definición**: tu respuesta corta resume: Elige métricas de daño o valor a largo plazo (reembolsos, quejas, latencia, churn). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-007",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "segmentation"
+    ],
+    "question_en": "How do you choose segments without p-hacking?",
+    "question_es": "¿Cómo eliges segmentos sin p-hacking?",
+    "answer_en": "Predefine key segments, limit the number, correct for multiple testing, and validate on holdout. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Predefine segmentos, limita cantidad, corrige múltiples pruebas y valida en holdout. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you choose segments without p-hacking?”.\n- **Anchor your definition**: Your short answer covers: Predefine key segments, limit the number, correct for multiple testing, and validate on holdout.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo eliges segmentos sin p-hacking?”.\n- **Ancla tu definición**: tu respuesta corta resume: Predefine segmentos, limita cantidad, corrige múltiples pruebas y valida en holdout.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-008",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "trade-offs"
+    ],
+    "question_en": "What do you do when metrics disagree?",
+    "question_es": "¿Qué haces cuando métricas se contradicen?",
+    "answer_en": "Check definitions, pick a hierarchy (primary/guardrails), quantify trade-offs, and align with goals. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Revisa definiciones, jerarquía, cuantifica trade-offs y alinea con objetivos. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What do you do when metrics disagree?”.\n- **Anchor your definition**: Your short answer covers: Check definitions, pick a hierarchy (primary/guardrails), quantify trade-offs, and align with goals.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué haces cuando métricas se contradicen?”.\n- **Ancla tu definición**: tu respuesta corta resume: Revisa definiciones, jerarquía, cuantifica trade-offs y alinea con objetivos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-009",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "retention"
+    ],
+    "question_en": "Cohort retention vs rolling retention?",
+    "question_es": "¿Retención por cohorte vs rolling retention?",
+    "answer_en": "Cohort: return on exact day/week. Rolling: return on or after a day (easier to interpret for long horizons). Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Cohorte: regreso en día exacto. Rolling: regreso en o después (más interpretable a largo plazo). Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Cohort retention vs rolling retention?”.\n- **Anchor your definition**: Your short answer covers: Cohort: return on exact day/week. Rolling: return on or after a day (easier to interpret for long horizons). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Retención por cohorte vs rolling retention?”.\n- **Ancla tu definición**: tu respuesta corta resume: Cohorte: regreso en día exacto. Rolling: regreso en o después (más interpretable a largo plazo). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-010",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "seasonality"
+    ],
+    "question_en": "How do you account for seasonality in metrics?",
+    "question_es": "¿Cómo manejas estacionalidad en métricas?",
+    "answer_en": "Compare to prior periods (WoW/YoY), use control charts/baselines, and segment by calendar effects. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Compara vs periodos previos, usa baselines y segmenta por efectos de calendario. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you account for seasonality in metrics?”.\n- **Anchor your definition**: Your short answer covers: Compare to prior periods (WoW/YoY), use control charts/baselines, and segment by calendar effects.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo manejas estacionalidad en métricas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Compara vs periodos previos, usa baselines y segmenta por efectos de calendario.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-011",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "instrumentation"
+    ],
+    "question_en": "How do you validate event tracking?",
+    "question_es": "¿Cómo validas tracking de eventos?",
+    "answer_en": "Define schema, test end-to-end, compare client/server logs, monitor drops and duplicates. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Define schema, prueba end-to-end, compara logs, monitorea caídas y duplicados. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you validate event tracking?”.\n- **Anchor your definition**: Your short answer covers: Define schema, test end-to-end, compare client/server logs, monitor drops and duplicates.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo validas tracking de eventos?”.\n- **Ancla tu definición**: tu respuesta corta resume: Define schema, prueba end-to-end, compara logs, monitorea caídas y duplicados.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-012",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "launch"
+    ],
+    "question_en": "What’s a safe rollout strategy?",
+    "question_es": "¿Estrategia segura de rollout?",
+    "answer_en": "Start small (1%), monitor guardrails, ramp gradually, keep rollback plan. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Empieza pequeño, monitorea guardrails, aumenta gradual y plan de rollback. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What’s a safe rollout strategy?”.\n- **Anchor your definition**: Your short answer covers: Start small (1%), monitor guardrails, ramp gradually, keep rollback plan.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Estrategia segura de rollout?”.\n- **Ancla tu definición**: tu respuesta corta resume: Empieza pequeño, monitorea guardrails, aumenta gradual y plan de rollback.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-013",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pricing"
+    ],
+    "question_en": "How do you evaluate a pricing change?",
+    "question_es": "¿Cómo evalúas un cambio de pricing?",
+    "answer_en": "Use experiments if possible; track revenue, conversion, churn, refunds, and long-term cohorts. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Si se puede, experimento; mide revenue, conversión, churn, reembolsos y cohortes. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you evaluate a pricing change?”.\n- **Anchor your definition**: Your short answer covers: Use experiments if possible; track revenue, conversion, churn, refunds, and long-term cohorts.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo evalúas un cambio de pricing?”.\n- **Ancla tu definición**: tu respuesta corta resume: Si se puede, experimento; mide revenue, conversión, churn, reembolsos y cohortes.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-014",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "unit-economics"
+    ],
+    "question_en": "What are unit economics?",
+    "question_es": "¿Qué son unit economics?",
+    "answer_en": "Per-unit revenue and cost (LTV, CAC, margin) to assess sustainability. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Ingresos y costos por unidad (LTV, CAC, margen) para evaluar sostenibilidad. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What are unit economics?”.\n- **Anchor your definition**: Your short answer covers: Per-unit revenue and cost (LTV, CAC, margin) to assess sustainability.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué son unit economics?”.\n- **Ancla tu definición**: tu respuesta corta resume: Ingresos y costos por unidad (LTV, CAC, margen) para evaluar sostenibilidad.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-015",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "experiments"
+    ],
+    "question_en": "What’s an SRM and why does it matter?",
+    "question_es": "¿Qué es SRM y por qué importa?",
+    "answer_en": "Sample ratio mismatch: allocation differs from expected; can indicate broken randomization. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Sample ratio mismatch: la asignación difiere de lo esperado; puede indicar randomización rota. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What’s an SRM and why does it matter?”.\n- **Anchor your definition**: Your short answer covers: Sample ratio mismatch: allocation differs from expected; can indicate broken randomization.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es SRM y por qué importa?”.\n- **Ancla tu definición**: tu respuesta corta resume: Sample ratio mismatch: la asignación difiere de lo esperado; puede indicar randomización rota.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-m-016",
+    "category": "Product",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "metrics"
+    ],
+    "question_en": "How do you define an ‘active user’ metric?",
+    "question_es": "¿Cómo defines ‘usuario activo’?",
+    "answer_en": "Tie it to meaningful value actions (not just opens), pick window, and keep consistent across reporting. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Acciones de valor (no solo abrir), define ventana y mantén consistencia. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you define an ‘active user’ metric?”.\n- **Anchor your definition**: Your short answer covers: Tie it to meaningful value actions (not just opens), pick window, and keep consistent across reporting.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo defines ‘usuario activo’?”.\n- **Ancla tu definición**: tu respuesta corta resume: Acciones de valor (no solo abrir), define ventana y mantén consistencia.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-h-001",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "trade-offs"
+    ],
+    "question_en": "Primary metric up but guardrail down. Ship or not?",
+    "question_es": "Sube métrica principal pero baja guardrail. ¿Lanzas o no?",
+    "answer_en": "Quantify net value, validate significance/CI, analyze segments, mitigate harms; avoid broad ship if guardrail impact is meaningful.",
+    "answer_es": "Cuantifica valor neto, valida IC, segmenta, mitiga daños; evita lanzamiento amplio si el daño es significativo. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Primary metric up but guardrail down. Ship or not?”.\n- **Anchor your definition**: Your short answer covers: Quantify net value, validate significance/CI, analyze segments, mitigate harms; avoid broad ship if guardrail impact is meaningful.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “Sube métrica principal pero baja guardrail. ¿Lanzas o no?”.\n- **Ancla tu definición**: tu respuesta corta resume: Cuantifica valor neto, valida IC, segmenta, mitiga daños; evita lanzamiento amplio si el daño es significativo.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-h-002",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "causality"
+    ],
+    "question_en": "How do you debug a metric with strong selection bias?",
+    "question_es": "¿Cómo depuras una métrica con sesgo de selección fuerte?",
+    "answer_en": "Look for confounders, define comparable cohorts, use experiments/quasi-experiments, and avoid naive comparisons. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Busca confusores, cohortes comparables, experimentos/cuasi-experimentos y evita comparaciones ingenuas. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you debug a metric with strong selection bias?”.\n- **Anchor your definition**: Your short answer covers: Look for confounders, define comparable cohorts, use experiments/quasi-experiments, and avoid naive comparisons.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo depuras una métrica con sesgo de selección fuerte?”.\n- **Ancla tu definición**: tu respuesta corta resume: Busca confusores, cohortes comparables, experimentos/cuasi-experimentos y evita comparaciones ingenuas.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-h-003",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "measurement"
+    ],
+    "question_en": "How do you prevent metric gaming?",
+    "question_es": "¿Cómo previenes ‘gaming’ de métricas?",
+    "answer_en": "Choose metrics tied to value, add guardrails, audit incentives, and monitor for distribution shifts/edge behaviors. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Métricas ligadas a valor, guardrails, auditar incentivos y monitorear shifts/comportamientos. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you prevent metric gaming?”.\n- **Anchor your definition**: Your short answer covers: Choose metrics tied to value, add guardrails, audit incentives, and monitor for distribution shifts/edge behaviors.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo previenes ‘gaming’ de métricas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Métricas ligadas a valor, guardrails, auditar incentivos y monitorear shifts/comportamientos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-h-004",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "experiments"
+    ],
+    "question_en": "Design an experiment when you can’t randomize.",
+    "question_es": "Diseña un experimento cuando no puedes aleatorizar.",
+    "answer_en": "Use quasi-experiments: DID, synthetic controls, regression discontinuity, or phased rollouts with careful assumptions. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Usa cuasi-experimentos: DID, controles sintéticos, discontinuidad o rollouts por fases. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Design an experiment when you can’t randomize.”.\n- **Anchor your definition**: Your short answer covers: Use quasi-experiments: DID, synthetic controls, regression discontinuity, or phased rollouts with careful assumptions.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “Diseña un experimento cuando no puedes aleatorizar.”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa cuasi-experimentos: DID, controles sintéticos, discontinuidad o rollouts por fases.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-h-005",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "long-term"
+    ],
+    "question_en": "How do you evaluate long-term impact vs short-term lift?",
+    "question_es": "¿Cómo evalúas impacto a largo plazo vs lift corto plazo?",
+    "answer_en": "Track cohorts over time, monitor guardrails, and use holdouts/long-run experiments when feasible. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Sigue cohortes, monitorea guardrails y usa holdouts/experimentos largos si se puede. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you evaluate long-term impact vs short-term lift?”.\n- **Anchor your definition**: Your short answer covers: Track cohorts over time, monitor guardrails, and use holdouts/long-run experiments when feasible.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo evalúas impacto a largo plazo vs lift corto plazo?”.\n- **Ancla tu definición**: tu respuesta corta resume: Sigue cohortes, monitorea guardrails y usa holdouts/experimentos largos si se puede.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-h-006",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "counterfactual"
+    ],
+    "question_en": "What is the counterfactual in product experiments?",
+    "question_es": "¿Qué es el contrafactual en experimentos?",
+    "answer_en": "What would have happened to the same users without the change; randomization approximates it. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Lo que habría pasado sin el cambio; randomización lo aproxima. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is the counterfactual in product experiments?”.\n- **Anchor your definition**: Your short answer covers: What would have happened to the same users without the change; randomization approximates it.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es el contrafactual en experimentos?”.\n- **Ancla tu definición**: tu respuesta corta resume: Lo que habría pasado sin el cambio; randomización lo aproxima.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-h-007",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "attribution"
+    ],
+    "question_en": "What are common attribution pitfalls?",
+    "question_es": "¿Pitfalls comunes de atribución?",
+    "answer_en": "Last-click bias, missing channels, selection bias, and ignoring incrementality; use experiments when possible. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Sesgo last-click, canales faltantes, sesgo de selección e ignorar incrementalidad; usa experimentos si puedes. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What are common attribution pitfalls?”.\n- **Anchor your definition**: Your short answer covers: Last-click bias, missing channels, selection bias, and ignoring incrementality; use experiments when possible.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Pitfalls comunes de atribución?”.\n- **Ancla tu definición**: tu respuesta corta resume: Sesgo last-click, canales faltantes, sesgo de selección e ignorar incrementalidad; usa experimentos si puedes.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "pr-h-008",
+    "category": "Product",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "okrs"
+    ],
+    "question_en": "How do you align metrics to OKRs without creating perverse incentives?",
+    "question_es": "¿Cómo alineas métricas a OKRs sin incentivos perversos?",
+    "answer_en": "Use a small set of outcome metrics with guardrails, review regularly, and tie incentives to balanced scorecards. Tie it to **a decision** (ship vs iterate) and **which segment** you’d inspect first if the headline number moved.",
+    "answer_es": "Pocas métricas outcome con guardrails, revisión frecuente e incentivos balanceados. Líalo a una **decisión** (lanzar vs iterar) y al **segmento** que mirarías si cambia la métrica.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you align metrics to OKRs without creating perverse incentives?”.\n- **Anchor your definition**: Your short answer covers: Use a small set of outcome metrics with guardrails, review regularly, and tie incentives to balanced scorecards.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Product angle**: tie the idea to **users**, decisions, and trade-offs—what you’d measure before/after and which segment you’d inspect first.\n- **Follow-up**: guardrails, seasonality, and how you’d communicate uncertainty to PMs.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo alineas métricas a OKRs sin incentivos perversos?”.\n- **Ancla tu definición**: tu respuesta corta resume: Pocas métricas outcome con guardrails, revisión frecuente e incentivos balanceados.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo producto**: usuarios, decisiones y trade-offs—qué medirías antes/después y qué segmento mirarías primero.\n- **Seguimiento**: guardrails, estacionalidad y cómo comunicar incertidumbre a PMs.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  }
 ]
-

@@ -1,6 +1,10 @@
 /* Polished, calm, readable. */
 
 :root {
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+
   --bg: #0b1020;
   --panel: rgba(255, 255, 255, 0.06);
   --panel2: rgba(255, 255, 255, 0.08);
@@ -93,12 +97,32 @@ body {
 
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, Roboto, Helvetica, Arial;
+  font-family: var(--font-sans);
   color: var(--text);
-  line-height: 1.35;
+  line-height: 1.45;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   background: radial-gradient(1200px 700px at 25% 10%, rgba(124, 92, 255, 0.35), transparent 55%),
     radial-gradient(900px 600px at 85% 15%, rgba(45, 212, 191, 0.25), transparent 55%),
     radial-gradient(900px 650px at 50% 95%, rgba(251, 113, 133, 0.12), transparent 50%), var(--bg);
+}
+
+/* Fraunces for titles; Source Sans 3 on body for UI + long reading */
+.brand__title,
+.question,
+.sources__title,
+.sectionTitle,
+.modal__title,
+.howto__title,
+.sourceCard__title {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+.md :is(h1, h2, h3) {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
 }
 
 html[data-theme="light"] body {
@@ -452,7 +476,10 @@ pre {
   padding: 8px 10px;
   border-radius: 999px;
   cursor: pointer;
+  font-family: var(--font-sans);
   font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
@@ -472,15 +499,16 @@ pre {
 .tab[aria-selected="true"] {
   background: rgba(124, 92, 255, 0.25);
   border-color: rgba(124, 92, 255, 0.45);
+  font-weight: 700;
 }
 
 .layout {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 18px 20px 40px;
+  padding: 18px 20px 20px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 12px;
   align-items: start;
 }
 
@@ -570,7 +598,7 @@ html[data-theme="light"] input[type="search"]::placeholder {
 
 @media (max-width: 560px) {
   .layout {
-    padding: 12px max(12px, env(safe-area-inset-left, 0px)) 28px max(12px, env(safe-area-inset-right, 0px));
+    padding: 12px max(12px, env(safe-area-inset-left, 0px)) 18px max(12px, env(safe-area-inset-right, 0px));
     gap: 12px;
   }
 
@@ -582,6 +610,7 @@ html[data-theme="light"] input[type="search"]::placeholder {
   .tab {
     padding: 7px 11px;
     font-size: 12px;
+    font-weight: 600;
     flex: 0 0 auto;
   }
 
@@ -882,10 +911,12 @@ html[data-theme="light"] input[type="search"]::placeholder {
 }
 
 .question {
-  margin: 0;
+  margin: 0 auto;
   font-size: 20px;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  text-align: center;
+  max-width: min(36rem, 100%);
 }
 
 .cardNav {
@@ -969,9 +1000,10 @@ kbd {
 
 .sectionTitle {
   margin: 0 0 8px;
-  font-size: 13px;
+  font-size: 13.5px;
+  font-weight: 600;
   color: rgba(255, 255, 255, 0.86);
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
 .md p {
@@ -997,6 +1029,28 @@ pre {
   padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--faint);
+}
+
+/* Info blocks (Sources / How it works / About) — inside .layout, directly under the practice panel */
+.bottomInfo {
+  width: 100%;
+  margin: 0;
+  padding: 4px 0 8px;
+}
+
+/* No extra gap above footer when Sources / HowTo / About are all hidden */
+.bottomInfo:not(:has(section:not([hidden]))) {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .bottomInfo {
+    padding: 4px 0 8px;
+  }
+}
+
+.bottomInfo .sources {
+  margin-top: 0;
 }
 
 /* Sources view */
@@ -1047,9 +1101,18 @@ html[data-theme="light"] .howto__step {
 }
 
 .sources__title {
-  margin: 0 0 8px;
-  font-size: 16px;
-  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+#sourcesIntro {
+  margin: 0 0 6px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  max-width: 52ch;
 }
 
 .sources__grid {
@@ -1069,7 +1132,7 @@ html[data-theme="light"] .howto__step {
   display: block;
   text-decoration: none;
   color: var(--text);
-  padding: 12px 12px;
+  padding: 14px 14px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(0, 0, 0, 0.14);
@@ -1152,21 +1215,39 @@ html[data-theme="light"] .sourceCard__icon {
 }
 
 .sourceCard__title {
-  font-weight: 750;
-  letter-spacing: -0.01em;
+  font-weight: 650;
+  font-size: 1rem;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
 }
 
 .sourceCard__meta {
-  margin-top: 6px;
+  margin-top: 8px;
   color: var(--muted);
-  font-size: 12.5px;
-  line-height: 1.35;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+@media (min-width: 560px) {
+  .sourceCard__meta {
+    font-size: 0.84375rem;
+  }
 }
 
 .sources__note {
-  margin-top: 12px;
-  padding-top: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--faint);
+  max-width: 62ch;
+}
+
+html[data-theme="light"] .sources__note,
+html[data-theme="pink"] .sources__note {
+  border-top-color: rgba(9, 12, 20, 0.1);
 }
 
 /* Footer */

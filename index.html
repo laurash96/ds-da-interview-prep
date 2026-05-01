@@ -11,6 +11,12 @@
       name="description"
       content="Practice Data Analytics and Data Science interviews with flip cards."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
 
     <!-- Markdown + syntax highlight (CDN). -->
@@ -60,6 +66,7 @@
         <button class="tab" data-tab="Product">Product</button>
         <button class="tab" data-tab="Python">Python</button>
         <button class="tab" data-tab="GenAI">GenAI</button>
+        <button class="tab" data-tab="SoftSkills">Soft skills</button>
         <button class="tab" data-tab="HowTo">How it works</button>
         <button class="tab" data-tab="Sources">Sources</button>
         <button class="tab" data-tab="About">About</button>
@@ -157,133 +164,6 @@
           Shortcuts: <kbd>←</kbd>/<kbd>→</kbd> navigate, <kbd>Space</kbd> flip, <kbd>S</kbd> shuffle.
         </div>
 
-        <section class="sources" id="sourcesView" aria-label="Sources" hidden>
-          <h2 class="sources__title" id="sourcesTitle">Sources</h2>
-          <p class="small" id="sourcesIntro">
-            This app uses original Q&A written for practice. The links below are provided for transparency and further reading.
-          </p>
-
-          <div class="sources__grid" id="sourcesList">
-            <a class="sourceCard" href="https://datalemur.com" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">DataLemur</div>
-              <div class="sourceCard__meta">SQL & Analytics interview practice</div>
-            </a>
-            <a
-              class="sourceCard"
-              href="https://www.synergisticit.com/data-science-interview-questions-answers/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div class="sourceCard__title">SynergisticIT</div>
-              <div class="sourceCard__meta">Data Science interview questions (reference)</div>
-            </a>
-            <a class="sourceCard" href="https://sqlbolt.com" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">SQLBolt</div>
-              <div class="sourceCard__meta">Short, interactive SQL lessons (great warm-up)</div>
-            </a>
-            <a class="sourceCard" href="https://mode.com/sql-tutorial/" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">Mode SQL Tutorial</div>
-              <div class="sourceCard__meta">Clean explanations + practice (analytics style SQL)</div>
-            </a>
-            <a class="sourceCard" href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">Google ML Crash Course</div>
-              <div class="sourceCard__meta">Friendly ML fundamentals with exercises</div>
-            </a>
-            <a class="sourceCard" href="https://pandas.pydata.org/docs/" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">pandas Docs</div>
-              <div class="sourceCard__meta">Canonical reference for data wrangling in Python</div>
-            </a>
-            <a class="sourceCard" href="https://scikit-learn.org/stable/" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">scikit-learn Docs</div>
-              <div class="sourceCard__meta">Practical ML, metrics, and model selection guides</div>
-            </a>
-            <a class="sourceCard" href="https://www.kaggle.com/learn" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">Kaggle Learn</div>
-              <div class="sourceCard__meta">Bite-sized lessons (pandas, SQL, ML, CV, NLP)</div>
-            </a>
-            <a class="sourceCard" href="https://www.openintro.org/book/os/" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">OpenIntro Statistics</div>
-              <div class="sourceCard__meta">Free, well-structured stats book (great clarity)</div>
-            </a>
-            <a class="sourceCard" href="https://seeing-theory.brown.edu" target="_blank" rel="noreferrer">
-              <div class="sourceCard__title">Seeing Theory</div>
-              <div class="sourceCard__meta">Beautiful interactive intuition for probability & stats</div>
-            </a>
-          </div>
-
-          <div class="sources__note small" id="sourcesNote">
-            Note: we link to sources instead of copying content to respect authors’ rights and site terms.
-          </div>
-        </section>
-
-        <section class="sources" id="howToView" aria-label="How it works" hidden>
-          <h2 class="sources__title" id="howToTitle">How it works</h2>
-          <div class="howto">
-            <div class="howto__step">
-              <div class="howto__emoji">1</div>
-              <div>
-                <div class="howto__title" id="howToS1T">Pick a topic</div>
-                <div class="small" id="howToS1B">Choose SQL / Python / ML, and start with Easy using Learning Path.</div>
-              </div>
-            </div>
-            <div class="howto__step">
-              <div class="howto__emoji">2</div>
-              <div>
-                <div class="howto__title" id="howToS2T">Practice</div>
-                <div class="small" id="howToS2B">Read the question, try to answer out loud, then flip the card.</div>
-              </div>
-            </div>
-            <div class="howto__step">
-              <div class="howto__emoji">3</div>
-              <div>
-                <div class="howto__title" id="howToS3T">Track progress</div>
-                <div class="small" id="howToS3B">Mark cards as Learning or Known. The progress bar updates automatically.</div>
-              </div>
-            </div>
-            <div class="howto__step">
-              <div class="howto__emoji">⌨️</div>
-              <div>
-                <div class="howto__title" id="howToS4T">Keyboard shortcuts</div>
-                <div class="small" id="howToS4B">←/→ navigate, Space flip, S shuffle.</div>
-              </div>
-            </div>
-            <div class="howto__step">
-              <div class="howto__emoji">🎨</div>
-              <div>
-                <div class="howto__title" id="howToS5T">Language & theme</div>
-                <div class="small md" id="howToS5B"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="sources" id="aboutView" aria-label="About" hidden>
-          <h2 class="sources__title" id="aboutTitle">Objective</h2>
-          <p class="small" id="aboutBody">
-            This app is a friendly, low-pressure way to practice Data Analytics / Data Science interview questions, build
-            confidence, and track progress over time.
-          </p>
-
-          <div class="sources__grid">
-            <a
-              class="sourceCard sourceCard--cta"
-              id="contactCard"
-              href="https://laurash96.github.io/portfolio-LSH/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div class="sourceCard__row">
-                <div class="sourceCard__icon" aria-hidden="true">✉️</div>
-                <div class="sourceCard__content">
-                  <div class="sourceCard__title" id="contactTitle">Contact me</div>
-                  <div class="sourceCard__meta" id="contactMeta">Portfolio / projects / experience</div>
-                </div>
-                <div class="sourceCard__arrow" id="contactCta" aria-hidden="true">Open →</div>
-              </div>
-            </a>
-          </div>
-        </section>
-
         <div class="modal" id="filtersModal" aria-hidden="true">
           <div class="modal__backdrop" data-close="true"></div>
           <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="filtersTitle">
@@ -330,6 +210,136 @@
           </div>
         </div>
       </section>
+
+      <div class="bottomInfo">
+      <section class="sources" id="sourcesView" aria-label="Sources" hidden>
+        <h2 class="sources__title" id="sourcesTitle">Sources</h2>
+        <p class="small" id="sourcesIntro">
+          This app uses original Q&A written for practice. The links below are provided for transparency and further reading.
+        </p>
+
+        <div class="sources__grid" id="sourcesList">
+          <a class="sourceCard" href="https://datalemur.com" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">DataLemur</div>
+            <div class="sourceCard__meta">SQL & Analytics interview practice</div>
+          </a>
+          <a
+            class="sourceCard"
+            href="https://www.synergisticit.com/data-science-interview-questions-answers/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="sourceCard__title">SynergisticIT</div>
+            <div class="sourceCard__meta">Data Science interview questions (reference)</div>
+          </a>
+          <a class="sourceCard" href="https://sqlbolt.com" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">SQLBolt</div>
+            <div class="sourceCard__meta">Short, interactive SQL lessons (great warm-up)</div>
+          </a>
+          <a class="sourceCard" href="https://mode.com/sql-tutorial/" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">Mode SQL Tutorial</div>
+            <div class="sourceCard__meta">Clean explanations + practice (analytics style SQL)</div>
+          </a>
+          <a class="sourceCard" href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">Google ML Crash Course</div>
+            <div class="sourceCard__meta">Friendly ML fundamentals with exercises</div>
+          </a>
+          <a class="sourceCard" href="https://pandas.pydata.org/docs/" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">pandas Docs</div>
+            <div class="sourceCard__meta">Canonical reference for data wrangling in Python</div>
+          </a>
+          <a class="sourceCard" href="https://scikit-learn.org/stable/" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">scikit-learn Docs</div>
+            <div class="sourceCard__meta">Practical ML, metrics, and model selection guides</div>
+          </a>
+          <a class="sourceCard" href="https://www.kaggle.com/learn" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">Kaggle Learn</div>
+            <div class="sourceCard__meta">Bite-sized lessons (pandas, SQL, ML, CV, NLP)</div>
+          </a>
+          <a class="sourceCard" href="https://www.openintro.org/book/os/" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">OpenIntro Statistics</div>
+            <div class="sourceCard__meta">Free, well-structured stats book (great clarity)</div>
+          </a>
+          <a class="sourceCard" href="https://seeing-theory.brown.edu" target="_blank" rel="noreferrer">
+            <div class="sourceCard__title">Seeing Theory</div>
+            <div class="sourceCard__meta">Beautiful interactive intuition for probability & stats</div>
+          </a>
+        </div>
+
+        <div class="sources__note small" id="sourcesNote">
+          Note: we link to sources instead of copying content to respect authors’ rights and site terms.
+        </div>
+      </section>
+
+      <section class="sources" id="howToView" aria-label="How it works" hidden>
+        <h2 class="sources__title" id="howToTitle">How it works</h2>
+        <div class="howto">
+          <div class="howto__step">
+            <div class="howto__emoji">1</div>
+            <div>
+              <div class="howto__title" id="howToS1T">Pick a topic</div>
+              <div class="small" id="howToS1B">Choose SQL / Python / ML, and start with Easy using Learning Path.</div>
+            </div>
+          </div>
+          <div class="howto__step">
+            <div class="howto__emoji">2</div>
+            <div>
+              <div class="howto__title" id="howToS2T">Practice</div>
+              <div class="small" id="howToS2B">Read the question, try to answer out loud, then flip the card.</div>
+            </div>
+          </div>
+          <div class="howto__step">
+            <div class="howto__emoji">3</div>
+            <div>
+              <div class="howto__title" id="howToS3T">Track progress</div>
+              <div class="small" id="howToS3B">Mark cards as Learning or Known. The progress bar updates automatically.</div>
+            </div>
+          </div>
+          <div class="howto__step">
+            <div class="howto__emoji">⌨️</div>
+            <div>
+              <div class="howto__title" id="howToS4T">Keyboard shortcuts</div>
+              <div class="small" id="howToS4B">←/→ navigate, Space flip, S shuffle.</div>
+            </div>
+          </div>
+          <div class="howto__step">
+            <div class="howto__emoji">🎨</div>
+            <div>
+              <div class="howto__title" id="howToS5T">Language & theme</div>
+              <div class="small md" id="howToS5B"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sources" id="aboutView" aria-label="About" hidden>
+        <h2 class="sources__title" id="aboutTitle">Objective</h2>
+        <p class="small" id="aboutBody">
+          This app is a friendly, low-pressure way to practice Data Analytics / Data Science interview questions, build
+          confidence, and track progress over time.
+        </p>
+
+        <div class="sources__grid">
+          <a
+            class="sourceCard sourceCard--cta"
+            id="contactCard"
+            href="https://laurash96.github.io/portfolio-LSH/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="sourceCard__row">
+              <div class="sourceCard__icon" aria-hidden="true">✉️</div>
+              <div class="sourceCard__content">
+                <div class="sourceCard__title" id="contactTitle">Contact me</div>
+                <div class="sourceCard__meta" id="contactMeta">Portfolio / projects / experience</div>
+              </div>
+              <div class="sourceCard__arrow" id="contactCta" aria-hidden="true">Open →</div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+
     </main>
 
     <footer class="footer">

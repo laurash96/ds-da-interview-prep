@@ -1,0 +1,883 @@
+[
+  {
+    "id": "ss-e-001",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "STAR",
+      "challenge"
+    ],
+    "question_en": "Describe a recent challenge at work: what problems appeared and how did you approach them?",
+    "question_es": "Describe un desafío reciente en el trabajo: qué problemas aparecieron y cómo lo afrontaste.",
+    "answer_en": "Use **STAR**: Situation (context), Task (your responsibility), Action (specific steps you took), Result (outcome + learning). Name stakeholders, constraints, trade-offs, and metrics if possible; avoid blaming others.",
+    "answer_es": "Usa **STAR**: Situación, Tarea, Acción (pasos concretos), Resultado (+ aprendizaje). Nombra stakeholders, restricciones y trade-offs; evita culpar.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-002",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "failure"
+    ],
+    "question_en": "Tell me about a time you failed. What happened and what did you change afterward?",
+    "question_es": "Cuéntame un fracaso: qué pasó y qué cambiaste después.",
+    "answer_en": "Pick a **real, bounded** mistake. Show accountability: early detection, communication, corrective actions, prevention (tests, checklist, doc). Interviewers want maturity and learning velocity.",
+    "answer_es": "Elige un error **concreto**. Muestra responsabilidad: detección, comunicación, corrección y prevención (tests, checklist, doc). Buscan madurez y velocidad de aprendizaje.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-003",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "conflict"
+    ],
+    "question_en": "Describe a disagreement with a teammate. How did you resolve it?",
+    "question_es": "Describe un desacuerdo con un compañero. ¿Cómo lo resolviste?",
+    "answer_en": "Focus on **problem vs person**, shared goal, listening, clarifying assumptions, data when relevant, agreed decision owner, and follow-up.",
+    "answer_es": "Enfócate en **problema vs persona**, objetivo común, escuchar, aclarar supuestos, datos si aplica, dueño de decisión y seguimiento.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-004",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "priorities"
+    ],
+    "question_en": "How do you handle shifting priorities or interruptions?",
+    "question_es": "¿Cómo manejas prioridades que cambian o interrupciones?",
+    "answer_en": "Mention triage: stakeholder alignment, impact/effort, communicate slips early, protect deep-work blocks, and document commitments.",
+    "answer_es": "Triage: alinear con stakeholders, impacto/esfuerzo, avisar retrasos pronto, proteger bloques de trabajo profundo y documentar compromisos.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-005",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "communication"
+    ],
+    "question_en": "Tell me about a miscommunication you fixed.",
+    "question_es": "Cuéntame una mala comunicación que corregiste.",
+    "answer_en": "Show how you **closed the loop**: clarified expectations, wrote a short recap, chose the right channel, and verified understanding.",
+    "answer_es": "Cierra el ciclo: expectativas claras, resumen breve, canal adecuado y verificación de entendimiento.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-006",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "initiative"
+    ],
+    "question_en": "When did you take initiative without being asked?",
+    "question_es": "¿Cuándo tomaste iniciativa sin que te lo pidieran?",
+    "answer_en": "Connect initiative to **team/org outcome**: small automation, doc, dashboard, or process—not busywork. Say how you validated need first.",
+    "answer_es": "Liga la iniciativa a **resultado**: automatización, doc, dashboard o proceso; valida necesidad antes.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-007",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "support"
+    ],
+    "question_en": "How have you helped a struggling teammate?",
+    "question_es": "¿Cómo ayudaste a un compañero que iba mal?",
+    "answer_en": "Pairing, clarifying scope, sharing examples, escalating kindly when needed—without micromanaging or gossip.",
+    "answer_es": "Pairing, aclarar alcance, ejemplos y escalar con tacto si hace falta—sin microgestionar ni chismes.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-008",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pressure"
+    ],
+    "question_en": "Describe working under a tight deadline. What did you cut or negotiate?",
+    "question_es": "Trabajo con fecha muy ajustada: ¿qué recortaste o negociaste?",
+    "answer_en": "Show **scope negotiation**, risk communication, MVP mindset, and checking quality guardrails (tests, validation samples).",
+    "answer_es": "Negociación de alcance, comunicar riesgos, MVP y salvaguardas de calidad.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-009",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "organization"
+    ],
+    "question_en": "How do you stay organized when juggling multiple tasks?",
+    "question_es": "¿Cómo te organizas con varias tareas a la vez?",
+    "answer_en": "Tools are secondary; emphasize **single source of truth**, weekly priorities, written commitments, and proactive updates.",
+    "answer_es": "Prioriza una **fuente única de verdad**, prioridades semanales, compromisos por escrito y updates proactivos.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-010",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "adaptability"
+    ],
+    "question_en": "Tell me about adapting to a major process or tool change.",
+    "question_es": "¿Cómo te adaptaste a un cambio grande de proceso o herramienta?",
+    "answer_en": "Learning plan, practice on safe data, asking targeted questions, and mentoring others once confident.",
+    "answer_es": "Plan de aprendizaje, práctica segura, preguntas concretas y ayudar a otros cuando ya dominas.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-011",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "detail"
+    ],
+    "question_en": "Give an example where attention to detail prevented a bad outcome.",
+    "question_es": "Ejemplo donde el detalle evitó un mal resultado.",
+    "answer_en": "Name the **check** (reconciliation, validation rule, peer review) and the downstream impact you avoided.",
+    "answer_es": "Nombra el **chequeo** y el impacto negativo evitado.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-012",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "empathy"
+    ],
+    "question_en": "How do you incorporate user or stakeholder needs into analysis?",
+    "question_es": "¿Cómo incorporas necesidades de usuario o stakeholder en tu análisis?",
+    "answer_en": "Discovery questions, success metrics they care about, prototypes/reviews, and iterating after feedback.",
+    "answer_es": "Preguntas de descubrimiento, métricas que les importan, prototipos/reviews e iterar con feedback.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-013",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ownership"
+    ],
+    "question_en": "Tell me about owning a mistake publicly (email/slack/meeting).",
+    "question_es": "¿Cuándo asumiste un error en público (correo/slack/reunión)?",
+    "answer_en": "Timeliness, facts without excuses, impact assessment, mitigation plan, and prevention—builds trust.",
+    "answer_es": "Pronto, hechos sin excusas, impacto, mitigación y prevención—genera confianza.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-014",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "collaboration"
+    ],
+    "question_en": "Describe collaborating across teams with different incentives.",
+    "question_es": "Colaboración entre equipos con incentivos distintos.",
+    "answer_en": "Find shared KPI, document assumptions, regular syncs, and escalate misalignment with options—not complaints only.",
+    "answer_es": "KPI compartido, supuestos por escrito, syncs y escalar desalineación con **opciones**.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-015",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "motivation"
+    ],
+    "question_en": "How do you stay motivated with repetitive or manual work?",
+    "question_es": "¿Cómo mantienes motivación con trabajo repetitivo o manual?",
+    "answer_en": "Automate/autoscripts where allowed, gamify progress, rotate tasks, connect drudgery to customer impact.",
+    "answer_es": "Automatiza si se puede, divide hitos, rotación y conectar con impacto al cliente.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-e-016",
+    "category": "SoftSkills",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ambiguity"
+    ],
+    "question_en": "What do you do when instructions are vague?",
+    "question_es": "¿Qué haces cuando las instrucciones son vagas?",
+    "answer_en": "Paraphrase back, propose a short plan, confirm acceptance criteria, and surface risks early.",
+    "answer_es": "Reformula, propón plan corto, confirma criterios de aceptación y riesgos temprano.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-001",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "stakeholders"
+    ],
+    "question_en": "Tell me about pushback on your analysis or recommendation. How did you respond?",
+    "question_es": "¿Pushback a tu análisis o recomendación? ¿Cómo respondiste?",
+    "answer_en": "Separate **intent vs methodology**, revisit assumptions, offer sensitivity analysis or alternative cuts, and decide escalation path if decisions stall.",
+    "answer_es": "Separa intención vs método, revisa supuestos, sensibilidades/alternativas y escala si se bloquea la decisión.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-002",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "bad-news"
+    ],
+    "question_en": "How did you deliver bad news supported by data without alienating stakeholders?",
+    "question_es": "¿Cómo diste malas noticias con datos sin alienar a stakeholders?",
+    "answer_en": "Lead with empathy, clear headline, uncertainty bands, options/next steps, and invite collaborative problem-solving.",
+    "answer_es": "Empatía, titular claro, incertidumbre, opciones/próximos pasos y cocrear solución.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-003",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "influence"
+    ],
+    "question_en": "Describe influencing a peer who disagreed with your approach.",
+    "question_es": "¿Cómo influyendo en un peer que no estaba de acuerdo?",
+    "answer_en": "Shared experiments, side-by-side prototypes, criteria matrix, or pilot—make disagreement **cheap to test**.",
+    "answer_es": "Experimentos comparados, prototipo piloto o matriz de criterios—barato de probar.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-004",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "delivery"
+    ],
+    "question_en": "Tell me about rescuing a delayed project or analysis.",
+    "question_es": "¿Salvaste un proyecto o análisis retrasado? ¿Cómo?",
+    "answer_en": "Snapshot root causes (data access, scope creep, dependencies), re-plan with buffers, daily visibility, and negotiated cuts.",
+    "answer_es": "Causas raíz, replan con buffers, visibilidad diaria y recortes negociados.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-005",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "trade-offs"
+    ],
+    "question_en": "How do you communicate trade-offs between speed and quality in analytics work?",
+    "question_es": "¿Cómo comunicas trade-offs velocidad vs calidad en analytics?",
+    "answer_en": "Spell risks explicitly: sampling bias, unreproducible queries, missing QA—and propose phased delivery (quick insight → hardened pipeline).",
+    "answer_es": "Riesgos explícitos y entrega por fases (insight rápido → pipeline robusto).",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-006",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "feedback"
+    ],
+    "question_en": "Describe giving constructive feedback to someone more senior than you.",
+    "question_es": "Feedback constructivo a alguien más senior que tú.",
+    "answer_en": "Private setting, behavior-specific examples, impact framing, request not accusation, offer partnership on fix.",
+    "answer_es": "Privado, ejemplos de comportamiento, impacto, pedir no acusar y ofrecer ayuda.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-007",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "presentation"
+    ],
+    "question_en": "Tell me about presenting to executives who challenged your numbers live.",
+    "question_es": "Presentación a ejecutivos que retaron tus números en vivo.",
+    "answer_en": "Stay calm, clarify definitions, show lineage/sources, offer offline validation path—never guess under pressure.",
+    "answer_es": "Calma, definiciones, linaje/fuentes y validación offline—no inventes bajo presión.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-008",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "trust"
+    ],
+    "question_en": "Have you rebuilt trust after a reporting error or broken SLA?",
+    "question_es": "¿Reconstruiste confianza tras error en reporting o SLA roto?",
+    "answer_en": "Transparent RCA, timeline for fix, interim manual checks, postmortem actions visible to stakeholders.",
+    "answer_es": "RCA transparente, fix con fecha, chequeos manuales interim y acciones visibles postmortem.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-009",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "remote"
+    ],
+    "question_en": "How do you drive alignment in remote/async environments?",
+    "question_es": "¿Cómo alineas en remoto/async?",
+    "answer_en": "Written decision logs, Loom/async summaries, timezone fairness, and crisp RACI on asks.",
+    "answer_es": "Decision log por escrito, resúmenes async, zonas horarias justas y RACI claro.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-010",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "mentoring"
+    ],
+    "question_en": "Describe onboarding or mentoring a junior hire quickly.",
+    "question_es": "¿Onboarding o mentoría rápida a alguien junior?",
+    "answer_en": "Structured checklist, pair sessions, safe sandbox data, incremental ownership, and weekly feedback loops.",
+    "answer_es": "Checklist, pair, sandbox seguro, ownership incremental y feedback semanal.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-011",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "negotiation"
+    ],
+    "question_en": "Tell me about negotiating scope or deadlines with a demanding stakeholder.",
+    "question_es": "¿Negociaste alcance o fechas con un stakeholder exigente?",
+    "answer_en": "Translate asks into capacity math, offer phased roadmap, document agreements, and sync sponsor if chronic overload.",
+    "answer_es": "Traduce pedidos a capacidad, roadmap por fases, acuerdos por escrito y sponsor si hay sobrecarga crónica.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-012",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "metrics"
+    ],
+    "question_en": "Cross-functional teams disagreed on metric definitions. What did you do?",
+    "question_es": "Equipos cruzados discrepan en definición de métricas. ¿Qué hiciste?",
+    "answer_en": "Facilitate workshop, document canonical definition + edge cases, owner for governance, and phased adoption plan.",
+    "answer_es": "Taller, definición canónica + casos borde, dueño de gobernanza y adopción por fases.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-013",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "incident"
+    ],
+    "question_en": "Describe your role communicating during a data quality incident or outage.",
+    "question_es": "Tu papel comunicando un incidente de calidad de datos o caída.",
+    "answer_en": "Clear severity, customer impact, ETA updates, interim workaround, and blameless tone focusing on fixes.",
+    "answer_es": "Severidad, impacto, ETAs, workaround interim y tono blameless orientado a fix.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-014",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "scope"
+    ],
+    "question_en": "How did you handle scope creep on an analytics request?",
+    "question_es": "¿Scope creep en un pedido de analytics? ¿Cómo lo manejaste?",
+    "answer_en": "Acknowledge value, restate original ask, propose ticket/version two, and align sponsor on priorities.",
+    "answer_es": "Reconoce valor, re-afirma pedido original, v2 en ticket y sponsor alinea prioridades.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-015",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "psychological-safety"
+    ],
+    "question_en": "Tell me about raising a concern others were hesitant to voice.",
+    "question_es": "¿Elevaste una preocupación que otros callaban?",
+    "answer_en": "Private ping first, bring evidence, propose solutions, involve manager/HR per policy when safety/ethics at stake.",
+    "answer_es": "Ping privado, evidencia, soluciones y manager/HR según política si hay ética o seguridad.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-m-016",
+    "category": "SoftSkills",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "bias"
+    ],
+    "question_en": "How do you reduce bias in how findings are communicated internally?",
+    "question_es": "¿Cómo reduces sesgos al comunicar hallazgos por dentro?",
+    "answer_en": "Show methodology limits, confidence intervals, caveats first, and invite critique before broad circulation.",
+    "answer_es": "Límites metodológicos, intervalos/avisos primero y crítica antes de difundir amplio.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-h-001",
+    "category": "SoftSkills",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ethics"
+    ],
+    "question_en": "Describe navigating an ethical gray area involving data use or privacy.",
+    "question_es": "Zona gris ética en uso de datos o privacidad. ¿Cómo lo navegaste?",
+    "answer_en": "Escalate early, cite policy/law basics, document decisions, minimize data, seek legal/compliance partners—never rationalize shortcuts.",
+    "answer_es": "Escala pronto, política/legal, doc de decisiones, minimización de datos y compliance—sin atajos justificados.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-h-002",
+    "category": "SoftSkills",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "politics"
+    ],
+    "question_en": "Tell me about unblocking access to data when politics slowed progress.",
+    "question_es": "¿Desbloqueaste acceso a datos cuando la política interna frenaba?",
+    "answer_en": "Map incentives, find sponsor alignment, pilot with anonymized aggregates, formal data-sharing agreement path.",
+    "answer_es": "Mapa incentivos, sponsor, piloto agregado/anónimo y camino formal de data-sharing.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-h-003",
+    "category": "SoftSkills",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "reorg"
+    ],
+    "question_en": "How did you support teammates during layoffs or heavy reorg while staying productive?",
+    "question_es": "¿Apoyaste al equipo en despidos o reorg fuerte manteniendo productividad?",
+    "answer_en": "Acknowledge emotions, clarify surviving priorities, redistribute knowledge, protect psychological safety within your sphere.",
+    "answer_es": "Validar emociones, prioridades claras, redistribuir conocimiento y seguridad psicológica en tu ámbito.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-h-004",
+    "category": "SoftSkills",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "conduct"
+    ],
+    "question_en": "Describe addressing toxic or exclusionary behavior you witnessed on a team.",
+    "question_es": "Conducta tóxica o excluyente que presenciaste: ¿qué hiciste?",
+    "answer_en": "Follow HR/policy, document facts, support affected person appropriately, escalate through channels—avoid performative call-outs in public slack.",
+    "answer_es": "Sigue HR/política, hechos documentados, apoyo adecuado y escalamiento por canales—evita espectáculo en público.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-h-005",
+    "category": "SoftSkills",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "dei"
+    ],
+    "question_en": "Tell me about facilitating a tense conversation about fairness or inclusion in team outcomes.",
+    "question_es": "Conversa tensa sobre equidad o inclusión en resultados de equipo.",
+    "answer_en": "Ground rules, focus on behaviors/systems not identities, bring data without weaponizing it, follow-up commitments tracked.",
+    "answer_es": "Reglas, comportamientos/sistemas (no identidades), datos sin weaponizar y compromisos con seguimiento.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-h-006",
+    "category": "SoftSkills",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "boundaries"
+    ],
+    "question_en": "How do you set boundaries with a stakeholder who routinely bypasses process?",
+    "question_es": "¿Límites con stakeholder que salta el proceso siempre?",
+    "answer_en": "Explain why process protects quality, offer fast-lane within guardrails, cc sponsor, measure rework cost—stay firm but polite.",
+    "answer_es": "Por qué el proceso protege calidad, carril rápido con guardrails, sponsor en copia y costo de rework—firme y cortés.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-h-007",
+    "category": "SoftSkills",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "leadership"
+    ],
+    "question_en": "Describe disagreeing with leadership’s decision yet executing responsibly afterward.",
+    "question_es": "¿Discrepaste de la dirección pero ejecutaste bien después?",
+    "answer_en": "Seek clarification once, commit or escalate exit professionally, document risks you flagged, deliver without sabotage.",
+    "answer_es": "Aclara una vez, compromiso o salida profesional, riesgos documentados y ejecución sin sabotaje.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ss-h-008",
+    "category": "SoftSkills",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "burnout"
+    ],
+    "question_en": "How do you recognize burnout signals in yourself or peers and still deliver sustainably?",
+    "question_es": "¿Señales de burnout en ti o en otros y entrega sostenible?",
+    "answer_en": "Early signals (irritability, errors), workload negotiation, delegating/automating, manager transparency, mental-health resources—tie to outcomes preserved.",
+    "answer_es": "Señales tempranas, negociar carga, delegar/automatizar, transparencia con manager y recursos de salud mental—resultados preservados.",
+    "theory_en": "- **Story arc (STAR)**: 1 sentence context → your responsibility → **2–3 actions you owned** (meetings, docs, code, data you pulled) → outcome with numbers or clear quality impact → **one lesson**.\n- **Make it concrete**: name a stakeholder role, a rough timeframe (“within two weeks”), and one artifact (PR, RFC, dashboard, retro notes).\n- **Tone**: accountable, curious, collaborative—show how you reduced ambiguity for others.\n- **If they probe**: what you’d do earlier next time (process, communication cadence, or validation step).",
+    "theory_es": "- **Arco STAR**: contexto en 1 frase → tu responsabilidad → **2–3 acciones tuyas** (reuniones, doc, código, datos que sacaste) → resultado (métrica o calidad) → **aprendizaje**.\n- **Anclajes concretos**: rol de stakeholder, ventana de tiempo aproximada (“en dos semanas”) y un artefacto (PR, RFC, dashboard, notas de retro).\n- **Tono**: responsabilidad, curiosidad, colaboración—cómo bajaste la ambigüedad para el equipo.\n- **Si profundizan**: qué harías antes la próxima vez (proceso, ritmo de comunicación o validación).",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  }
+]

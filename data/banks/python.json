@@ -1,45 +1,981 @@
 [
-  { "id": "py-e-001", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["data-types"], "question_en": "List vs tuple: what’s the difference?", "question_es": "¿List vs tuple: cuál es la diferencia?", "answer_en": "Lists are mutable; tuples are immutable and can be used as dict keys (if their elements are hashable).", "answer_es": "Las listas son mutables; las tuplas son inmutables y pueden ser keys de dict (si sus elementos son hashables).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-002", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["dict"], "question_en": "What is a Python dictionary?", "question_es": "¿Qué es un diccionario en Python?", "answer_en": "A hash map mapping keys to values with average O(1) lookup/insert.", "answer_es": "Un hash map que mapea keys a valores con lookup/insert O(1) en promedio.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-003", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["set"], "question_en": "Why use a `set`?", "question_es": "¿Por qué usar un `set`?", "answer_en": "Fast membership checks and deduplication; no duplicates allowed.", "answer_es": "Búsqueda de pertenencia rápida y deduplicación; no permite duplicados.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "seen = set(ids)\nif user_id in seen:\n    ..." }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-004", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["comprehensions"], "question_en": "What are list comprehensions?", "question_es": "¿Qué son list comprehensions?", "answer_en": "A concise syntax to build lists from iterables, optionally with filters.", "answer_es": "Sintaxis concisa para construir listas desde iterables, con filtros opcionales.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "squares = [x*x for x in nums if x % 2 == 0]" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-005", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["exceptions"], "question_en": "How do you handle exceptions?", "question_es": "¿Cómo manejas excepciones?", "answer_en": "Use `try/except` (and `finally` for cleanup). Catch specific exceptions.", "answer_es": "Usa `try/except` (y `finally` para cleanup). Captura excepciones específicas.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "try:\n    x = int(s)\nexcept ValueError:\n    x = None" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-006", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["pandas", "groupby"], "question_en": "In pandas, how do you compute mean amount per user?", "question_es": "En pandas, ¿cómo calculas el promedio por usuario?", "answer_en": "`df.groupby('user_id')['amount'].mean()` (optionally `reset_index()`).", "answer_es": "`df.groupby('user_id')['amount'].mean()` (opcional `reset_index()`).", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "out = df.groupby('user_id', as_index=False)['amount'].mean()" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-007", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["pandas", "missing"], "question_en": "How do you count missing values per column in pandas?", "question_es": "¿Cómo cuentas missing values por columna en pandas?", "answer_en": "`df.isna().sum()`.", "answer_es": "`df.isna().sum()`.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "df.isna().sum().sort_values(ascending=False)" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-008", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["pandas", "merge"], "question_en": "pandas `merge` vs `concat`?", "question_es": "¿`merge` vs `concat` en pandas?", "answer_en": "`merge` joins on keys (like SQL joins). `concat` stacks along an axis (rows/columns).", "answer_es": "`merge` une por keys (como joins). `concat` apila por un eje (filas/columnas).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-009", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["iterators"], "question_en": "What is a generator?", "question_es": "¿Qué es un generador?", "answer_en": "An iterator produced lazily (often with `yield`), useful for large data streams.", "answer_es": "Un iterador lazy (a menudo con `yield`), útil para streams grandes.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "def gen():\n    for i in range(10):\n        yield i" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-010", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["typing"], "question_en": "Why use type hints?", "question_es": "¿Por qué usar type hints?", "answer_en": "They improve readability and tooling (linting, autocomplete) and catch bugs earlier.", "answer_es": "Mejoran legibilidad y tooling (linting, autocompletado) y ayudan a detectar bugs.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "def add(a: int, b: int) -> int:\n    return a + b" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-011", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["time-complexity"], "question_en": "What’s the average complexity of `x in set` vs `x in list`?", "question_es": "¿Complejidad promedio de `x in set` vs `x in list`?", "answer_en": "Set membership is average O(1); list membership is O(n).", "answer_es": "`set` es O(1) promedio; `list` es O(n).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-012", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["numpy"], "question_en": "What is broadcasting in NumPy?", "question_es": "¿Qué es broadcasting en NumPy?", "answer_en": "Rules that let arrays of different shapes be combined without explicit loops by “stretching” dimensions.", "answer_es": "Reglas para combinar arreglos de formas distintas sin loops, “expandiendo” dimensiones.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-013", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["pandas", "sort"], "question_en": "How do you sort a DataFrame by a column?", "question_es": "¿Cómo ordenas un DataFrame por una columna?", "answer_en": "`df.sort_values('col', ascending=False)`.", "answer_es": "`df.sort_values('col', ascending=False)`.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-014", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["pandas", "apply"], "question_en": "Why can `DataFrame.apply` be slow?", "question_es": "¿Por qué `DataFrame.apply` puede ser lento?", "answer_en": "It often runs Python-level code row by row; vectorized ops run in optimized native code.", "answer_es": "A menudo corre código a nivel Python fila a fila; vectorizado corre en código nativo optimizado.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-015", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["pandas", "datetime"], "question_en": "How do you parse a column as datetimes in pandas?", "question_es": "¿Cómo parseas una columna como fechas en pandas?", "answer_en": "Use `pd.to_datetime(df['col'])` (with `utc=True` if needed).", "answer_es": "Usa `pd.to_datetime(df['col'])` (con `utc=True` si aplica).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-e-016", "category": "Python", "difficulty": "Easy", "company": ["General"], "tags": ["env", "reproducibility"], "question_en": "How do you keep experiments reproducible in Python?", "question_es": "¿Cómo mantienes reproducibles experimentos en Python?", "answer_en": "Pin dependencies, set random seeds, log configs/data versions, and save artifacts.", "answer_es": "Fija dependencias, seeds, registra configs/versiones de datos y guarda artefactos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "py-m-001", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["pandas", "vectorization"], "question_en": "Why is vectorization faster than Python loops?", "question_es": "¿Por qué vectorizar es más rápido que loops?", "answer_en": "It runs in optimized native code and avoids per-iteration Python overhead.", "answer_es": "Corre en código nativo optimizado y evita overhead del intérprete.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "df['z'] = df['x'] + df['y']  # vectorized" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-002", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["pandas", "memory"], "question_en": "How do you reduce memory usage in pandas?", "question_es": "¿Cómo reduces memoria en pandas?", "answer_en": "Use smaller dtypes (int32/float32), categorize low-cardinality strings, and drop unused columns early.", "answer_es": "Usa dtypes más pequeños, categoriza strings de baja cardinalidad y elimina columnas pronto.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "df['city'] = df['city'].astype('category')" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-003", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["pandas", "groupby"], "question_en": "How do you compute rolling averages in pandas?", "question_es": "¿Cómo calculas promedios móviles en pandas?", "answer_en": "Sort by time, then use `.rolling(window).mean()` (often within groups).", "answer_es": "Ordena por tiempo y usa `.rolling(window).mean()` (a veces por grupo).", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "df = df.sort_values('date')\ndf['ma7'] = df['dau'].rolling(7).mean()" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-004", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["pandas", "join"], "question_en": "When would you use `join` vs `merge` in pandas?", "question_es": "¿Cuándo usar `join` vs `merge` en pandas?", "answer_en": "`merge` is explicit on keys; `join` is convenient when joining on index.", "answer_es": "`merge` es explícito en keys; `join` es cómodo cuando unes por índice.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-005", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["pandas", "window"], "question_en": "How do you compute rank within groups in pandas?", "question_es": "¿Cómo calculas rank dentro de grupos en pandas?", "answer_en": "Use `groupby(...).rank()`.", "answer_es": "Usa `groupby(...).rank()`.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "df['r'] = df.groupby('user_id')['amount'].rank(ascending=False, method='first')" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-006", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["itertools"], "question_en": "What is `itertools` useful for?", "question_es": "¿Para qué sirve `itertools`?", "answer_en": "Efficient iterator building blocks (product, combinations, groupby) without building big lists.", "answer_es": "Bloques para iteradores eficientes (product, combinations, groupby) sin listas grandes.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-007", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["decorators"], "question_en": "What is a decorator?", "question_es": "¿Qué es un decorador?", "answer_en": "A function that wraps another function to add behavior (logging, timing) without changing its call sites.", "answer_es": "Una función que envuelve otra para agregar comportamiento sin cambiar llamadas.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "def deco(f):\n    def w(*a, **k):\n        return f(*a, **k)\n    return w" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-008", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["pandas", "chunks"], "question_en": "How do you process a huge CSV that doesn’t fit in memory?", "question_es": "¿Cómo procesas un CSV enorme que no cabe en memoria?", "answer_en": "Read in chunks (`chunksize`) and aggregate incrementally, or use Polars/DuckDB/Spark.", "answer_es": "Lee por chunks (`chunksize`) y agrega incrementalmente, o usa Polars/DuckDB/Spark.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "for chunk in pd.read_csv('big.csv', chunksize=1_000_000):\n    ..." }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-009", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["testing"], "question_en": "Why write unit tests for data code?", "question_es": "¿Por qué escribir unit tests para código de datos?", "answer_en": "To catch regressions in transformations and assumptions (schema, null handling, edge cases).", "answer_es": "Para detectar regresiones en transformaciones y supuestos (schema, nulos, edge cases).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-010", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["logging"], "question_en": "What should you log in a ML training run?", "question_es": "¿Qué deberías loggear en un entrenamiento de ML?", "answer_en": "Params, metrics, dataset/version, feature pipeline version, seeds, and artifacts (model, plots).", "answer_es": "Parámetros, métricas, versión de datos, versión de features, seeds y artefactos (modelo, plots).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-011", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["performance"], "question_en": "Quick ways to speed up Python code?", "question_es": "¿Formas rápidas de acelerar Python?", "answer_en": "Use vectorization, avoid loops, profile first, use PyPy/Numba/Cython when needed.", "answer_es": "Vectoriza, evita loops, perfila primero y usa PyPy/Numba/Cython si se necesita.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-012", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["pandas", "categorical"], "question_en": "When should you use pandas `category` dtype?", "question_es": "¿Cuándo usar dtype `category` en pandas?", "answer_en": "For low-cardinality repeated strings: saves memory and can speed up groupbys/joins.", "answer_es": "Para strings repetidos de baja cardinalidad: ahorra memoria y acelera groupbys/joins.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-013", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["datetime", "tz"], "question_en": "Common timezone bug in pandas?", "question_es": "¿Bug común de timezone en pandas?", "answer_en": "Mixing naive and timezone-aware timestamps; always standardize to UTC then convert for reporting.", "answer_es": "Mezclar timestamps naive y con timezone; estandariza a UTC y convierte para reportes.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-014", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["serialization"], "question_en": "Parquet vs CSV?", "question_es": "¿Parquet vs CSV?", "answer_en": "Parquet is columnar, compressed, typed, and faster for analytics; CSV is text, larger, lossy types.", "answer_es": "Parquet es columnar, comprimido, tipado y más rápido; CSV es texto, más grande y pierde tipos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-015", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["sklearn", "pipelines"], "question_en": "Why use scikit-learn Pipelines?", "question_es": "¿Por qué usar Pipelines de scikit-learn?", "answer_en": "To bundle preprocessing + model and avoid leakage by fitting transforms only on training folds.", "answer_es": "Para unir preprocessing + modelo y evitar leakage ajustando transforms solo en entrenamiento.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "from sklearn.pipeline import make_pipeline\npipe = make_pipeline(preproc, model)" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-m-016", "category": "Python", "difficulty": "Medium", "company": ["General"], "tags": ["api"], "question_en": "How do you structure a small data API client in Python?", "question_es": "¿Cómo estructuras un cliente pequeño de API en Python?", "answer_en": "Use a thin wrapper around requests, typed models, retries/timeouts, and clear error handling.", "answer_es": "Un wrapper sobre requests, modelos tipados, retries/timeouts y errores claros.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "py-h-001", "category": "Python", "difficulty": "Hard", "company": ["General"], "tags": ["leakage", "mlops"], "question_en": "Give an example of leakage in Python feature code and how to prevent it.", "question_es": "Da un ejemplo de leakage en features en Python y cómo prevenirlo.", "answer_en": "Computing global aggregates (mean target by user) on full data then splitting. Prevent by computing features within each training fold/time window only.", "answer_es": "Calcular agregados globales con todo el dataset y luego split. Prevenir calculando features solo en cada fold/ventana.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-h-002", "category": "Python", "difficulty": "Hard", "company": ["General"], "tags": ["profiling"], "question_en": "How do you profile Python to find bottlenecks?", "question_es": "¿Cómo perfilas Python para encontrar cuellos de botella?", "answer_en": "Use cProfile/py-spy for CPU, line_profiler for hotspots, and memory_profiler/tracemalloc for memory.", "answer_es": "Usa cProfile/py-spy para CPU, line_profiler para hotspots y memory_profiler/tracemalloc para memoria.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-h-003", "category": "Python", "difficulty": "Hard", "company": ["General"], "tags": ["concurrency"], "question_en": "Threads vs processes in Python (high level)?", "question_es": "¿Threads vs procesos en Python (alto nivel)?", "answer_en": "Threads help for I/O-bound work; processes help for CPU-bound work due to the GIL.", "answer_es": "Threads ayudan en I/O-bound; procesos en CPU-bound por el GIL.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-h-004", "category": "Python", "difficulty": "Hard", "company": ["General"], "tags": ["numerical"], "question_en": "What’s a common numerical pitfall when averaging probabilities?", "question_es": "¿Pitfall numérico común al promediar probabilidades?", "answer_en": "Averaging logits vs probabilities: prefer logit space for some ensembles; also beware underflow with tiny numbers.", "answer_es": "Promediar logits vs probabilidades: a veces conviene espacio logit; cuidado con underflow.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-h-005", "category": "Python", "difficulty": "Hard", "company": ["General"], "tags": ["dataframes", "joins"], "question_en": "How do you validate a large join in pandas to avoid surprises?", "question_es": "¿Cómo validas un join grande en pandas para evitar sorpresas?", "answer_en": "Check key uniqueness, use `validate='1:1'/'1:m'`, and compare row counts and null rates after the merge.", "answer_es": "Revisa unicidad, usa `validate='1:1'/'1:m'` y compara conteos y nulos tras el merge.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "df.merge(dim, on='id', validate='m:1')" }], "source": { "label": "Original", "url": "" } },
-  { "id": "py-h-006", "category": "Python", "difficulty": "Hard", "company": ["General"], "tags": ["packaging"], "question_en": "How do you package a data project for production?", "question_es": "¿Cómo empaquetas un proyecto de datos para producción?", "answer_en": "Use a proper package layout, pinned deps, CI tests, config management, and reproducible builds/containers.", "answer_es": "Estructura de paquete, deps fijadas, CI tests, config y builds reproducibles/contenedores.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-h-007", "category": "Python", "difficulty": "Hard", "company": ["General"], "tags": ["streaming"], "question_en": "How would you compute metrics on a stream of events?", "question_es": "¿Cómo calcularías métricas en un stream de eventos?", "answer_en": "Maintain incremental aggregates/state (counts, sums) and use windowing (tumbling/sliding) with watermarks for lateness.", "answer_es": "Mantén agregados incrementales/estado y usa ventanas (tumbling/sliding) con watermarks para tardíos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "py-h-008", "category": "Python", "difficulty": "Hard", "company": ["General"], "tags": ["ml", "calibration"], "question_en": "How do you calibrate a classifier’s probabilities in Python?", "question_es": "¿Cómo calibras probabilidades de un clasificador en Python?", "answer_en": "Use Platt scaling or isotonic regression (e.g., `CalibratedClassifierCV`) on a validation set.", "answer_es": "Usa Platt scaling o isotónica (p. ej. `CalibratedClassifierCV`) en validación.", "theory_en": "", "theory_es": "", "code": [{ "lang": "python", "snippet": "from sklearn.calibration import CalibratedClassifierCV\ncal = CalibratedClassifierCV(base, method='isotonic', cv=3)" }], "source": { "label": "Original", "url": "" } }
+  {
+    "id": "py-e-001",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "data-types"
+    ],
+    "question_en": "List vs tuple: what’s the difference?",
+    "question_es": "¿List vs tuple: cuál es la diferencia?",
+    "answer_en": "Lists are mutable; tuples are immutable and can be used as dict keys (if their elements are hashable). Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Las listas son mutables; las tuplas son inmutables y pueden ser keys de dict (si sus elementos son hashables). Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “List vs tuple: what’s the difference?”.\n- **Anchor your definition**: Your short answer covers: Lists are mutable; tuples are immutable and can be used as dict keys (if their elements are hashable). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿List vs tuple: cuál es la diferencia?”.\n- **Ancla tu definición**: tu respuesta corta resume: Las listas son mutables; las tuplas son inmutables y pueden ser keys de dict (si sus elementos son hashables). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-002",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "dict"
+    ],
+    "question_en": "What is a Python dictionary?",
+    "question_es": "¿Qué es un diccionario en Python?",
+    "answer_en": "A hash map mapping keys to values with average O(1) lookup/insert. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Un hash map que mapea keys a valores con lookup/insert O(1) en promedio. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a Python dictionary?”.\n- **Anchor your definition**: Your short answer covers: A hash map mapping keys to values with average O(1) lookup/insert.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es un diccionario en Python?”.\n- **Ancla tu definición**: tu respuesta corta resume: Un hash map que mapea keys a valores con lookup/insert O(1) en promedio.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-003",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "set"
+    ],
+    "question_en": "Why use a `set`?",
+    "question_es": "¿Por qué usar un `set`?",
+    "answer_en": "Fast membership checks and deduplication; no duplicates allowed. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Búsqueda de pertenencia rápida y deduplicación; no permite duplicados. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why use a `set`?”.\n- **Anchor your definition**: Your short answer covers: Fast membership checks and deduplication; no duplicates allowed.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué usar un `set`?”.\n- **Ancla tu definición**: tu respuesta corta resume: Búsqueda de pertenencia rápida y deduplicación; no permite duplicados.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "seen = set(ids)\nif user_id in seen:\n    ..."
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-004",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "comprehensions"
+    ],
+    "question_en": "What are list comprehensions?",
+    "question_es": "¿Qué son list comprehensions?",
+    "answer_en": "A concise syntax to build lists from iterables, optionally with filters. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Sintaxis concisa para construir listas desde iterables, con filtros opcionales. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What are list comprehensions?”.\n- **Anchor your definition**: Your short answer covers: A concise syntax to build lists from iterables, optionally with filters.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué son list comprehensions?”.\n- **Ancla tu definición**: tu respuesta corta resume: Sintaxis concisa para construir listas desde iterables, con filtros opcionales.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "squares = [x*x for x in nums if x % 2 == 0]"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-005",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "exceptions"
+    ],
+    "question_en": "How do you handle exceptions?",
+    "question_es": "¿Cómo manejas excepciones?",
+    "answer_en": "Use `try/except` (and `finally` for cleanup). Catch specific exceptions. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Usa `try/except` (y `finally` para cleanup). Captura excepciones específicas. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you handle exceptions?”.\n- **Anchor your definition**: Your short answer covers: Use `try/except` (and `finally` for cleanup). Catch specific exceptions.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo manejas excepciones?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa `try/except` (y `finally` para cleanup). Captura excepciones específicas.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "try:\n    x = int(s)\nexcept ValueError:\n    x = None"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-006",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "groupby"
+    ],
+    "question_en": "In pandas, how do you compute mean amount per user?",
+    "question_es": "En pandas, ¿cómo calculas el promedio por usuario?",
+    "answer_en": "`df.groupby('user_id')['amount'].mean()` (optionally `reset_index()`). Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "`df.groupby('user_id')['amount'].mean()` (opcional `reset_index()`). Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “In pandas, how do you compute mean amount per user?”.\n- **Anchor your definition**: Your short answer covers: `df.groupby('user_id')['amount'].mean()` (optionally `reset_index()`). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “En pandas, ¿cómo calculas el promedio por usuario?”.\n- **Ancla tu definición**: tu respuesta corta resume: `df.groupby('user_id')['amount'].mean()` (opcional `reset_index()`). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "out = df.groupby('user_id', as_index=False)['amount'].mean()"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-007",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "missing"
+    ],
+    "question_en": "How do you count missing values per column in pandas?",
+    "question_es": "¿Cómo cuentas missing values por columna en pandas?",
+    "answer_en": "`df.isna().sum()`. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "`df.isna().sum()`. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you count missing values per column in pandas?”.\n- **Anchor your definition**: Your short answer covers: `df.isna().sum()`.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo cuentas missing values por columna en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: `df.isna().sum()`.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "df.isna().sum().sort_values(ascending=False)"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-008",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "merge"
+    ],
+    "question_en": "pandas `merge` vs `concat`?",
+    "question_es": "¿`merge` vs `concat` en pandas?",
+    "answer_en": "`merge` joins on keys (like SQL joins). `concat` stacks along an axis (rows/columns). Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "`merge` une por keys (como joins). `concat` apila por un eje (filas/columnas). Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “pandas `merge` vs `concat`?”.\n- **Anchor your definition**: Your short answer covers: `merge` joins on keys (like SQL joins). `concat` stacks along an axis (rows/columns). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿`merge` vs `concat` en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: `merge` une por keys (como joins). `concat` apila por un eje (filas/columnas). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-009",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "iterators"
+    ],
+    "question_en": "What is a generator?",
+    "question_es": "¿Qué es un generador?",
+    "answer_en": "An iterator produced lazily (often with `yield`), useful for large data streams. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Un iterador lazy (a menudo con `yield`), útil para streams grandes. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a generator?”.\n- **Anchor your definition**: Your short answer covers: An iterator produced lazily (often with `yield`), useful for large data streams.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es un generador?”.\n- **Ancla tu definición**: tu respuesta corta resume: Un iterador lazy (a menudo con `yield`), útil para streams grandes.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "def gen():\n    for i in range(10):\n        yield i"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-010",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "typing"
+    ],
+    "question_en": "Why use type hints?",
+    "question_es": "¿Por qué usar type hints?",
+    "answer_en": "They improve readability and tooling (linting, autocomplete) and catch bugs earlier. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Mejoran legibilidad y tooling (linting, autocompletado) y ayudan a detectar bugs. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why use type hints?”.\n- **Anchor your definition**: Your short answer covers: They improve readability and tooling (linting, autocomplete) and catch bugs earlier.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué usar type hints?”.\n- **Ancla tu definición**: tu respuesta corta resume: Mejoran legibilidad y tooling (linting, autocompletado) y ayudan a detectar bugs.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "def add(a: int, b: int) -> int:\n    return a + b"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-011",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "time-complexity"
+    ],
+    "question_en": "What’s the average complexity of `x in set` vs `x in list`?",
+    "question_es": "¿Complejidad promedio de `x in set` vs `x in list`?",
+    "answer_en": "Set membership is average O(1); list membership is O(n). Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "`set` es O(1) promedio; `list` es O(n). Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What’s the average complexity of `x in set` vs `x in list`?”.\n- **Anchor your definition**: Your short answer covers: Set membership is average O(1); list membership is O(n). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Complejidad promedio de `x in set` vs `x in list`?”.\n- **Ancla tu definición**: tu respuesta corta resume: `set` es O(1) promedio; `list` es O(n). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-012",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "numpy"
+    ],
+    "question_en": "What is broadcasting in NumPy?",
+    "question_es": "¿Qué es broadcasting en NumPy?",
+    "answer_en": "Rules that let arrays of different shapes be combined without explicit loops by “stretching” dimensions. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Reglas para combinar arreglos de formas distintas sin loops, “expandiendo” dimensiones. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is broadcasting in NumPy?”.\n- **Anchor your definition**: Your short answer covers: Rules that let arrays of different shapes be combined without explicit loops by “stretching” dimensions.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es broadcasting en NumPy?”.\n- **Ancla tu definición**: tu respuesta corta resume: Reglas para combinar arreglos de formas distintas sin loops, “expandiendo” dimensiones.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-013",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "sort"
+    ],
+    "question_en": "How do you sort a DataFrame by a column?",
+    "question_es": "¿Cómo ordenas un DataFrame por una columna?",
+    "answer_en": "`df.sort_values('col', ascending=False)`. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "`df.sort_values('col', ascending=False)`. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you sort a DataFrame by a column?”.\n- **Anchor your definition**: Your short answer covers: `df.sort_values('col', ascending=False)`.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo ordenas un DataFrame por una columna?”.\n- **Ancla tu definición**: tu respuesta corta resume: `df.sort_values('col', ascending=False)`.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-014",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "apply"
+    ],
+    "question_en": "Why can `DataFrame.apply` be slow?",
+    "question_es": "¿Por qué `DataFrame.apply` puede ser lento?",
+    "answer_en": "It often runs Python-level code row by row; vectorized ops run in optimized native code. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "A menudo corre código a nivel Python fila a fila; vectorizado corre en código nativo optimizado. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why can `DataFrame.apply` be slow?”.\n- **Anchor your definition**: Your short answer covers: It often runs Python-level code row by row; vectorized ops run in optimized native code.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué `DataFrame.apply` puede ser lento?”.\n- **Ancla tu definición**: tu respuesta corta resume: A menudo corre código a nivel Python fila a fila; vectorizado corre en código nativo optimizado.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-015",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "datetime"
+    ],
+    "question_en": "How do you parse a column as datetimes in pandas?",
+    "question_es": "¿Cómo parseas una columna como fechas en pandas?",
+    "answer_en": "Use `pd.to_datetime(df['col'])` (with `utc=True` if needed). Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Usa `pd.to_datetime(df['col'])` (con `utc=True` si aplica). Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you parse a column as datetimes in pandas?”.\n- **Anchor your definition**: Your short answer covers: Use `pd.to_datetime(df['col'])` (with `utc=True` if needed). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo parseas una columna como fechas en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa `pd.to_datetime(df['col'])` (con `utc=True` si aplica). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-e-016",
+    "category": "Python",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "env",
+      "reproducibility"
+    ],
+    "question_en": "How do you keep experiments reproducible in Python?",
+    "question_es": "¿Cómo mantienes reproducibles experimentos en Python?",
+    "answer_en": "Pin dependencies, set random seeds, log configs/data versions, and save artifacts. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Fija dependencias, seeds, registra configs/versiones de datos y guarda artefactos. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you keep experiments reproducible in Python?”.\n- **Anchor your definition**: Your short answer covers: Pin dependencies, set random seeds, log configs/data versions, and save artifacts.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo mantienes reproducibles experimentos en Python?”.\n- **Ancla tu definición**: tu respuesta corta resume: Fija dependencias, seeds, registra configs/versiones de datos y guarda artefactos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-001",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "vectorization"
+    ],
+    "question_en": "Why is vectorization faster than Python loops?",
+    "question_es": "¿Por qué vectorizar es más rápido que loops?",
+    "answer_en": "It runs in optimized native code and avoids per-iteration Python overhead. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Corre en código nativo optimizado y evita overhead del intérprete. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why is vectorization faster than Python loops?”.\n- **Anchor your definition**: Your short answer covers: It runs in optimized native code and avoids per-iteration Python overhead.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué vectorizar es más rápido que loops?”.\n- **Ancla tu definición**: tu respuesta corta resume: Corre en código nativo optimizado y evita overhead del intérprete.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "df['z'] = df['x'] + df['y']  # vectorized"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-002",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "memory"
+    ],
+    "question_en": "How do you reduce memory usage in pandas?",
+    "question_es": "¿Cómo reduces memoria en pandas?",
+    "answer_en": "Use smaller dtypes (int32/float32), categorize low-cardinality strings, and drop unused columns early. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Usa dtypes más pequeños, categoriza strings de baja cardinalidad y elimina columnas pronto. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you reduce memory usage in pandas?”.\n- **Anchor your definition**: Your short answer covers: Use smaller dtypes (int32/float32), categorize low-cardinality strings, and drop unused columns early.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo reduces memoria en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa dtypes más pequeños, categoriza strings de baja cardinalidad y elimina columnas pronto.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "df['city'] = df['city'].astype('category')"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-003",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "groupby"
+    ],
+    "question_en": "How do you compute rolling averages in pandas?",
+    "question_es": "¿Cómo calculas promedios móviles en pandas?",
+    "answer_en": "Sort by time, then use `.rolling(window).mean()` (often within groups). Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Ordena por tiempo y usa `.rolling(window).mean()` (a veces por grupo). Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you compute rolling averages in pandas?”.\n- **Anchor your definition**: Your short answer covers: Sort by time, then use `.rolling(window).mean()` (often within groups). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo calculas promedios móviles en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Ordena por tiempo y usa `.rolling(window).mean()` (a veces por grupo). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "df = df.sort_values('date')\ndf['ma7'] = df['dau'].rolling(7).mean()"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-004",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "join"
+    ],
+    "question_en": "When would you use `join` vs `merge` in pandas?",
+    "question_es": "¿Cuándo usar `join` vs `merge` en pandas?",
+    "answer_en": "`merge` is explicit on keys; `join` is convenient when joining on index. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "`merge` es explícito en keys; `join` es cómodo cuando unes por índice. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “When would you use `join` vs `merge` in pandas?”.\n- **Anchor your definition**: Your short answer covers: `merge` is explicit on keys; `join` is convenient when joining on index.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cuándo usar `join` vs `merge` en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: `merge` es explícito en keys; `join` es cómodo cuando unes por índice.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-005",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "window"
+    ],
+    "question_en": "How do you compute rank within groups in pandas?",
+    "question_es": "¿Cómo calculas rank dentro de grupos en pandas?",
+    "answer_en": "Use `groupby(...).rank()`. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Usa `groupby(...).rank()`. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you compute rank within groups in pandas?”.\n- **Anchor your definition**: Your short answer covers: Use `groupby(...).rank()`.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo calculas rank dentro de grupos en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa `groupby(...).rank()`.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "df['r'] = df.groupby('user_id')['amount'].rank(ascending=False, method='first')"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-006",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "itertools"
+    ],
+    "question_en": "What is `itertools` useful for?",
+    "question_es": "¿Para qué sirve `itertools`?",
+    "answer_en": "Efficient iterator building blocks (product, combinations, groupby) without building big lists. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Bloques para iteradores eficientes (product, combinations, groupby) sin listas grandes. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is `itertools` useful for?”.\n- **Anchor your definition**: Your short answer covers: Efficient iterator building blocks (product, combinations, groupby) without building big lists.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Para qué sirve `itertools`?”.\n- **Ancla tu definición**: tu respuesta corta resume: Bloques para iteradores eficientes (product, combinations, groupby) sin listas grandes.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-007",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "decorators"
+    ],
+    "question_en": "What is a decorator?",
+    "question_es": "¿Qué es un decorador?",
+    "answer_en": "A function that wraps another function to add behavior (logging, timing) without changing its call sites. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Una función que envuelve otra para agregar comportamiento sin cambiar llamadas. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a decorator?”.\n- **Anchor your definition**: Your short answer covers: A function that wraps another function to add behavior (logging, timing) without changing its call sites.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es un decorador?”.\n- **Ancla tu definición**: tu respuesta corta resume: Una función que envuelve otra para agregar comportamiento sin cambiar llamadas.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "def deco(f):\n    def w(*a, **k):\n        return f(*a, **k)\n    return w"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-008",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "chunks"
+    ],
+    "question_en": "How do you process a huge CSV that doesn’t fit in memory?",
+    "question_es": "¿Cómo procesas un CSV enorme que no cabe en memoria?",
+    "answer_en": "Read in chunks (`chunksize`) and aggregate incrementally, or use Polars/DuckDB/Spark. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Lee por chunks (`chunksize`) y agrega incrementalmente, o usa Polars/DuckDB/Spark. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you process a huge CSV that doesn’t fit in memory?”.\n- **Anchor your definition**: Your short answer covers: Read in chunks (`chunksize`) and aggregate incrementally, or use Polars/DuckDB/Spark.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo procesas un CSV enorme que no cabe en memoria?”.\n- **Ancla tu definición**: tu respuesta corta resume: Lee por chunks (`chunksize`) y agrega incrementalmente, o usa Polars/DuckDB/Spark.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "for chunk in pd.read_csv('big.csv', chunksize=1_000_000):\n    ..."
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-009",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "testing"
+    ],
+    "question_en": "Why write unit tests for data code?",
+    "question_es": "¿Por qué escribir unit tests para código de datos?",
+    "answer_en": "To catch regressions in transformations and assumptions (schema, null handling, edge cases). Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Para detectar regresiones en transformaciones y supuestos (schema, nulos, edge cases). Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why write unit tests for data code?”.\n- **Anchor your definition**: Your short answer covers: To catch regressions in transformations and assumptions (schema, null handling, edge cases). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué escribir unit tests para código de datos?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para detectar regresiones en transformaciones y supuestos (schema, nulos, edge cases). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-010",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "logging"
+    ],
+    "question_en": "What should you log in a ML training run?",
+    "question_es": "¿Qué deberías loggear en un entrenamiento de ML?",
+    "answer_en": "Params, metrics, dataset/version, feature pipeline version, seeds, and artifacts (model, plots). Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Parámetros, métricas, versión de datos, versión de features, seeds y artefactos (modelo, plots). Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What should you log in a ML training run?”.\n- **Anchor your definition**: Your short answer covers: Params, metrics, dataset/version, feature pipeline version, seeds, and artifacts (model, plots). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué deberías loggear en un entrenamiento de ML?”.\n- **Ancla tu definición**: tu respuesta corta resume: Parámetros, métricas, versión de datos, versión de features, seeds y artefactos (modelo, plots). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-011",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "performance"
+    ],
+    "question_en": "Quick ways to speed up Python code?",
+    "question_es": "¿Formas rápidas de acelerar Python?",
+    "answer_en": "Use vectorization, avoid loops, profile first, use PyPy/Numba/Cython when needed. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Vectoriza, evita loops, perfila primero y usa PyPy/Numba/Cython si se necesita. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Quick ways to speed up Python code?”.\n- **Anchor your definition**: Your short answer covers: Use vectorization, avoid loops, profile first, use PyPy/Numba/Cython when needed.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Formas rápidas de acelerar Python?”.\n- **Ancla tu definición**: tu respuesta corta resume: Vectoriza, evita loops, perfila primero y usa PyPy/Numba/Cython si se necesita.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-012",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "pandas",
+      "categorical"
+    ],
+    "question_en": "When should you use pandas `category` dtype?",
+    "question_es": "¿Cuándo usar dtype `category` en pandas?",
+    "answer_en": "For low-cardinality repeated strings: saves memory and can speed up groupbys/joins. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Para strings repetidos de baja cardinalidad: ahorra memoria y acelera groupbys/joins. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “When should you use pandas `category` dtype?”.\n- **Anchor your definition**: Your short answer covers: For low-cardinality repeated strings: saves memory and can speed up groupbys/joins.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cuándo usar dtype `category` en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para strings repetidos de baja cardinalidad: ahorra memoria y acelera groupbys/joins.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-013",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "datetime",
+      "tz"
+    ],
+    "question_en": "Common timezone bug in pandas?",
+    "question_es": "¿Bug común de timezone en pandas?",
+    "answer_en": "Mixing naive and timezone-aware timestamps; always standardize to UTC then convert for reporting. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Mezclar timestamps naive y con timezone; estandariza a UTC y convierte para reportes. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Common timezone bug in pandas?”.\n- **Anchor your definition**: Your short answer covers: Mixing naive and timezone-aware timestamps; always standardize to UTC then convert for reporting.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Bug común de timezone en pandas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Mezclar timestamps naive y con timezone; estandariza a UTC y convierte para reportes.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-014",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "serialization"
+    ],
+    "question_en": "Parquet vs CSV?",
+    "question_es": "¿Parquet vs CSV?",
+    "answer_en": "Parquet is columnar, compressed, typed, and faster for analytics; CSV is text, larger, lossy types. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Parquet es columnar, comprimido, tipado y más rápido; CSV es texto, más grande y pierde tipos. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Parquet vs CSV?”.\n- **Anchor your definition**: Your short answer covers: Parquet is columnar, compressed, typed, and faster for analytics; CSV is text, larger, lossy types.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Parquet vs CSV?”.\n- **Ancla tu definición**: tu respuesta corta resume: Parquet es columnar, comprimido, tipado y más rápido; CSV es texto, más grande y pierde tipos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-015",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "sklearn",
+      "pipelines"
+    ],
+    "question_en": "Why use scikit-learn Pipelines?",
+    "question_es": "¿Por qué usar Pipelines de scikit-learn?",
+    "answer_en": "To bundle preprocessing + model and avoid leakage by fitting transforms only on training folds. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Para unir preprocessing + modelo y evitar leakage ajustando transforms solo en entrenamiento. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why use scikit-learn Pipelines?”.\n- **Anchor your definition**: Your short answer covers: To bundle preprocessing + model and avoid leakage by fitting transforms only on training folds.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué usar Pipelines de scikit-learn?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para unir preprocessing + modelo y evitar leakage ajustando transforms solo en entrenamiento.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "from sklearn.pipeline import make_pipeline\npipe = make_pipeline(preproc, model)"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-m-016",
+    "category": "Python",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "api"
+    ],
+    "question_en": "How do you structure a small data API client in Python?",
+    "question_es": "¿Cómo estructuras un cliente pequeño de API en Python?",
+    "answer_en": "Use a thin wrapper around requests, typed models, retries/timeouts, and clear error handling. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Un wrapper sobre requests, modelos tipados, retries/timeouts y errores claros. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you structure a small data API client in Python?”.\n- **Anchor your definition**: Your short answer covers: Use a thin wrapper around requests, typed models, retries/timeouts, and clear error handling.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo estructuras un cliente pequeño de API en Python?”.\n- **Ancla tu definición**: tu respuesta corta resume: Un wrapper sobre requests, modelos tipados, retries/timeouts y errores claros.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-h-001",
+    "category": "Python",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "leakage",
+      "mlops"
+    ],
+    "question_en": "Give an example of leakage in Python feature code and how to prevent it.",
+    "question_es": "Da un ejemplo de leakage en features en Python y cómo prevenirlo.",
+    "answer_en": "Computing global aggregates (mean target by user) on full data then splitting. Prevent by computing features within each training fold/time window only.",
+    "answer_es": "Calcular agregados globales con todo el dataset y luego split. Prevenir calculando features solo en cada fold/ventana. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Give an example of leakage in Python feature code and how to preven...”.\n- **Anchor your definition**: Your short answer covers: Computing global aggregates (mean target by user) on full data then splitting. Prevent by computing features within each training fold/ti.... Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “Da un ejemplo de leakage en features en Python y cómo prevenirlo.”.\n- **Ancla tu definición**: tu respuesta corta resume: Calcular agregados globales con todo el dataset y luego split. Prevenir calculando features solo en cada fold/ventana.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-h-002",
+    "category": "Python",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "profiling"
+    ],
+    "question_en": "How do you profile Python to find bottlenecks?",
+    "question_es": "¿Cómo perfilas Python para encontrar cuellos de botella?",
+    "answer_en": "Use cProfile/py-spy for CPU, line_profiler for hotspots, and memory_profiler/tracemalloc for memory. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Usa cProfile/py-spy para CPU, line_profiler para hotspots y memory_profiler/tracemalloc para memoria. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you profile Python to find bottlenecks?”.\n- **Anchor your definition**: Your short answer covers: Use cProfile/py-spy for CPU, line_profiler for hotspots, and memory_profiler/tracemalloc for memory.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo perfilas Python para encontrar cuellos de botella?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa cProfile/py-spy para CPU, line_profiler para hotspots y memory_profiler/tracemalloc para memoria.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-h-003",
+    "category": "Python",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "concurrency"
+    ],
+    "question_en": "Threads vs processes in Python (high level)?",
+    "question_es": "¿Threads vs procesos en Python (alto nivel)?",
+    "answer_en": "Threads help for I/O-bound work; processes help for CPU-bound work due to the GIL. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Threads ayudan en I/O-bound; procesos en CPU-bound por el GIL. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Threads vs processes in Python (high level)?”.\n- **Anchor your definition**: Your short answer covers: Threads help for I/O-bound work; processes help for CPU-bound work due to the GIL.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Threads vs procesos en Python (alto nivel)?”.\n- **Ancla tu definición**: tu respuesta corta resume: Threads ayudan en I/O-bound; procesos en CPU-bound por el GIL.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-h-004",
+    "category": "Python",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "numerical"
+    ],
+    "question_en": "What’s a common numerical pitfall when averaging probabilities?",
+    "question_es": "¿Pitfall numérico común al promediar probabilidades?",
+    "answer_en": "Averaging logits vs probabilities: prefer logit space for some ensembles; also beware underflow with tiny numbers. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Promediar logits vs probabilidades: a veces conviene espacio logit; cuidado con underflow. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What’s a common numerical pitfall when averaging probabilities?”.\n- **Anchor your definition**: Your short answer covers: Averaging logits vs probabilities: prefer logit space for some ensembles; also beware underflow with tiny numbers.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Pitfall numérico común al promediar probabilidades?”.\n- **Ancla tu definición**: tu respuesta corta resume: Promediar logits vs probabilidades: a veces conviene espacio logit; cuidado con underflow.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-h-005",
+    "category": "Python",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "dataframes",
+      "joins"
+    ],
+    "question_en": "How do you validate a large join in pandas to avoid surprises?",
+    "question_es": "¿Cómo validas un join grande en pandas para evitar sorpresas?",
+    "answer_en": "Check key uniqueness, use `validate='1:1'/'1:m'`, and compare row counts and null rates after the merge. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Revisa unicidad, usa `validate='1:1'/'1:m'` y compara conteos y nulos tras el merge. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you validate a large join in pandas to avoid surprises?”.\n- **Anchor your definition**: Your short answer covers: Check key uniqueness, use `validate='1:1'/'1:m'`, and compare row counts and null rates after the merge.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo validas un join grande en pandas para evitar sorpresas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Revisa unicidad, usa `validate='1:1'/'1:m'` y compara conteos y nulos tras el merge.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "df.merge(dim, on='id', validate='m:1')"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-h-006",
+    "category": "Python",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "packaging"
+    ],
+    "question_en": "How do you package a data project for production?",
+    "question_es": "¿Cómo empaquetas un proyecto de datos para producción?",
+    "answer_en": "Use a proper package layout, pinned deps, CI tests, config management, and reproducible builds/containers. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Estructura de paquete, deps fijadas, CI tests, config y builds reproducibles/contenedores. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you package a data project for production?”.\n- **Anchor your definition**: Your short answer covers: Use a proper package layout, pinned deps, CI tests, config management, and reproducible builds/containers.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo empaquetas un proyecto de datos para producción?”.\n- **Ancla tu definición**: tu respuesta corta resume: Estructura de paquete, deps fijadas, CI tests, config y builds reproducibles/contenedores.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-h-007",
+    "category": "Python",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "streaming"
+    ],
+    "question_en": "How would you compute metrics on a stream of events?",
+    "question_es": "¿Cómo calcularías métricas en un stream de eventos?",
+    "answer_en": "Maintain incremental aggregates/state (counts, sums) and use windowing (tumbling/sliding) with watermarks for lateness. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Mantén agregados incrementales/estado y usa ventanas (tumbling/sliding) con watermarks para tardíos. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How would you compute metrics on a stream of events?”.\n- **Anchor your definition**: Your short answer covers: Maintain incremental aggregates/state (counts, sums) and use windowing (tumbling/sliding) with watermarks for lateness.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo calcularías métricas en un stream de eventos?”.\n- **Ancla tu definición**: tu respuesta corta resume: Mantén agregados incrementales/estado y usa ventanas (tumbling/sliding) con watermarks para tardíos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "py-h-008",
+    "category": "Python",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ml",
+      "calibration"
+    ],
+    "question_en": "How do you calibrate a classifier’s probabilities in Python?",
+    "question_es": "¿Cómo calibras probabilidades de un clasificador en Python?",
+    "answer_en": "Use Platt scaling or isotonic regression (e.g., `CalibratedClassifierCV`) on a validation set. Mention a **tiny concrete case** (e.g., tuple as dict key) and when mutability or hashing bites you in real code.",
+    "answer_es": "Usa Platt scaling o isotónica (p. ej. `CalibratedClassifierCV`) en validación. Cita un **caso mínimo** (p. ej. tupla como clave de dict) y cuándo muerde la mutabilidad o el hashing.",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you calibrate a classifier’s probabilities in Python?”.\n- **Anchor your definition**: Your short answer covers: Use Platt scaling or isotonic regression (e.g., `CalibratedClassifierCV`) on a validation set.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Python angle**: connect to tests, readability, dtypes, and when **vectorized pandas** beats Python loops.\n- **Follow-up**: How you’d log inputs/outputs for debugging and guard against silent coercion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo calibras probabilidades de un clasificador en Python?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa Platt scaling o isotónica (p. ej. `CalibratedClassifierCV`) en validación.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo Python**: tests, legibilidad, dtypes y cuándo **vectorizar en pandas** vs loops.\n- **Seguimiento**: cómo loguearías entradas/salidas y evitar coerciones silenciosas.",
+    "code": [
+      {
+        "lang": "python",
+        "snippet": "from sklearn.calibration import CalibratedClassifierCV\ncal = CalibratedClassifierCV(base, method='isotonic', cv=3)"
+      }
+    ],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  }
 ]
-

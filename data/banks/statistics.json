@@ -1,45 +1,890 @@
 [
-  { "id": "st-e-001", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["mean", "median"], "question_en": "When prefer median over mean?", "question_es": "¿Cuándo prefieres mediana sobre media?", "answer_en": "With skew/outliers; median is robust.", "answer_es": "Con sesgo/outliers; la mediana es robusta.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-002", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["normal"], "question_en": "What is a normal distribution?", "question_es": "¿Qué es una distribución normal?", "answer_en": "A symmetric bell-shaped distribution described by mean and standard deviation.", "answer_es": "Distribución simétrica tipo campana descrita por media y desviación estándar.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-003", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["variance", "std"], "question_en": "Variance vs standard deviation?", "question_es": "¿Varianza vs desviación estándar?", "answer_en": "Std is sqrt(variance) and has the same unit as the data.", "answer_es": "La desviación es sqrt(varianza) y tiene las mismas unidades que los datos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-004", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["correlation"], "question_en": "Correlation implies causation?", "question_es": "¿Correlación implica causalidad?", "answer_en": "No. Correlation can come from confounding, reverse causality, or coincidence.", "answer_es": "No. Puede venir de confusores, causalidad inversa o coincidencia.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-005", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["p-value"], "question_en": "What is a p-value (one line)?", "question_es": "¿Qué es un p-value (una línea)?", "answer_en": "Under the null, probability of observing a result at least as extreme as the data.", "answer_es": "Bajo la nula, prob de observar un resultado al menos tan extremo como los datos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-006", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["ci"], "question_en": "What is a confidence interval?", "question_es": "¿Qué es un intervalo de confianza?", "answer_en": "A range produced by a procedure that captures the true parameter a fixed % of the time in repeated samples.", "answer_es": "Un rango cuyo procedimiento captura el parámetro verdadero un % fijo en muestreos repetidos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-007", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["ab-testing"], "question_en": "Why randomize in experiments?", "question_es": "¿Por qué aleatorizar en experimentos?", "answer_en": "To balance confounders and enable causal inference.", "answer_es": "Para balancear confusores y permitir inferencia causal.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-008", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["power"], "question_en": "What affects statistical power?", "question_es": "¿Qué afecta la potencia estadística?", "answer_en": "Effect size, variance, sample size, and alpha.", "answer_es": "Tamaño de efecto, varianza, tamaño de muestra y alpha.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-009", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["errors"], "question_en": "Type I vs Type II error?", "question_es": "¿Error Tipo I vs Tipo II?", "answer_en": "Type I: false positive (α). Type II: false negative (β). Power = 1−β.", "answer_es": "Tipo I: falso positivo (α). Tipo II: falso negativo (β). Potencia = 1−β.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-010", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["skew"], "question_en": "Skewed vs uniform distribution?", "question_es": "¿Distribución sesgada vs uniforme?", "answer_en": "Skewed is asymmetric with a tail; uniform has (roughly) equal probability over a range.", "answer_es": "Sesgada es asimétrica; uniforme tiene prob (aprox.) igual en un rango.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-011", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["sampling"], "question_en": "What is a sample vs a population?", "question_es": "¿Qué es muestra vs población?", "answer_en": "Population is the whole set; sample is the observed subset used to infer about the population.", "answer_es": "Población es el conjunto total; muestra es el subconjunto observado para inferir.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-012", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["bayes"], "question_en": "Bayes’ rule (in words)?", "question_es": "¿Regla de Bayes (en palabras)?", "answer_en": "Posterior ∝ likelihood × prior.", "answer_es": "Posterior ∝ verosimilitud × prior.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-013", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["variance-reduction"], "question_en": "Why use stratification in experiments?", "question_es": "¿Por qué estratificar en experimentos?", "answer_en": "To reduce variance and ensure balance across key segments.", "answer_es": "Para reducir varianza y balancear segmentos clave.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-014", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["outliers"], "question_en": "How do outliers affect mean and variance?", "question_es": "¿Cómo afectan outliers a media y varianza?", "answer_en": "They can shift the mean and inflate variance substantially.", "answer_es": "Pueden mover la media e inflar varianza mucho.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-015", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["hypothesis"], "question_en": "Null vs alternative hypothesis?", "question_es": "¿Hipótesis nula vs alternativa?", "answer_en": "Null: no effect/difference. Alternative: an effect/difference exists.", "answer_es": "Nula: no efecto/diferencia. Alternativa: sí existe.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-e-016", "category": "Statistics", "difficulty": "Easy", "company": ["General"], "tags": ["metrics"], "question_en": "Why report effect size, not just significance?", "question_es": "¿Por qué reportar tamaño de efecto y no solo significancia?", "answer_en": "Significance can happen with tiny effects at large N; effect size tells practical impact.", "answer_es": "Con N grande, efectos pequeños pueden ser significativos; el tamaño indica impacto real.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "st-m-001", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["clt"], "question_en": "What is the Central Limit Theorem?", "question_es": "¿Qué es el Teorema Central del Límite?", "answer_en": "The sample mean approaches normal as N grows (under mild conditions).", "answer_es": "La media muestral tiende a normal al crecer N (bajo condiciones).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-002", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["ci", "interpretation"], "question_en": "Common CI misinterpretation?", "question_es": "¿Mala interpretación común de IC?", "answer_en": "It’s not “95% probability the parameter is in this interval”.", "answer_es": "No es “95% prob de que el parámetro esté en este intervalo”.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-003", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["ab-testing", "p-hacking"], "question_en": "What is p-hacking?", "question_es": "¿Qué es p-hacking?", "answer_en": "Trying many analyses/stops until p<0.05, inflating false positives.", "answer_es": "Probar muchas variantes/análisis hasta p<0.05, inflando falsos positivos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-004", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["multiple-testing"], "question_en": "How do you control multiple testing?", "question_es": "¿Cómo controlas múltiples pruebas?", "answer_en": "Use Bonferroni/Holm for FWER or Benjamini–Hochberg for FDR.", "answer_es": "Usa Bonferroni/Holm (FWER) o Benjamini–Hochberg (FDR).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-005", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["sampling", "cluster"], "question_en": "What is cluster sampling?", "question_es": "¿Qué es muestreo por clusters?", "answer_en": "Sample groups (clusters) then sample units within clusters; useful when individuals are hard to list.", "answer_es": "Muestreas grupos y luego unidades; útil cuando individuos son difíciles de listar.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-006", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["bootstrap"], "question_en": "What is bootstrapping used for?", "question_es": "¿Para qué sirve bootstrap?", "answer_en": "To estimate uncertainty (CI) by resampling the observed data with replacement.", "answer_es": "Para estimar incertidumbre (IC) re-muestreando con reemplazo.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-007", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["nonparametric"], "question_en": "When use a non-parametric test?", "question_es": "¿Cuándo usar un test no paramétrico?", "answer_en": "When assumptions (normality/variance) are violated or data is ordinal/heavy-tailed.", "answer_es": "Cuando fallan supuestos o datos son ordinales/colas pesadas.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-008", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["chi-square"], "question_en": "What is a chi-square test used for?", "question_es": "¿Para qué sirve chi-cuadrado?", "answer_en": "To test independence/association in contingency tables (categorical variables).", "answer_es": "Para probar independencia/asociación en tablas de contingencia.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-009", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["variance", "anova"], "question_en": "What does ANOVA test?", "question_es": "¿Qué prueba ANOVA?", "answer_en": "Whether group means differ more than expected by chance (under assumptions).", "answer_es": "Si medias de grupos difieren más de lo esperado por azar (bajo supuestos).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-010", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["covariance"], "question_en": "Covariance vs correlation?", "question_es": "¿Covarianza vs correlación?", "answer_en": "Covariance is unscaled; correlation is scaled to [-1,1] and unitless.", "answer_es": "Covarianza no está escalada; correlación se escala a [-1,1] y no tiene unidades.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-011", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["se"], "question_en": "What is standard error?", "question_es": "¿Qué es error estándar?", "answer_en": "The standard deviation of an estimator’s sampling distribution (e.g., mean).", "answer_es": "La desviación estándar de la distribución muestral de un estimador.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-012", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["bayesian"], "question_en": "Bayesian vs frequentist (one minute)?", "question_es": "¿Bayesiano vs frecuentista (un minuto)?", "answer_en": "Bayesian treats parameters as random with priors; frequentist treats parameters fixed and data random.", "answer_es": "Bayes trata parámetros como aleatorios con priors; frecuentista los trata fijos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-013", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["ab-testing", "sequential"], "question_en": "Why is peeking at results dangerous?", "question_es": "¿Por qué mirar resultados a mitad es peligroso?", "answer_en": "It inflates Type I error unless you use sequential methods/corrections.", "answer_es": "Infla error Tipo I salvo que uses métodos secuenciales.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-014", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["effect-size"], "question_en": "What’s Cohen’s d?", "question_es": "¿Qué es Cohen’s d?", "answer_en": "A standardized mean difference: (mean1-mean2)/pooled std.", "answer_es": "Diferencia de medias estandarizada: (m1-m2)/std combinada.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-015", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["metrics", "ratio"], "question_en": "Why are ratio metrics tricky (CTR)?", "question_es": "¿Por qué métricas ratio son tricky (CTR)?", "answer_en": "Variance depends on denominator; user-level vs event-level aggregation changes estimates.", "answer_es": "La varianza depende del denominador; el grano (usuario/evento) cambia estimaciones.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-m-016", "category": "Statistics", "difficulty": "Medium", "company": ["General"], "tags": ["design"], "question_en": "How do you choose sample size for an A/B test?", "question_es": "¿Cómo eliges tamaño de muestra en A/B test?", "answer_en": "Pick MDE, alpha, power, variance/baseline rate, then compute N.", "answer_es": "Define MDE, alpha, potencia, varianza/tasa base y calcula N.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "st-h-001", "category": "Statistics", "difficulty": "Hard", "company": ["General"], "tags": ["confounding"], "question_en": "Explain confounding with an example.", "question_es": "Explica confounding con un ejemplo.", "answer_en": "A third variable affects both treatment and outcome, biasing estimates (e.g., marketing targets high-value users).", "answer_es": "Un tercer factor afecta tratamiento y resultado, sesgando estimaciones (p. ej. targeting).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-h-002", "category": "Statistics", "difficulty": "Hard", "company": ["General"], "tags": ["did"], "question_en": "What is difference-in-differences (DID)?", "question_es": "¿Qué es difference-in-differences (DID)?", "answer_en": "A causal method comparing pre/post changes between treated and control groups assuming parallel trends.", "answer_es": "Método causal que compara cambios pre/post entre tratado y control (supuesto tendencias paralelas).", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-h-003", "category": "Statistics", "difficulty": "Hard", "company": ["General"], "tags": ["iv"], "question_en": "What is an instrumental variable (IV)?", "question_es": "¿Qué es una variable instrumental (IV)?", "answer_en": "A variable that affects treatment but impacts outcome only through treatment; used to address unobserved confounding.", "answer_es": "Variable que afecta tratamiento y solo impacta outcome vía tratamiento; útil ante confusión no observada.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-h-004", "category": "Statistics", "difficulty": "Hard", "company": ["General"], "tags": ["simpson"], "question_en": "What is Simpson’s paradox?", "question_es": "¿Qué es la paradoja de Simpson?", "answer_en": "A trend appears in aggregated data but reverses within subgroups due to confounding.", "answer_es": "Una tendencia agregada se revierte al segmentar por subgrupos por confusión.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-h-005", "category": "Statistics", "difficulty": "Hard", "company": ["General"], "tags": ["sequential"], "question_en": "Name a sequential testing approach.", "question_es": "Nombra un enfoque de testing secuencial.", "answer_en": "Group sequential designs (alpha spending), SPRT, or Bayesian stopping rules.", "answer_es": "Diseños secuenciales (alpha spending), SPRT o reglas bayesianas.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-h-006", "category": "Statistics", "difficulty": "Hard", "company": ["General"], "tags": ["heterogeneous-effects"], "question_en": "How do you analyze heterogeneous treatment effects safely?", "question_es": "¿Cómo analizas efectos heterogéneos con cuidado?", "answer_en": "Pre-register segments, correct for multiple testing, use hierarchical models, and validate with holdouts.", "answer_es": "Pre-registra segmentos, corrige múltiples pruebas, usa modelos jerárquicos y valida.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-h-007", "category": "Statistics", "difficulty": "Hard", "company": ["General"], "tags": ["ratio-metrics"], "question_en": "How do you test ratio metrics properly?", "question_es": "¿Cómo testeas métricas ratio correctamente?", "answer_en": "Use delta method, bootstrap, or analyze at the unit level (user) to get valid variance estimates.", "answer_es": "Usa delta method, bootstrap o analiza al nivel de unidad (usuario) para varianzas válidas.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "st-h-008", "category": "Statistics", "difficulty": "Hard", "company": ["General"], "tags": ["fdr"], "question_en": "FWER vs FDR: what’s the difference?", "question_es": "¿FWER vs FDR: diferencia?", "answer_en": "FWER controls probability of any false positive; FDR controls expected proportion of false positives among discoveries.", "answer_es": "FWER controla prob de algún falso positivo; FDR controla proporción esperada entre descubrimientos.", "theory_en": "", "theory_es": "", "code": [], "source": { "label": "Original", "url": "" } }
+  {
+    "id": "st-e-001",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "mean",
+      "median"
+    ],
+    "question_en": "When prefer median over mean?",
+    "question_es": "¿Cuándo prefieres mediana sobre media?",
+    "answer_en": "With skew/outliers; median is robust. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Con sesgo/outliers; la mediana es robusta. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “When prefer median over mean?”.\n- **Anchor your definition**: Your short answer covers: With skew/outliers; median is robust.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cuándo prefieres mediana sobre media?”.\n- **Ancla tu definición**: tu respuesta corta resume: Con sesgo/outliers; la mediana es robusta.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-002",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "normal"
+    ],
+    "question_en": "What is a normal distribution?",
+    "question_es": "¿Qué es una distribución normal?",
+    "answer_en": "A symmetric bell-shaped distribution described by mean and standard deviation. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Distribución simétrica tipo campana descrita por media y desviación estándar. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a normal distribution?”.\n- **Anchor your definition**: Your short answer covers: A symmetric bell-shaped distribution described by mean and standard deviation.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es una distribución normal?”.\n- **Ancla tu definición**: tu respuesta corta resume: Distribución simétrica tipo campana descrita por media y desviación estándar.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-003",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "variance",
+      "std"
+    ],
+    "question_en": "Variance vs standard deviation?",
+    "question_es": "¿Varianza vs desviación estándar?",
+    "answer_en": "Std is sqrt(variance) and has the same unit as the data. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "La desviación es sqrt(varianza) y tiene las mismas unidades que los datos. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Variance vs standard deviation?”.\n- **Anchor your definition**: Your short answer covers: Std is sqrt(variance) and has the same unit as the data.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Varianza vs desviación estándar?”.\n- **Ancla tu definición**: tu respuesta corta resume: La desviación es sqrt(varianza) y tiene las mismas unidades que los datos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-004",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "correlation"
+    ],
+    "question_en": "Correlation implies causation?",
+    "question_es": "¿Correlación implica causalidad?",
+    "answer_en": "No. Correlation can come from confounding, reverse causality, or coincidence. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "No. Puede venir de confusores, causalidad inversa o coincidencia. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Correlation implies causation?”.\n- **Anchor your definition**: Your short answer covers: No. Correlation can come from confounding, reverse causality, or coincidence.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Correlación implica causalidad?”.\n- **Ancla tu definición**: tu respuesta corta resume: No. Puede venir de confusores, causalidad inversa o coincidencia.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-005",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "p-value"
+    ],
+    "question_en": "What is a p-value (one line)?",
+    "question_es": "¿Qué es un p-value (una línea)?",
+    "answer_en": "Under the null, probability of observing a result at least as extreme as the data. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Bajo la nula, prob de observar un resultado al menos tan extremo como los datos. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a p-value (one line)?”.\n- **Anchor your definition**: Your short answer covers: Under the null, probability of observing a result at least as extreme as the data.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es un p-value (una línea)?”.\n- **Ancla tu definición**: tu respuesta corta resume: Bajo la nula, prob de observar un resultado al menos tan extremo como los datos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-006",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ci"
+    ],
+    "question_en": "What is a confidence interval?",
+    "question_es": "¿Qué es un intervalo de confianza?",
+    "answer_en": "A range produced by a procedure that captures the true parameter a fixed % of the time in repeated samples. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Un rango cuyo procedimiento captura el parámetro verdadero un % fijo en muestreos repetidos. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a confidence interval?”.\n- **Anchor your definition**: Your short answer covers: A range produced by a procedure that captures the true parameter a fixed % of the time in repeated samples.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es un intervalo de confianza?”.\n- **Ancla tu definición**: tu respuesta corta resume: Un rango cuyo procedimiento captura el parámetro verdadero un % fijo en muestreos repetidos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-007",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ab-testing"
+    ],
+    "question_en": "Why randomize in experiments?",
+    "question_es": "¿Por qué aleatorizar en experimentos?",
+    "answer_en": "To balance confounders and enable causal inference. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Para balancear confusores y permitir inferencia causal. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why randomize in experiments?”.\n- **Anchor your definition**: Your short answer covers: To balance confounders and enable causal inference.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué aleatorizar en experimentos?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para balancear confusores y permitir inferencia causal.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-008",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "power"
+    ],
+    "question_en": "What affects statistical power?",
+    "question_es": "¿Qué afecta la potencia estadística?",
+    "answer_en": "Effect size, variance, sample size, and alpha. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Tamaño de efecto, varianza, tamaño de muestra y alpha. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What affects statistical power?”.\n- **Anchor your definition**: Your short answer covers: Effect size, variance, sample size, and alpha.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué afecta la potencia estadística?”.\n- **Ancla tu definición**: tu respuesta corta resume: Tamaño de efecto, varianza, tamaño de muestra y alpha.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-009",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "errors"
+    ],
+    "question_en": "Type I vs Type II error?",
+    "question_es": "¿Error Tipo I vs Tipo II?",
+    "answer_en": "Type I: false positive (α). Type II: false negative (β). Power = 1−β. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Tipo I: falso positivo (α). Tipo II: falso negativo (β). Potencia = 1−β. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Type I vs Type II error?”.\n- **Anchor your definition**: Your short answer covers: Type I: false positive (α). Type II: false negative (β). Power = 1−β.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Error Tipo I vs Tipo II?”.\n- **Ancla tu definición**: tu respuesta corta resume: Tipo I: falso positivo (α). Tipo II: falso negativo (β). Potencia = 1−β.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-010",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "skew"
+    ],
+    "question_en": "Skewed vs uniform distribution?",
+    "question_es": "¿Distribución sesgada vs uniforme?",
+    "answer_en": "Skewed is asymmetric with a tail; uniform has (roughly) equal probability over a range. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Sesgada es asimétrica; uniforme tiene prob (aprox.) igual en un rango. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Skewed vs uniform distribution?”.\n- **Anchor your definition**: Your short answer covers: Skewed is asymmetric with a tail; uniform has (roughly) equal probability over a range.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Distribución sesgada vs uniforme?”.\n- **Ancla tu definición**: tu respuesta corta resume: Sesgada es asimétrica; uniforme tiene prob (aprox.) igual en un rango.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-011",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "sampling"
+    ],
+    "question_en": "What is a sample vs a population?",
+    "question_es": "¿Qué es muestra vs población?",
+    "answer_en": "Population is the whole set; sample is the observed subset used to infer about the population. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Población es el conjunto total; muestra es el subconjunto observado para inferir. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a sample vs a population?”.\n- **Anchor your definition**: Your short answer covers: Population is the whole set; sample is the observed subset used to infer about the population.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es muestra vs población?”.\n- **Ancla tu definición**: tu respuesta corta resume: Población es el conjunto total; muestra es el subconjunto observado para inferir.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-012",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "bayes"
+    ],
+    "question_en": "Bayes’ rule (in words)?",
+    "question_es": "¿Regla de Bayes (en palabras)?",
+    "answer_en": "Posterior ∝ likelihood × prior. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Posterior ∝ verosimilitud × prior. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Bayes’ rule (in words)?”.\n- **Anchor your definition**: Your short answer covers: Posterior ∝ likelihood × prior.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Regla de Bayes (en palabras)?”.\n- **Ancla tu definición**: tu respuesta corta resume: Posterior ∝ verosimilitud × prior.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-013",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "variance-reduction"
+    ],
+    "question_en": "Why use stratification in experiments?",
+    "question_es": "¿Por qué estratificar en experimentos?",
+    "answer_en": "To reduce variance and ensure balance across key segments. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Para reducir varianza y balancear segmentos clave. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why use stratification in experiments?”.\n- **Anchor your definition**: Your short answer covers: To reduce variance and ensure balance across key segments.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué estratificar en experimentos?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para reducir varianza y balancear segmentos clave.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-014",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "outliers"
+    ],
+    "question_en": "How do outliers affect mean and variance?",
+    "question_es": "¿Cómo afectan outliers a media y varianza?",
+    "answer_en": "They can shift the mean and inflate variance substantially. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Pueden mover la media e inflar varianza mucho. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do outliers affect mean and variance?”.\n- **Anchor your definition**: Your short answer covers: They can shift the mean and inflate variance substantially.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo afectan outliers a media y varianza?”.\n- **Ancla tu definición**: tu respuesta corta resume: Pueden mover la media e inflar varianza mucho.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-015",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "hypothesis"
+    ],
+    "question_en": "Null vs alternative hypothesis?",
+    "question_es": "¿Hipótesis nula vs alternativa?",
+    "answer_en": "Null: no effect/difference. Alternative: an effect/difference exists. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Nula: no efecto/diferencia. Alternativa: sí existe. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Null vs alternative hypothesis?”.\n- **Anchor your definition**: Your short answer covers: Null: no effect/difference. Alternative: an effect/difference exists.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Hipótesis nula vs alternativa?”.\n- **Ancla tu definición**: tu respuesta corta resume: Nula: no efecto/diferencia. Alternativa: sí existe.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-e-016",
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "metrics"
+    ],
+    "question_en": "Why report effect size, not just significance?",
+    "question_es": "¿Por qué reportar tamaño de efecto y no solo significancia?",
+    "answer_en": "Significance can happen with tiny effects at large N; effect size tells practical impact. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Con N grande, efectos pequeños pueden ser significativos; el tamaño indica impacto real. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why report effect size, not just significance?”.\n- **Anchor your definition**: Your short answer covers: Significance can happen with tiny effects at large N; effect size tells practical impact.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué reportar tamaño de efecto y no solo significancia?”.\n- **Ancla tu definición**: tu respuesta corta resume: Con N grande, efectos pequeños pueden ser significativos; el tamaño indica impacto real.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-001",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "clt"
+    ],
+    "question_en": "What is the Central Limit Theorem?",
+    "question_es": "¿Qué es el Teorema Central del Límite?",
+    "answer_en": "The sample mean approaches normal as N grows (under mild conditions). Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "La media muestral tiende a normal al crecer N (bajo condiciones). Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is the Central Limit Theorem?”.\n- **Anchor your definition**: Your short answer covers: The sample mean approaches normal as N grows (under mild conditions). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es el Teorema Central del Límite?”.\n- **Ancla tu definición**: tu respuesta corta resume: La media muestral tiende a normal al crecer N (bajo condiciones). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-002",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ci",
+      "interpretation"
+    ],
+    "question_en": "Common CI misinterpretation?",
+    "question_es": "¿Mala interpretación común de IC?",
+    "answer_en": "It’s not “95% probability the parameter is in this interval”. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "No es “95% prob de que el parámetro esté en este intervalo”. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Common CI misinterpretation?”.\n- **Anchor your definition**: Your short answer covers: It’s not “95% probability the parameter is in this interval”.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Mala interpretación común de IC?”.\n- **Ancla tu definición**: tu respuesta corta resume: No es “95% prob de que el parámetro esté en este intervalo”.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-003",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ab-testing",
+      "p-hacking"
+    ],
+    "question_en": "What is p-hacking?",
+    "question_es": "¿Qué es p-hacking?",
+    "answer_en": "Trying many analyses/stops until p<0.05, inflating false positives. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Probar muchas variantes/análisis hasta p<0.05, inflando falsos positivos. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is p-hacking?”.\n- **Anchor your definition**: Your short answer covers: Trying many analyses/stops until p<0.05, inflating false positives.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es p-hacking?”.\n- **Ancla tu definición**: tu respuesta corta resume: Probar muchas variantes/análisis hasta p<0.05, inflando falsos positivos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-004",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "multiple-testing"
+    ],
+    "question_en": "How do you control multiple testing?",
+    "question_es": "¿Cómo controlas múltiples pruebas?",
+    "answer_en": "Use Bonferroni/Holm for FWER or Benjamini–Hochberg for FDR. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Usa Bonferroni/Holm (FWER) o Benjamini–Hochberg (FDR). Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you control multiple testing?”.\n- **Anchor your definition**: Your short answer covers: Use Bonferroni/Holm for FWER or Benjamini–Hochberg for FDR.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo controlas múltiples pruebas?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa Bonferroni/Holm (FWER) o Benjamini–Hochberg (FDR). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-005",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "sampling",
+      "cluster"
+    ],
+    "question_en": "What is cluster sampling?",
+    "question_es": "¿Qué es muestreo por clusters?",
+    "answer_en": "Sample groups (clusters) then sample units within clusters; useful when individuals are hard to list. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Muestreas grupos y luego unidades; útil cuando individuos son difíciles de listar. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is cluster sampling?”.\n- **Anchor your definition**: Your short answer covers: Sample groups (clusters) then sample units within clusters; useful when individuals are hard to list.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es muestreo por clusters?”.\n- **Ancla tu definición**: tu respuesta corta resume: Muestreas grupos y luego unidades; útil cuando individuos son difíciles de listar.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-006",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "bootstrap"
+    ],
+    "question_en": "What is bootstrapping used for?",
+    "question_es": "¿Para qué sirve bootstrap?",
+    "answer_en": "To estimate uncertainty (CI) by resampling the observed data with replacement. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Para estimar incertidumbre (IC) re-muestreando con reemplazo. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is bootstrapping used for?”.\n- **Anchor your definition**: Your short answer covers: To estimate uncertainty (CI) by resampling the observed data with replacement.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Para qué sirve bootstrap?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para estimar incertidumbre (IC) re-muestreando con reemplazo.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-007",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "nonparametric"
+    ],
+    "question_en": "When use a non-parametric test?",
+    "question_es": "¿Cuándo usar un test no paramétrico?",
+    "answer_en": "When assumptions (normality/variance) are violated or data is ordinal/heavy-tailed. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Cuando fallan supuestos o datos son ordinales/colas pesadas. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “When use a non-parametric test?”.\n- **Anchor your definition**: Your short answer covers: When assumptions (normality/variance) are violated or data is ordinal/heavy-tailed.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cuándo usar un test no paramétrico?”.\n- **Ancla tu definición**: tu respuesta corta resume: Cuando fallan supuestos o datos son ordinales/colas pesadas.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-008",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "chi-square"
+    ],
+    "question_en": "What is a chi-square test used for?",
+    "question_es": "¿Para qué sirve chi-cuadrado?",
+    "answer_en": "To test independence/association in contingency tables (categorical variables). Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Para probar independencia/asociación en tablas de contingencia. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is a chi-square test used for?”.\n- **Anchor your definition**: Your short answer covers: To test independence/association in contingency tables (categorical variables). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Para qué sirve chi-cuadrado?”.\n- **Ancla tu definición**: tu respuesta corta resume: Para probar independencia/asociación en tablas de contingencia.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-009",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "variance",
+      "anova"
+    ],
+    "question_en": "What does ANOVA test?",
+    "question_es": "¿Qué prueba ANOVA?",
+    "answer_en": "Whether group means differ more than expected by chance (under assumptions). Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Si medias de grupos difieren más de lo esperado por azar (bajo supuestos). Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What does ANOVA test?”.\n- **Anchor your definition**: Your short answer covers: Whether group means differ more than expected by chance (under assumptions). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué prueba ANOVA?”.\n- **Ancla tu definición**: tu respuesta corta resume: Si medias de grupos difieren más de lo esperado por azar (bajo supuestos). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-010",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "covariance"
+    ],
+    "question_en": "Covariance vs correlation?",
+    "question_es": "¿Covarianza vs correlación?",
+    "answer_en": "Covariance is unscaled; correlation is scaled to [-1,1] and unitless. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Covarianza no está escalada; correlación se escala a [-1,1] y no tiene unidades. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Covariance vs correlation?”.\n- **Anchor your definition**: Your short answer covers: Covariance is unscaled; correlation is scaled to [-1,1] and unitless.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Covarianza vs correlación?”.\n- **Ancla tu definición**: tu respuesta corta resume: Covarianza no está escalada; correlación se escala a [-1,1] y no tiene unidades.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-011",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "se"
+    ],
+    "question_en": "What is standard error?",
+    "question_es": "¿Qué es error estándar?",
+    "answer_en": "The standard deviation of an estimator’s sampling distribution (e.g., mean). Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "La desviación estándar de la distribución muestral de un estimador. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is standard error?”.\n- **Anchor your definition**: Your short answer covers: The standard deviation of an estimator’s sampling distribution (e.g., mean). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es error estándar?”.\n- **Ancla tu definición**: tu respuesta corta resume: La desviación estándar de la distribución muestral de un estimador.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-012",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "bayesian"
+    ],
+    "question_en": "Bayesian vs frequentist (one minute)?",
+    "question_es": "¿Bayesiano vs frecuentista (un minuto)?",
+    "answer_en": "Bayesian treats parameters as random with priors; frequentist treats parameters fixed and data random. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Bayes trata parámetros como aleatorios con priors; frecuentista los trata fijos. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Bayesian vs frequentist (one minute)?”.\n- **Anchor your definition**: Your short answer covers: Bayesian treats parameters as random with priors; frequentist treats parameters fixed and data random.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Bayesiano vs frecuentista (un minuto)?”.\n- **Ancla tu definición**: tu respuesta corta resume: Bayes trata parámetros como aleatorios con priors; frecuentista los trata fijos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-013",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ab-testing",
+      "sequential"
+    ],
+    "question_en": "Why is peeking at results dangerous?",
+    "question_es": "¿Por qué mirar resultados a mitad es peligroso?",
+    "answer_en": "It inflates Type I error unless you use sequential methods/corrections. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Infla error Tipo I salvo que uses métodos secuenciales. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why is peeking at results dangerous?”.\n- **Anchor your definition**: Your short answer covers: It inflates Type I error unless you use sequential methods/corrections.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué mirar resultados a mitad es peligroso?”.\n- **Ancla tu definición**: tu respuesta corta resume: Infla error Tipo I salvo que uses métodos secuenciales.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-014",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "effect-size"
+    ],
+    "question_en": "What’s Cohen’s d?",
+    "question_es": "¿Qué es Cohen’s d?",
+    "answer_en": "A standardized mean difference: (mean1-mean2)/pooled std. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Diferencia de medias estandarizada: (m1-m2)/std combinada. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What’s Cohen’s d?”.\n- **Anchor your definition**: Your short answer covers: A standardized mean difference: (mean1-mean2)/pooled std.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es Cohen’s d?”.\n- **Ancla tu definición**: tu respuesta corta resume: Diferencia de medias estandarizada: (m1-m2)/std combinada.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-015",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "metrics",
+      "ratio"
+    ],
+    "question_en": "Why are ratio metrics tricky (CTR)?",
+    "question_es": "¿Por qué métricas ratio son tricky (CTR)?",
+    "answer_en": "Variance depends on denominator; user-level vs event-level aggregation changes estimates. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "La varianza depende del denominador; el grano (usuario/evento) cambia estimaciones. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Why are ratio metrics tricky (CTR)?”.\n- **Anchor your definition**: Your short answer covers: Variance depends on denominator; user-level vs event-level aggregation changes estimates.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Por qué métricas ratio son tricky (CTR)?”.\n- **Ancla tu definición**: tu respuesta corta resume: La varianza depende del denominador; el grano (usuario/evento) cambia estimaciones.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-m-016",
+    "category": "Statistics",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "design"
+    ],
+    "question_en": "How do you choose sample size for an A/B test?",
+    "question_es": "¿Cómo eliges tamaño de muestra en A/B test?",
+    "answer_en": "Pick MDE, alpha, power, variance/baseline rate, then compute N. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Define MDE, alpha, potencia, varianza/tasa base y calcula N. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you choose sample size for an A/B test?”.\n- **Anchor your definition**: Your short answer covers: Pick MDE, alpha, power, variance/baseline rate, then compute N.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo eliges tamaño de muestra en A/B test?”.\n- **Ancla tu definición**: tu respuesta corta resume: Define MDE, alpha, potencia, varianza/tasa base y calcula N.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-h-001",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "confounding"
+    ],
+    "question_en": "Explain confounding with an example.",
+    "question_es": "Explica confounding con un ejemplo.",
+    "answer_en": "A third variable affects both treatment and outcome, biasing estimates (e.g., marketing targets high-value users). Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Un tercer factor afecta tratamiento y resultado, sesgando estimaciones (p. ej. targeting). Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Explain confounding with an example.”.\n- **Anchor your definition**: Your short answer covers: A third variable affects both treatment and outcome, biasing estimates (e.g., marketing targets high-value users). Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “Explica confounding con un ejemplo.”.\n- **Ancla tu definición**: tu respuesta corta resume: Un tercer factor afecta tratamiento y resultado, sesgando estimaciones (p. ej. targeting). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-h-002",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "did"
+    ],
+    "question_en": "What is difference-in-differences (DID)?",
+    "question_es": "¿Qué es difference-in-differences (DID)?",
+    "answer_en": "A causal method comparing pre/post changes between treated and control groups assuming parallel trends. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Método causal que compara cambios pre/post entre tratado y control (supuesto tendencias paralelas). Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is difference-in-differences (DID)?”.\n- **Anchor your definition**: Your short answer covers: A causal method comparing pre/post changes between treated and control groups assuming parallel trends.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es difference-in-differences (DID)?”.\n- **Ancla tu definición**: tu respuesta corta resume: Método causal que compara cambios pre/post entre tratado y control (supuesto tendencias paralelas). Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-h-003",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "iv"
+    ],
+    "question_en": "What is an instrumental variable (IV)?",
+    "question_es": "¿Qué es una variable instrumental (IV)?",
+    "answer_en": "A variable that affects treatment but impacts outcome only through treatment; used to address unobserved confounding. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Variable que afecta tratamiento y solo impacta outcome vía tratamiento; útil ante confusión no observada. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is an instrumental variable (IV)?”.\n- **Anchor your definition**: Your short answer covers: A variable that affects treatment but impacts outcome only through treatment; used to address unobserved confounding.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es una variable instrumental (IV)?”.\n- **Ancla tu definición**: tu respuesta corta resume: Variable que afecta tratamiento y solo impacta outcome vía tratamiento; útil ante confusión no observada.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-h-004",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "simpson"
+    ],
+    "question_en": "What is Simpson’s paradox?",
+    "question_es": "¿Qué es la paradoja de Simpson?",
+    "answer_en": "A trend appears in aggregated data but reverses within subgroups due to confounding. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Una tendencia agregada se revierte al segmentar por subgrupos por confusión. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “What is Simpson’s paradox?”.\n- **Anchor your definition**: Your short answer covers: A trend appears in aggregated data but reverses within subgroups due to confounding.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Qué es la paradoja de Simpson?”.\n- **Ancla tu definición**: tu respuesta corta resume: Una tendencia agregada se revierte al segmentar por subgrupos por confusión.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-h-005",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "sequential"
+    ],
+    "question_en": "Name a sequential testing approach.",
+    "question_es": "Nombra un enfoque de testing secuencial.",
+    "answer_en": "Group sequential designs (alpha spending), SPRT, or Bayesian stopping rules. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Diseños secuenciales (alpha spending), SPRT o reglas bayesianas. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “Name a sequential testing approach.”.\n- **Anchor your definition**: Your short answer covers: Group sequential designs (alpha spending), SPRT, or Bayesian stopping rules.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “Nombra un enfoque de testing secuencial.”.\n- **Ancla tu definición**: tu respuesta corta resume: Diseños secuenciales (alpha spending), SPRT o reglas bayesianas.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-h-006",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "heterogeneous-effects"
+    ],
+    "question_en": "How do you analyze heterogeneous treatment effects safely?",
+    "question_es": "¿Cómo analizas efectos heterogéneos con cuidado?",
+    "answer_en": "Pre-register segments, correct for multiple testing, use hierarchical models, and validate with holdouts. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Pre-registra segmentos, corrige múltiples pruebas, usa modelos jerárquicos y valida. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you analyze heterogeneous treatment effects safely?”.\n- **Anchor your definition**: Your short answer covers: Pre-register segments, correct for multiple testing, use hierarchical models, and validate with holdouts.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo analizas efectos heterogéneos con cuidado?”.\n- **Ancla tu definición**: tu respuesta corta resume: Pre-registra segmentos, corrige múltiples pruebas, usa modelos jerárquicos y valida.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-h-007",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "ratio-metrics"
+    ],
+    "question_en": "How do you test ratio metrics properly?",
+    "question_es": "¿Cómo testeas métricas ratio correctamente?",
+    "answer_en": "Use delta method, bootstrap, or analyze at the unit level (user) to get valid variance estimates. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "Usa delta method, bootstrap o analiza al nivel de unidad (usuario) para varianzas válidas. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “How do you test ratio metrics properly?”.\n- **Anchor your definition**: Your short answer covers: Use delta method, bootstrap, or analyze at the unit level (user) to get valid variance estimates.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿Cómo testeas métricas ratio correctamente?”.\n- **Ancla tu definición**: tu respuesta corta resume: Usa delta method, bootstrap o analiza al nivel de unidad (usuario) para varianzas válidas.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "st-h-008",
+    "category": "Statistics",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "fdr"
+    ],
+    "question_en": "FWER vs FDR: what’s the difference?",
+    "question_es": "¿FWER vs FDR: diferencia?",
+    "answer_en": "FWER controls probability of any false positive; FDR controls expected proportion of false positives among discoveries. Add **one bias source** (selection, non-compliance, peeking) and **one diagnostic** (plot, placebo check, or bootstrap).",
+    "answer_es": "FWER controla prob de algún falso positivo; FDR controla proporción esperada entre descubrimientos. Suma **una fuente de sesgo** (selección, no cumplimiento, peeking) y **un diagnóstico** (gráfico, placebo, bootstrap).",
+    "theory_en": "- **How to expand this answer aloud**: Restate the core idea in plain language, then walk through **one mini-example** (a table name, a metric, or a toy number) tied to: “FWER vs FDR: what’s the difference?”.\n- **Anchor your definition**: Your short answer covers: FWER controls probability of any false positive; FDR controls expected proportion of false positives among discoveries.. Add **where it breaks** in real pipelines (skew, nulls, leakage, wrong grain, or stale dashboards).\n- **Stats angle**: assumptions (i.i.d., representativeness), **effect size vs p-values**, and what plot or diagnostic you’d look at first.\n- **Follow-up**: how changing sample size or variance would change your conclusion.",
+    "theory_es": "- **Cómo expandir en voz alta**: define en lenguaje claro y luego un **mini-ejemplo** (tabla, métrica o número toy) ligado a: “¿FWER vs FDR: diferencia?”.\n- **Ancla tu definición**: tu respuesta corta resume: FWER controla prob de algún falso positivo; FDR controla proporción esperada entre descubrimientos.. Añade **dónde falla** en datos reales (sesgo, nulos, leakage, grano incorrecto o dashboards desactualizados).\n- **Ángulo estadístico**: supuestos (i.i.d., representatividad), **tamaño de efecto vs p-value** y qué gráfico o diagnóstico mirarías primero.\n- **Seguimiento**: cómo cambian N o la varianza tu conclusión.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  }
 ]
-

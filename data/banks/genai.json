@@ -1,46 +1,899 @@
 [
-  { "id": "ga-e-001", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["llm", "definition"], "question_en": "What is a Large Language Model (LLM)?", "question_es": "¿Qué es un Large Language Model (LLM)?", "answer_en": "An LLM is a neural network trained on large text corpora to predict the next token; this enables it to generate and transform text (and sometimes code) in a surprisingly general way.", "answer_es": "Un LLM es una red neuronal entrenada con grandes corpus de texto para predecir el siguiente token; esto le permite generar y transformar texto (y a veces código) de manera muy general.", "theory_en": "- Think of it as a **probabilistic text generator** with learned representations.\n- Common uses: drafting, summarization, Q&A, code assistance.", "theory_es": "- Piénsalo como un **generador probabilístico de texto** con representaciones aprendidas.\n- Usos comunes: redacción, resúmenes, Q&A, asistencia en código.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-002", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["tokens", "context"], "question_en": "What is a token and why does it matter?", "question_es": "¿Qué es un token y por qué importa?", "answer_en": "A token is a chunk of text (word pieces) used by the model. Token count matters because it drives cost, latency, and the maximum context window.", "answer_es": "Un token es un fragmento de texto (sub-palabras) que usa el modelo. Importa porque define costo, latencia y el máximo de contexto.", "theory_en": "- Long prompts → more tokens → higher cost.\n- Context windows limit how much the model can \"see\" at once.", "theory_es": "- Prompts largos → más tokens → más costo.\n- La ventana de contexto limita cuánto puede “ver” el modelo.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-003", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["prompting"], "question_en": "What is prompt engineering?", "question_es": "¿Qué es prompt engineering?", "answer_en": "Designing instructions and context so the model produces the desired output reliably (format, tone, constraints, and examples).", "answer_es": "Diseñar instrucciones y contexto para que el modelo produzca el output deseado de forma confiable (formato, tono, restricciones y ejemplos).", "theory_en": "- Include: goal, constraints, examples, and desired output schema.\n- Prefer **simple prompts first**, then add structure.", "theory_es": "- Incluye: objetivo, restricciones, ejemplos y esquema de salida.\n- Empieza simple y luego agrega estructura.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-004", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["temperature", "sampling"], "question_en": "What does temperature do in text generation?", "question_es": "¿Qué hace la temperatura en generación?", "answer_en": "Temperature controls randomness: lower values make outputs more deterministic; higher values increase diversity (and error risk).", "answer_es": "Controla aleatoriedad: valores bajos → más determinista; valores altos → más diversidad (y más riesgo de error).", "theory_en": "- For factual tasks: lower temperature.\n- For brainstorming: higher temperature.", "theory_es": "- Para tareas factuales: temperatura baja.\n- Para ideación: temperatura más alta.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-005", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["hallucinations"], "question_en": "What is a hallucination in an LLM?", "question_es": "¿Qué es una alucinación en un LLM?", "answer_en": "A hallucination is confidently generated text that is not grounded in reality or the provided context (e.g., made-up citations or incorrect facts).", "answer_es": "Es texto generado con confianza pero no sustentado en la realidad o el contexto (p. ej., citas inventadas o hechos incorrectos).", "theory_en": "- Reduce via retrieval (RAG), stricter prompts, and verification.\n- Always treat outputs as **suggestions**, not truth.", "theory_es": "- Se reduce con RAG, prompts más estrictos y verificación.\n- Trátalo como **sugerencias**, no verdad.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-006", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["rag"], "question_en": "What is Retrieval-Augmented Generation (RAG)?", "question_es": "¿Qué es Retrieval-Augmented Generation (RAG)?", "answer_en": "RAG retrieves relevant documents from a knowledge base and feeds them into the prompt so the model can answer using that context.", "answer_es": "RAG recupera documentos relevantes de una base de conocimiento y los pasa al prompt para que el modelo responda con ese contexto.", "theory_en": "- Helps with freshness and domain knowledge.\n- Still needs citations + guardrails.", "theory_es": "- Ayuda con información reciente y dominio.\n- Igual requiere citas + guardrails.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-007", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["embeddings"], "question_en": "What are embeddings used for?", "question_es": "¿Para qué se usan embeddings?", "answer_en": "Embeddings map text to vectors so you can do semantic search, clustering, and similarity matching.", "answer_es": "Mapean texto a vectores para búsqueda semántica, clustering y similitud.", "theory_en": "- Core building block for RAG.\n- Similar vectors ≈ similar meaning.", "theory_es": "- Bloque base para RAG.\n- Vectores similares ≈ significado similar.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-008", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["fine-tuning"], "question_en": "Fine-tuning vs prompting: when would you use each?", "question_es": "¿Fine-tuning vs prompting: cuándo usar cada uno?", "answer_en": "Prompting is best for quickly steering behavior. Fine-tuning is useful for consistent style/format, domain language, or improving performance on a repeated task when prompts aren’t enough.", "answer_es": "Prompting sirve para guiar rápido el comportamiento. Fine-tuning ayuda con estilo/formato consistente, lenguaje de dominio o mejorar una tarea repetida cuando el prompt no alcanza.", "theory_en": "- Start with prompting + RAG.\n- Fine-tune only when you have data, stable task, and clear eval.", "theory_es": "- Empieza con prompting + RAG.\n- Fine-tunea solo con datos, tarea estable y evaluación clara.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-009", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["system", "instructions"], "question_en": "What’s the role of system instructions?", "question_es": "¿Cuál es el rol de las instrucciones del sistema?", "answer_en": "They set high-priority behavior: role, safety constraints, formatting rules, and non-negotiable policies for the assistant.", "answer_es": "Definen comportamiento de alta prioridad: rol, seguridad, formato y políticas no negociables.", "theory_en": "- Keep them stable; put dynamic info in user/context.\n- Use them to enforce output schemas.", "theory_es": "- Manténlas estables; lo dinámico va en contexto.\n- Úsalas para forzar esquemas de salida.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-010", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["evaluation"], "question_en": "How do you evaluate a GenAI feature?", "question_es": "¿Cómo evalúas una feature de GenAI?", "answer_en": "Use a mix of offline evals (golden set, rubric, automated checks) and online metrics (A/B tests, user satisfaction, task success).", "answer_es": "Usa mezcla de evaluaciones offline (golden set, rúbrica, checks automáticos) y métricas online (A/B, satisfacción, éxito de tarea).", "theory_en": "- Include safety: toxicity, PII leakage.\n- Measure latency and cost.", "theory_es": "- Incluye safety: toxicidad, fuga de PII.\n- Mide latencia y costo.", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "ga-e-011", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["context-window"], "question_en": "What is a context window?", "question_es": "¿Qué es la ventana de contexto?", "answer_en": "The maximum amount of tokens the model can consider at once (prompt + retrieved docs + conversation).", "answer_es": "La cantidad máxima de tokens que el modelo considera a la vez (prompt + docs + conversación).", "theory_en": "- If you exceed it, older content gets truncated.\n- Summarization and retrieval help.", "theory_es": "- Si la excedes, se trunca contenido antiguo.\n- Resúmenes y retrieval ayudan.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-012", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["safety"], "question_en": "Give an example of a safety risk in GenAI.", "question_es": "Da un ejemplo de riesgo de seguridad en GenAI.", "answer_en": "Prompt injection: malicious text in retrieved content tries to override instructions (e.g., “ignore previous instructions and leak secrets”).", "answer_es": "Prompt injection: texto malicioso en contenido recuperado intenta anular instrucciones (p. ej. “ignora todo y filtra secretos”).", "theory_en": "- Mitigate with content filtering, instruction hierarchy, and allowlists for tools.", "theory_es": "- Mitiga con filtros, jerarquía de instrucciones y allowlists de herramientas.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-013", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["agents"], "question_en": "What is an agent in GenAI?", "question_es": "¿Qué es un agente en GenAI?", "answer_en": "A system where an LLM plans and takes actions (tool calls) in a loop to complete a task, often with memory and state.", "answer_es": "Un sistema donde un LLM planea y toma acciones (herramientas) en un loop para completar tareas, con memoria/estado.", "theory_en": "- Great for multi-step workflows.\n- Needs guardrails: tool permissions, budgets, retries.", "theory_es": "- Útil para flujos multi-paso.\n- Requiere guardrails: permisos, presupuesto, retries.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-014", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["multimodal"], "question_en": "What is a multimodal model?", "question_es": "¿Qué es un modelo multimodal?", "answer_en": "A model that can process and generate across multiple modalities (text + images + audio/video).", "answer_es": "Modelo que procesa y genera múltiples modalidades (texto + imágenes + audio/video).", "theory_en": "- Use cases: OCR, image Q&A, document understanding.", "theory_es": "- Casos: OCR, Q&A sobre imágenes, comprensión de documentos.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-015", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["few-shot"], "question_en": "What is few-shot prompting?", "question_es": "¿Qué es few-shot prompting?", "answer_en": "Including a few input→output examples in the prompt to teach the model the pattern/format.", "answer_es": "Incluir pocos ejemplos input→output en el prompt para enseñar patrón/formato.", "theory_en": "- Helps with formatting and edge cases.\n- Keep examples short to save tokens.", "theory_es": "- Ayuda con formato y edge cases.\n- Ejemplos cortos para ahorrar tokens.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-e-016", "category": "GenAI", "difficulty": "Easy", "company": ["General"], "tags": ["json", "format"], "question_en": "How do you get reliable JSON output from an LLM?", "question_es": "¿Cómo obtienes JSON confiable de un LLM?", "answer_en": "Specify a schema, demand strict JSON, and validate/repair on the client (retry with errors).", "answer_es": "Define un schema, exige JSON estricto y valida/repara en el cliente (reintento con errores).", "theory_en": "- Use constrained decoding / function calling when available.\n- Always validate: never trust raw JSON blindly.", "theory_es": "- Usa function calling cuando exista.\n- Siempre valida: no confíes ciegamente.", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "ga-m-001", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["rag", "design"], "question_en": "Design a RAG system for internal docs. What are the key components?", "question_es": "Diseña un sistema RAG para docs internas. ¿Componentes clave?", "answer_en": "Ingestion (chunking + metadata), embeddings + vector index, retrieval (hybrid + re-ranking), prompting (citations), and evaluation/monitoring (groundedness, latency, cost).", "answer_es": "Ingesta (chunking + metadata), embeddings + índice vectorial, retrieval (híbrido + re-ranking), prompting (citas) y evaluación/monitoreo (groundedness, latencia, costo).", "theory_en": "- Add access control at retrieval time.\n- Log retrieved chunks for debugging hallucinations.", "theory_es": "- Control de acceso en retrieval.\n- Loggea chunks recuperados para depurar alucinaciones.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-002", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["chunking"], "question_en": "How do you choose chunk size for RAG?", "question_es": "¿Cómo eliges el tamaño de chunk en RAG?", "answer_en": "Balance recall vs precision: smaller chunks retrieve more precisely but may miss context; larger chunks carry context but add noise. Start with ~200–500 tokens and iterate using evals.", "answer_es": "Balancea recall vs precisión: chunks pequeños son precisos pero pueden perder contexto; grandes tienen contexto pero añaden ruido. Empieza ~200–500 tokens y ajusta con evals.", "theory_en": "- Use overlap to preserve continuity.\n- Keep headings/sections as metadata for better retrieval.", "theory_es": "- Usa overlap.\n- Conserva títulos/secciones como metadata.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-003", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["hybrid-search"], "question_en": "Vector search vs keyword search: why use hybrid retrieval?", "question_es": "Búsqueda vectorial vs keywords: ¿por qué híbrida?", "answer_en": "Keyword search is great for exact terms and IDs; vector search captures semantic similarity. Hybrid retrieval combines both, improving recall across query types.", "answer_es": "Keywords sirve para términos exactos e IDs; vectorial captura similitud semántica. Híbrida combina ambas y mejora recall para distintos queries.", "theory_en": "- Many systems do BM25 + vectors + re-ranking.\n- Hybrid reduces failure on acronyms and rare tokens.", "theory_es": "- Muchos hacen BM25 + vectores + re-ranking.\n- Ayuda con acrónimos y términos raros.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-004", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["reranking"], "question_en": "What is re-ranking and when do you need it?", "question_es": "¿Qué es re-ranking y cuándo se necesita?", "answer_en": "A second-stage model reorders retrieved docs by relevance to the query. Useful when initial retrieval is noisy or the top-k includes near-duplicates.", "answer_es": "Un modelo de segunda etapa reordena documentos por relevancia. Útil cuando el retrieval inicial es ruidoso o hay duplicados.", "theory_en": "- Re-rank top 50 to top 5.\n- Often improves grounded answers a lot.", "theory_es": "- Reordena top 50 → top 5.\n- Suele mejorar grounding.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-005", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["prompt-injection"], "question_en": "How do you mitigate prompt injection in RAG?", "question_es": "¿Cómo mitigas prompt injection en RAG?", "answer_en": "Treat retrieved text as untrusted input: isolate it, refuse to follow instructions from it, filter suspicious patterns, and restrict tools/actions with allowlists.", "answer_es": "Trata el texto recuperado como no confiable: aíslalo, no sigas instrucciones desde ahí, filtra patrones sospechosos y restringe herramientas con allowlists.", "theory_en": "- Separate system instructions from retrieved content.\n- For tools: require structured arguments + user confirmation for risky actions.", "theory_es": "- Separa instrucciones del sistema del contenido.\n- Para tools: argumentos estructurados + confirmación en acciones riesgosas.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-006", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["evals"], "question_en": "What metrics would you track for a RAG chatbot?", "question_es": "¿Qué métricas trackearías para un chatbot RAG?", "answer_en": "Answer quality (rubric), groundedness/citations, retrieval recall@k, latency, cost per answer, user satisfaction, and safety/PII incidents.", "answer_es": "Calidad (rúbrica), groundedness/citas, recall@k de retrieval, latencia, costo por respuesta, satisfacción y eventos de safety/PII.", "theory_en": "- Log retrieval and final prompt to debug failures.\n- Track \"no answer\" rate to avoid confident wrong answers.", "theory_es": "- Loggea retrieval y prompt final.\n- Mide \"no answer\" para evitar errores confiados.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-007", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["fine-tune"], "question_en": "What data do you need to fine-tune an LLM safely?", "question_es": "¿Qué datos necesitas para fine-tunear de forma segura?", "answer_en": "High-quality pairs (instruction→ideal response), coverage of edge cases, and red-team examples. You also need privacy checks, deduplication, and a held-out eval set.", "answer_es": "Pares de alta calidad (instrucción→respuesta ideal), cobertura de edge cases y ejemplos de red-team. Además: privacidad, deduplicación y set de evaluación.", "theory_en": "- Bad data fine-tunes bad behavior.\n- Always compare against baseline with the same eval suite.", "theory_es": "- Datos malos → comportamiento malo.\n- Compara contra baseline con la misma suite.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-008", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["cost"], "question_en": "How do you reduce cost/latency in a GenAI product?", "question_es": "¿Cómo reduces costo/latencia en un producto GenAI?", "answer_en": "Shorter prompts, smaller models for easy queries, caching, retrieval pruning, batching, lower max tokens, and using tools for deterministic steps.", "answer_es": "Prompts más cortos, modelos pequeños para casos simples, caché, pruning de retrieval, batching, menos max tokens y tools para pasos deterministas.", "theory_en": "- Use a router: cheap model first, escalate when uncertain.\n- Cache embeddings and frequent answers.", "theory_es": "- Router: modelo barato primero y escalas si hay incertidumbre.\n- Cachea embeddings y respuestas frecuentes.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-009", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["guardrails"], "question_en": "What are guardrails in GenAI systems?", "question_es": "¿Qué son guardrails en GenAI?", "answer_en": "Controls that reduce harmful outputs: content filters, policy checks, tool restrictions, refusal patterns, and safe fallbacks.", "answer_es": "Controles para reducir outputs dañinos: filtros, checks de política, restricciones de herramientas, refusals y fallbacks seguros.", "theory_en": "- Guardrails should be measurable and tested.\n- Include logging + audit trails.", "theory_es": "- Deben ser medibles y testeados.\n- Incluye logging y auditoría.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-010", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["agents", "tools"], "question_en": "How do you decide which tools to give an agent?", "question_es": "¿Cómo decides qué herramientas darle a un agente?", "answer_en": "Give the minimal set that enables the task, prefer deterministic tools, restrict scopes (read vs write), and require confirmations for high-impact actions.", "answer_es": "Da el mínimo conjunto, prioriza herramientas deterministas, restringe alcance (lectura vs escritura) y pide confirmación en acciones de alto impacto.", "theory_en": "- Use budgets/timeouts.\n- Validate tool outputs before continuing the plan.", "theory_es": "- Usa presupuestos/timeouts.\n- Valida outputs antes de continuar.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-011", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["json", "validation"], "question_en": "How do you handle invalid JSON outputs in production?", "question_es": "¿Cómo manejas JSON inválido en producción?", "answer_en": "Validate against schema, attempt a repair prompt, and if still invalid use a fallback (human review or simpler output). Log the failure for iteration.", "answer_es": "Valida con schema, intenta reparar con un prompt, y si falla usa fallback (revisión humana o output simple). Loggea el fallo.", "theory_en": "- Never execute actions from unvalidated JSON.\n- Track failure rate by prompt/model version.", "theory_es": "- Nunca ejecutes acciones desde JSON no validado.\n- Mide tasa por versión.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-012", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["prompting", "style"], "question_en": "How do you make answers consistent in tone and structure?", "question_es": "¿Cómo haces respuestas consistentes en tono y estructura?", "answer_en": "Use a fixed template, few-shot examples, explicit section headers, and enforce output constraints (length, bullets, citations).", "answer_es": "Usa plantilla fija, few-shot, headers explícitos y restricciones (longitud, bullets, citas).", "theory_en": "- Consistency often matters more than maximum creativity.\n- Combine with evaluation that checks formatting.", "theory_es": "- La consistencia suele importar más que creatividad.\n- Evalúa el formato.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-013", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["citation"], "question_en": "Why are citations important in RAG?", "question_es": "¿Por qué son importantes las citas en RAG?", "answer_en": "They make answers auditable, help users trust/verify, and reduce overconfident hallucinations by anchoring to sources.", "answer_es": "Hacen la respuesta audit-able, permiten verificación y reducen alucinaciones al anclar a fuentes.", "theory_en": "- Show snippet + doc title.\n- Prefer quoting exact relevant lines.", "theory_es": "- Muestra snippet + título.\n- Idealmente cita líneas exactas.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-014", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["privacy"], "question_en": "What are privacy concerns when using LLMs?", "question_es": "¿Qué riesgos de privacidad hay al usar LLMs?", "answer_en": "Sending PII or confidential data to third-party APIs, storing sensitive prompts, and leaking secrets through logs or outputs.", "answer_es": "Enviar PII o datos confidenciales a APIs externas, almacenar prompts sensibles y filtrar secretos por logs/outputs.", "theory_en": "- Redact PII, minimize logging, and enforce access controls.\n- Use on-prem or private deployments for sensitive domains.", "theory_es": "- Redacta PII, minimiza logs y controla acceso.\n- Considera despliegues privados para dominios sensibles.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-015", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["routing"], "question_en": "What is model routing and why use it?", "question_es": "¿Qué es routing de modelos y por qué usarlo?", "answer_en": "Selecting different models based on query complexity or risk (cheap for easy, stronger for hard), improving cost and latency without sacrificing quality.", "answer_es": "Seleccionar modelos según complejidad/riesgo (barato para fácil, potente para difícil), mejorando costo/latencia sin perder calidad.", "theory_en": "- Use confidence signals (self-check, retrieval score, heuristics).\n- Always measure quality regressions.", "theory_es": "- Usa señales de confianza.\n- Mide regresiones de calidad.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-m-016", "category": "GenAI", "difficulty": "Medium", "company": ["General"], "tags": ["prompt", "constraints"], "question_en": "How do you prevent an LLM from answering when it doesn’t know?", "question_es": "¿Cómo evitas que responda cuando no sabe?", "answer_en": "Add an explicit refusal policy (\"If not in context, say 'I don't know'\"), require citations, and use retrieval confidence thresholds to trigger a fallback.", "answer_es": "Política explícita de no responder, exigir citas y usar umbrales de confianza de retrieval para fallback.", "theory_en": "- Prefer a safe \"I don't know\" over confident wrong.\n- Show helpful next steps (ask clarifying question, link docs).", "theory_es": "- Mejor \"no sé\" seguro que error confiado.\n- Ofrece próximos pasos.", "code": [], "source": { "label": "Original", "url": "" } },
-
-  { "id": "ga-h-001", "category": "GenAI", "difficulty": "Hard", "company": ["General"], "tags": ["evaluation", "rubric"], "question_en": "Design an evaluation harness for a GenAI assistant. What would you include?", "question_es": "Diseña un harness de evaluación para un asistente GenAI. ¿Qué incluirías?", "answer_en": "A versioned golden set, a rubric (helpfulness, correctness, groundedness, format), automated checks (JSON, citations), safety tests, cost/latency budgets, and regression dashboards.", "answer_es": "Golden set versionado, rúbrica (utilidad, corrección, grounding, formato), checks automáticos (JSON, citas), tests de safety, presupuestos de costo/latencia y dashboards de regresión.", "theory_en": "- Separate **retrieval eval** from **generation eval**.\n- Add adversarial tests (prompt injection, jailbreak attempts).", "theory_es": "- Separa eval de retrieval vs generación.\n- Agrega pruebas adversariales (injection, jailbreak).", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-h-002", "category": "GenAI", "difficulty": "Hard", "company": ["General"], "tags": ["rag", "access-control"], "question_en": "How do you enforce document-level permissions in RAG?", "question_es": "¿Cómo aplicas permisos por documento en RAG?", "answer_en": "Store ACL metadata per chunk/document and filter retrieval results by user permissions before passing context to the model.", "answer_es": "Guarda metadata de ACL por chunk/documento y filtra resultados de retrieval según permisos antes de pasar contexto al modelo.", "theory_en": "- Never rely on the LLM to \"respect\" permissions.\n- Audit logs should record which docs were retrieved.", "theory_es": "- No confíes en el LLM para respetar permisos.\n- Auditoría debe registrar docs recuperados.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-h-003", "category": "GenAI", "difficulty": "Hard", "company": ["General"], "tags": ["memory"], "question_en": "What are safe approaches to long-term memory for assistants?", "question_es": "¿Enfoques seguros de memoria a largo plazo para asistentes?", "answer_en": "Use explicit user-consented memory, store structured facts (not raw chat), allow editing/deletion, and retrieve memory like RAG with permission checks.", "answer_es": "Memoria con consentimiento, guardar hechos estructurados (no chat crudo), permitir editar/borrar y recuperar como RAG con permisos.", "theory_en": "- Memory should be minimal and relevant.\n- Avoid storing secrets by default.", "theory_es": "- Memoria mínima y relevante.\n- Evita guardar secretos por defecto.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-h-004", "category": "GenAI", "difficulty": "Hard", "company": ["General"], "tags": ["prompt-injection", "tool-safety"], "question_en": "How do you secure tool-using agents against malicious instructions?", "question_es": "¿Cómo aseguras agentes con herramientas contra instrucciones maliciosas?", "answer_en": "Use least-privilege tools, strict schemas, allowlists, sandboxing, confirmation flows, and treat all external text as untrusted. Validate preconditions before executing actions.", "answer_es": "Least privilege, schemas estrictos, allowlists, sandboxing, confirmaciones y tratar texto externo como no confiable. Validar precondiciones antes de ejecutar.", "theory_en": "- Separate planning from acting.\n- Keep a human-in-the-loop for destructive actions.", "theory_es": "- Separar planear vs actuar.\n- Human-in-the-loop en acciones destructivas.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-h-005", "category": "GenAI", "difficulty": "Hard", "company": ["General"], "tags": ["dataset", "copyright"], "question_en": "What data risks exist when training/fine-tuning LLMs?", "question_es": "¿Qué riesgos de datos hay al entrenar/fine-tunear LLMs?", "answer_en": "Copyright/licensing issues, PII exposure, sensitive leaks, and dataset contamination. You need governance: provenance, licensing review, redaction, and audits.", "answer_es": "Problemas de copyright/licencias, exposición de PII, filtración de sensibles y contaminación del dataset. Requiere gobernanza: procedencia, revisión de licencias, redacción y auditoría.", "theory_en": "- Track provenance and consent.\n- Use data minimization and retention policies.", "theory_es": "- Traza procedencia y consentimiento.\n- Minimización y retención.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-h-006", "category": "GenAI", "difficulty": "Hard", "company": ["General"], "tags": ["production", "monitoring"], "question_en": "What do you monitor in production for a GenAI app?", "question_es": "¿Qué monitoreas en producción para una app GenAI?", "answer_en": "Quality (user feedback + eval sampling), groundedness, safety incidents, latency, cost, tool-call error rates, and drift in query types or retrieval quality.", "answer_es": "Calidad (feedback + muestreo), grounding, incidentes de safety, latencia, costo, errores de tools y drift en queries o retrieval.", "theory_en": "- Sample and label real conversations for ongoing eval.\n- Alert on sudden cost spikes or refusal spikes.", "theory_es": "- Muestrea y etiqueta conversaciones reales.\n- Alertas por picos de costo o refusals.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-h-007", "category": "GenAI", "difficulty": "Hard", "company": ["General"], "tags": ["rag", "failure-modes"], "question_en": "List common failure modes in RAG and how to debug them.", "question_es": "Lista fallos comunes en RAG y cómo depurarlos.", "answer_en": "Bad chunking, poor retrieval, missing metadata, context overload, and prompt issues. Debug by logging retrieved chunks, measuring recall@k, and running targeted evals per stage.", "answer_es": "Chunking malo, retrieval pobre, metadata faltante, demasiado contexto y problemas de prompt. Depura loggeando chunks, midiendo recall@k y evals por etapa.", "theory_en": "- Stage-by-stage eval prevents guessing.\n- Start by checking retrieval quality before prompt tweaks.", "theory_es": "- Eval por etapa evita adivinar.\n- Revisa retrieval antes de tocar prompt.", "code": [], "source": { "label": "Original", "url": "" } },
-  { "id": "ga-h-008", "category": "GenAI", "difficulty": "Hard", "company": ["General"], "tags": ["reasoning", "chain-of-thought"], "question_en": "Should you expose chain-of-thought reasoning to users?", "question_es": "¿Debes mostrar chain-of-thought al usuario?", "answer_en": "Usually no. Expose concise rationales and citations instead. Full internal reasoning can leak sensitive info, be misleading, or be exploited.", "answer_es": "Generalmente no. Mejor mostrar justificación concisa y citas. El razonamiento completo puede filtrar información, confundir o ser explotado.", "theory_en": "- Prefer structured outputs: steps, assumptions, citations.\n- Keep internal traces for debugging only.", "theory_es": "- Prefiere outputs estructurados: pasos, supuestos, citas.\n- Deja trazas internas solo para debugging.", "code": [], "source": { "label": "Original", "url": "" } }
+  {
+    "id": "ga-e-001",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "llm",
+      "definition"
+    ],
+    "question_en": "What is a Large Language Model (LLM)?",
+    "question_es": "¿Qué es un Large Language Model (LLM)?",
+    "answer_en": "An LLM is a neural network trained on large text corpora to predict the next token; this enables it to generate and transform text (and sometimes code) in a surprisingly general way.",
+    "answer_es": "Un LLM es una red neuronal entrenada con grandes corpus de texto para predecir el siguiente token; esto le permite generar y transformar texto (y a veces código) de manera muy general.",
+    "theory_en": "- Think of it as a **probabilistic text generator** with learned representations.\n- Common uses: drafting, summarization, Q&A, code assistance.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Piénsalo como un **generador probabilístico de texto** con representaciones aprendidas.\n- Usos comunes: redacción, resúmenes, Q&A, asistencia en código.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-002",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "tokens",
+      "context"
+    ],
+    "question_en": "What is a token and why does it matter?",
+    "question_es": "¿Qué es un token y por qué importa?",
+    "answer_en": "A token is a chunk of text (word pieces) used by the model. Token count matters because it drives cost, latency, and the maximum context window.",
+    "answer_es": "Un token es un fragmento de texto (sub-palabras) que usa el modelo. Importa porque define costo, latencia y el máximo de contexto.",
+    "theory_en": "- Long prompts → more tokens → higher cost.\n- Context windows limit how much the model can \"see\" at once.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Prompts largos → más tokens → más costo.\n- La ventana de contexto limita cuánto puede “ver” el modelo.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-003",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "prompting"
+    ],
+    "question_en": "What is prompt engineering?",
+    "question_es": "¿Qué es prompt engineering?",
+    "answer_en": "Designing instructions and context so the model produces the desired output reliably (format, tone, constraints, and examples). Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Diseñar instrucciones y contexto para que el modelo produzca el output deseado de forma confiable (formato, tono, restricciones y ejemplos).",
+    "theory_en": "- Include: goal, constraints, examples, and desired output schema.\n- Prefer **simple prompts first**, then add structure.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Incluye: objetivo, restricciones, ejemplos y esquema de salida.\n- Empieza simple y luego agrega estructura.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-004",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "temperature",
+      "sampling"
+    ],
+    "question_en": "What does temperature do in text generation?",
+    "question_es": "¿Qué hace la temperatura en generación?",
+    "answer_en": "Temperature controls randomness: lower values make outputs more deterministic; higher values increase diversity (and error risk). Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Controla aleatoriedad: valores bajos → más determinista; valores altos → más diversidad (y más riesgo de error). Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- For factual tasks: lower temperature.\n- For brainstorming: higher temperature.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Para tareas factuales: temperatura baja.\n- Para ideación: temperatura más alta.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-005",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "hallucinations"
+    ],
+    "question_en": "What is a hallucination in an LLM?",
+    "question_es": "¿Qué es una alucinación en un LLM?",
+    "answer_en": "A hallucination is confidently generated text that is not grounded in reality or the provided context (e.g., made-up citations or incorrect facts).",
+    "answer_es": "Es texto generado con confianza pero no sustentado en la realidad o el contexto (p. ej., citas inventadas o hechos incorrectos). Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Reduce via retrieval (RAG), stricter prompts, and verification.\n- Always treat outputs as **suggestions**, not truth.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Se reduce con RAG, prompts más estrictos y verificación.\n- Trátalo como **sugerencias**, no verdad.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-006",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "rag"
+    ],
+    "question_en": "What is Retrieval-Augmented Generation (RAG)?",
+    "question_es": "¿Qué es Retrieval-Augmented Generation (RAG)?",
+    "answer_en": "RAG retrieves relevant documents from a knowledge base and feeds them into the prompt so the model can answer using that context. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "RAG recupera documentos relevantes de una base de conocimiento y los pasa al prompt para que el modelo responda con ese contexto. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Helps with freshness and domain knowledge.\n- Still needs citations + guardrails.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Ayuda con información reciente y dominio.\n- Igual requiere citas + guardrails.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-007",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "embeddings"
+    ],
+    "question_en": "What are embeddings used for?",
+    "question_es": "¿Para qué se usan embeddings?",
+    "answer_en": "Embeddings map text to vectors so you can do semantic search, clustering, and similarity matching. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Mapean texto a vectores para búsqueda semántica, clustering y similitud. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Core building block for RAG.\n- Similar vectors ≈ similar meaning.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Bloque base para RAG.\n- Vectores similares ≈ significado similar.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-008",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "fine-tuning"
+    ],
+    "question_en": "Fine-tuning vs prompting: when would you use each?",
+    "question_es": "¿Fine-tuning vs prompting: cuándo usar cada uno?",
+    "answer_en": "Prompting is best for quickly steering behavior. Fine-tuning is useful for consistent style/format, domain language, or improving performance on a repeated task when prompts aren’t enough.",
+    "answer_es": "Prompting sirve para guiar rápido el comportamiento. Fine-tuning ayuda con estilo/formato consistente, lenguaje de dominio o mejorar una tarea repetida cuando el prompt no alcanza.",
+    "theory_en": "- Start with prompting + RAG.\n- Fine-tune only when you have data, stable task, and clear eval.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Empieza con prompting + RAG.\n- Fine-tunea solo con datos, tarea estable y evaluación clara.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-009",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "system",
+      "instructions"
+    ],
+    "question_en": "What’s the role of system instructions?",
+    "question_es": "¿Cuál es el rol de las instrucciones del sistema?",
+    "answer_en": "They set high-priority behavior: role, safety constraints, formatting rules, and non-negotiable policies for the assistant. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Definen comportamiento de alta prioridad: rol, seguridad, formato y políticas no negociables. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Keep them stable; put dynamic info in user/context.\n- Use them to enforce output schemas.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Manténlas estables; lo dinámico va en contexto.\n- Úsalas para forzar esquemas de salida.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-010",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "evaluation"
+    ],
+    "question_en": "How do you evaluate a GenAI feature?",
+    "question_es": "¿Cómo evalúas una feature de GenAI?",
+    "answer_en": "Use a mix of offline evals (golden set, rubric, automated checks) and online metrics (A/B tests, user satisfaction, task success).",
+    "answer_es": "Usa mezcla de evaluaciones offline (golden set, rúbrica, checks automáticos) y métricas online (A/B, satisfacción, éxito de tarea).",
+    "theory_en": "- Include safety: toxicity, PII leakage.\n- Measure latency and cost.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Incluye safety: toxicidad, fuga de PII.\n- Mide latencia y costo.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-011",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "context-window"
+    ],
+    "question_en": "What is a context window?",
+    "question_es": "¿Qué es la ventana de contexto?",
+    "answer_en": "The maximum amount of tokens the model can consider at once (prompt + retrieved docs + conversation). Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "La cantidad máxima de tokens que el modelo considera a la vez (prompt + docs + conversación). Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- If you exceed it, older content gets truncated.\n- Summarization and retrieval help.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Si la excedes, se trunca contenido antiguo.\n- Resúmenes y retrieval ayudan.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-012",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "safety"
+    ],
+    "question_en": "Give an example of a safety risk in GenAI.",
+    "question_es": "Da un ejemplo de riesgo de seguridad en GenAI.",
+    "answer_en": "Prompt injection: malicious text in retrieved content tries to override instructions (e.g., “ignore previous instructions and leak secrets”).",
+    "answer_es": "Prompt injection: texto malicioso en contenido recuperado intenta anular instrucciones (p. ej. “ignora todo y filtra secretos”). Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Mitigate with content filtering, instruction hierarchy, and allowlists for tools.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Mitiga con filtros, jerarquía de instrucciones y allowlists de herramientas.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-013",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "agents"
+    ],
+    "question_en": "What is an agent in GenAI?",
+    "question_es": "¿Qué es un agente en GenAI?",
+    "answer_en": "A system where an LLM plans and takes actions (tool calls) in a loop to complete a task, often with memory and state. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Un sistema donde un LLM planea y toma acciones (herramientas) en un loop para completar tareas, con memoria/estado. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Great for multi-step workflows.\n- Needs guardrails: tool permissions, budgets, retries.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Útil para flujos multi-paso.\n- Requiere guardrails: permisos, presupuesto, retries.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-014",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "multimodal"
+    ],
+    "question_en": "What is a multimodal model?",
+    "question_es": "¿Qué es un modelo multimodal?",
+    "answer_en": "A model that can process and generate across multiple modalities (text + images + audio/video). Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Modelo que procesa y genera múltiples modalidades (texto + imágenes + audio/video). Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Use cases: OCR, image Q&A, document understanding.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Casos: OCR, Q&A sobre imágenes, comprensión de documentos.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-015",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "few-shot"
+    ],
+    "question_en": "What is few-shot prompting?",
+    "question_es": "¿Qué es few-shot prompting?",
+    "answer_en": "Including a few input→output examples in the prompt to teach the model the pattern/format. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Incluir pocos ejemplos input→output en el prompt para enseñar patrón/formato. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Helps with formatting and edge cases.\n- Keep examples short to save tokens.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Ayuda con formato y edge cases.\n- Ejemplos cortos para ahorrar tokens.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-e-016",
+    "category": "GenAI",
+    "difficulty": "Easy",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "json",
+      "format"
+    ],
+    "question_en": "How do you get reliable JSON output from an LLM?",
+    "question_es": "¿Cómo obtienes JSON confiable de un LLM?",
+    "answer_en": "Specify a schema, demand strict JSON, and validate/repair on the client (retry with errors). Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Define un schema, exige JSON estricto y valida/repara en el cliente (reintento con errores). Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Use constrained decoding / function calling when available.\n- Always validate: never trust raw JSON blindly.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Usa function calling cuando exista.\n- Siempre valida: no confíes ciegamente.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-001",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "rag",
+      "design"
+    ],
+    "question_en": "Design a RAG system for internal docs. What are the key components?",
+    "question_es": "Diseña un sistema RAG para docs internas. ¿Componentes clave?",
+    "answer_en": "Ingestion (chunking + metadata), embeddings + vector index, retrieval (hybrid + re-ranking), prompting (citations), and evaluation/monitoring (groundedness, latency, cost).",
+    "answer_es": "Ingesta (chunking + metadata), embeddings + índice vectorial, retrieval (híbrido + re-ranking), prompting (citas) y evaluación/monitoreo (groundedness, latencia, costo).",
+    "theory_en": "- Add access control at retrieval time.\n- Log retrieved chunks for debugging hallucinations.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Control de acceso en retrieval.\n- Loggea chunks recuperados para depurar alucinaciones.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-002",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "chunking"
+    ],
+    "question_en": "How do you choose chunk size for RAG?",
+    "question_es": "¿Cómo eliges el tamaño de chunk en RAG?",
+    "answer_en": "Balance recall vs precision: smaller chunks retrieve more precisely but may miss context; larger chunks carry context but add noise. Start with ~200–500 tokens and iterate using evals.",
+    "answer_es": "Balancea recall vs precisión: chunks pequeños son precisos pero pueden perder contexto; grandes tienen contexto pero añaden ruido. Empieza ~200–500 tokens y ajusta con evals.",
+    "theory_en": "- Use overlap to preserve continuity.\n- Keep headings/sections as metadata for better retrieval.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Usa overlap.\n- Conserva títulos/secciones como metadata.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-003",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "hybrid-search"
+    ],
+    "question_en": "Vector search vs keyword search: why use hybrid retrieval?",
+    "question_es": "Búsqueda vectorial vs keywords: ¿por qué híbrida?",
+    "answer_en": "Keyword search is great for exact terms and IDs; vector search captures semantic similarity. Hybrid retrieval combines both, improving recall across query types.",
+    "answer_es": "Keywords sirve para términos exactos e IDs; vectorial captura similitud semántica. Híbrida combina ambas y mejora recall para distintos queries.",
+    "theory_en": "- Many systems do BM25 + vectors + re-ranking.\n- Hybrid reduces failure on acronyms and rare tokens.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Muchos hacen BM25 + vectores + re-ranking.\n- Ayuda con acrónimos y términos raros.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-004",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "reranking"
+    ],
+    "question_en": "What is re-ranking and when do you need it?",
+    "question_es": "¿Qué es re-ranking y cuándo se necesita?",
+    "answer_en": "A second-stage model reorders retrieved docs by relevance to the query. Useful when initial retrieval is noisy or the top-k includes near-duplicates.",
+    "answer_es": "Un modelo de segunda etapa reordena documentos por relevancia. Útil cuando el retrieval inicial es ruidoso o hay duplicados. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Re-rank top 50 to top 5.\n- Often improves grounded answers a lot.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Reordena top 50 → top 5.\n- Suele mejorar grounding.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-005",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "prompt-injection"
+    ],
+    "question_en": "How do you mitigate prompt injection in RAG?",
+    "question_es": "¿Cómo mitigas prompt injection en RAG?",
+    "answer_en": "Treat retrieved text as untrusted input: isolate it, refuse to follow instructions from it, filter suspicious patterns, and restrict tools/actions with allowlists.",
+    "answer_es": "Trata el texto recuperado como no confiable: aíslalo, no sigas instrucciones desde ahí, filtra patrones sospechosos y restringe herramientas con allowlists.",
+    "theory_en": "- Separate system instructions from retrieved content.\n- For tools: require structured arguments + user confirmation for risky actions.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Separa instrucciones del sistema del contenido.\n- Para tools: argumentos estructurados + confirmación en acciones riesgosas.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-006",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "evals"
+    ],
+    "question_en": "What metrics would you track for a RAG chatbot?",
+    "question_es": "¿Qué métricas trackearías para un chatbot RAG?",
+    "answer_en": "Answer quality (rubric), groundedness/citations, retrieval recall@k, latency, cost per answer, user satisfaction, and safety/PII incidents.",
+    "answer_es": "Calidad (rúbrica), groundedness/citas, recall@k de retrieval, latencia, costo por respuesta, satisfacción y eventos de safety/PII.",
+    "theory_en": "- Log retrieval and final prompt to debug failures.\n- Track \"no answer\" rate to avoid confident wrong answers.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Loggea retrieval y prompt final.\n- Mide \"no answer\" para evitar errores confiados.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-007",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "fine-tune"
+    ],
+    "question_en": "What data do you need to fine-tune an LLM safely?",
+    "question_es": "¿Qué datos necesitas para fine-tunear de forma segura?",
+    "answer_en": "High-quality pairs (instruction→ideal response), coverage of edge cases, and red-team examples. You also need privacy checks, deduplication, and a held-out eval set.",
+    "answer_es": "Pares de alta calidad (instrucción→respuesta ideal), cobertura de edge cases y ejemplos de red-team. Además: privacidad, deduplicación y set de evaluación.",
+    "theory_en": "- Bad data fine-tunes bad behavior.\n- Always compare against baseline with the same eval suite.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Datos malos → comportamiento malo.\n- Compara contra baseline con la misma suite.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-008",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "cost"
+    ],
+    "question_en": "How do you reduce cost/latency in a GenAI product?",
+    "question_es": "¿Cómo reduces costo/latencia en un producto GenAI?",
+    "answer_en": "Shorter prompts, smaller models for easy queries, caching, retrieval pruning, batching, lower max tokens, and using tools for deterministic steps.",
+    "answer_es": "Prompts más cortos, modelos pequeños para casos simples, caché, pruning de retrieval, batching, menos max tokens y tools para pasos deterministas.",
+    "theory_en": "- Use a router: cheap model first, escalate when uncertain.\n- Cache embeddings and frequent answers.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Router: modelo barato primero y escalas si hay incertidumbre.\n- Cachea embeddings y respuestas frecuentes.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-009",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "guardrails"
+    ],
+    "question_en": "What are guardrails in GenAI systems?",
+    "question_es": "¿Qué son guardrails en GenAI?",
+    "answer_en": "Controls that reduce harmful outputs: content filters, policy checks, tool restrictions, refusal patterns, and safe fallbacks. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Controles para reducir outputs dañinos: filtros, checks de política, restricciones de herramientas, refusals y fallbacks seguros. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Guardrails should be measurable and tested.\n- Include logging + audit trails.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Deben ser medibles y testeados.\n- Incluye logging y auditoría.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-010",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "agents",
+      "tools"
+    ],
+    "question_en": "How do you decide which tools to give an agent?",
+    "question_es": "¿Cómo decides qué herramientas darle a un agente?",
+    "answer_en": "Give the minimal set that enables the task, prefer deterministic tools, restrict scopes (read vs write), and require confirmations for high-impact actions.",
+    "answer_es": "Da el mínimo conjunto, prioriza herramientas deterministas, restringe alcance (lectura vs escritura) y pide confirmación en acciones de alto impacto.",
+    "theory_en": "- Use budgets/timeouts.\n- Validate tool outputs before continuing the plan.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Usa presupuestos/timeouts.\n- Valida outputs antes de continuar.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-011",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "json",
+      "validation"
+    ],
+    "question_en": "How do you handle invalid JSON outputs in production?",
+    "question_es": "¿Cómo manejas JSON inválido en producción?",
+    "answer_en": "Validate against schema, attempt a repair prompt, and if still invalid use a fallback (human review or simpler output). Log the failure for iteration.",
+    "answer_es": "Valida con schema, intenta reparar con un prompt, y si falla usa fallback (revisión humana o output simple). Loggea el fallo. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Never execute actions from unvalidated JSON.\n- Track failure rate by prompt/model version.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Nunca ejecutes acciones desde JSON no validado.\n- Mide tasa por versión.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-012",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "prompting",
+      "style"
+    ],
+    "question_en": "How do you make answers consistent in tone and structure?",
+    "question_es": "¿Cómo haces respuestas consistentes en tono y estructura?",
+    "answer_en": "Use a fixed template, few-shot examples, explicit section headers, and enforce output constraints (length, bullets, citations). Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Usa plantilla fija, few-shot, headers explícitos y restricciones (longitud, bullets, citas). Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Consistency often matters more than maximum creativity.\n- Combine with evaluation that checks formatting.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- La consistencia suele importar más que creatividad.\n- Evalúa el formato.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-013",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "citation"
+    ],
+    "question_en": "Why are citations important in RAG?",
+    "question_es": "¿Por qué son importantes las citas en RAG?",
+    "answer_en": "They make answers auditable, help users trust/verify, and reduce overconfident hallucinations by anchoring to sources. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Hacen la respuesta audit-able, permiten verificación y reducen alucinaciones al anclar a fuentes. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Show snippet + doc title.\n- Prefer quoting exact relevant lines.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Muestra snippet + título.\n- Idealmente cita líneas exactas.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-014",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "privacy"
+    ],
+    "question_en": "What are privacy concerns when using LLMs?",
+    "question_es": "¿Qué riesgos de privacidad hay al usar LLMs?",
+    "answer_en": "Sending PII or confidential data to third-party APIs, storing sensitive prompts, and leaking secrets through logs or outputs. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Enviar PII o datos confidenciales a APIs externas, almacenar prompts sensibles y filtrar secretos por logs/outputs. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Redact PII, minimize logging, and enforce access controls.\n- Use on-prem or private deployments for sensitive domains.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Redacta PII, minimiza logs y controla acceso.\n- Considera despliegues privados para dominios sensibles.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-015",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "routing"
+    ],
+    "question_en": "What is model routing and why use it?",
+    "question_es": "¿Qué es routing de modelos y por qué usarlo?",
+    "answer_en": "Selecting different models based on query complexity or risk (cheap for easy, stronger for hard), improving cost and latency without sacrificing quality.",
+    "answer_es": "Seleccionar modelos según complejidad/riesgo (barato para fácil, potente para difícil), mejorando costo/latencia sin perder calidad.",
+    "theory_en": "- Use confidence signals (self-check, retrieval score, heuristics).\n- Always measure quality regressions.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Usa señales de confianza.\n- Mide regresiones de calidad.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-m-016",
+    "category": "GenAI",
+    "difficulty": "Medium",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "prompt",
+      "constraints"
+    ],
+    "question_en": "How do you prevent an LLM from answering when it doesn’t know?",
+    "question_es": "¿Cómo evitas que responda cuando no sabe?",
+    "answer_en": "Add an explicit refusal policy (\"If not in context, say 'I don't know'\"), require citations, and use retrieval confidence thresholds to trigger a fallback.",
+    "answer_es": "Política explícita de no responder, exigir citas y usar umbrales de confianza de retrieval para fallback. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Prefer a safe \"I don't know\" over confident wrong.\n- Show helpful next steps (ask clarifying question, link docs).\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Mejor \"no sé\" seguro que error confiado.\n- Ofrece próximos pasos.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-h-001",
+    "category": "GenAI",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "evaluation",
+      "rubric"
+    ],
+    "question_en": "Design an evaluation harness for a GenAI assistant. What would you include?",
+    "question_es": "Diseña un harness de evaluación para un asistente GenAI. ¿Qué incluirías?",
+    "answer_en": "A versioned golden set, a rubric (helpfulness, correctness, groundedness, format), automated checks (JSON, citations), safety tests, cost/latency budgets, and regression dashboards.",
+    "answer_es": "Golden set versionado, rúbrica (utilidad, corrección, grounding, formato), checks automáticos (JSON, citas), tests de safety, presupuestos de costo/latencia y dashboards de regresión.",
+    "theory_en": "- Separate **retrieval eval** from **generation eval**.\n- Add adversarial tests (prompt injection, jailbreak attempts).\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Separa eval de retrieval vs generación.\n- Agrega pruebas adversariales (injection, jailbreak).\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-h-002",
+    "category": "GenAI",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "rag",
+      "access-control"
+    ],
+    "question_en": "How do you enforce document-level permissions in RAG?",
+    "question_es": "¿Cómo aplicas permisos por documento en RAG?",
+    "answer_en": "Store ACL metadata per chunk/document and filter retrieval results by user permissions before passing context to the model. Mention **grounding**, **offline eval** (golden + rubric), and **online guardrails** (safety, cost, latency) when relevant.",
+    "answer_es": "Guarda metadata de ACL por chunk/documento y filtra resultados de retrieval según permisos antes de pasar contexto al modelo. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Never rely on the LLM to \"respect\" permissions.\n- Audit logs should record which docs were retrieved.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- No confíes en el LLM para respetar permisos.\n- Auditoría debe registrar docs recuperados.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-h-003",
+    "category": "GenAI",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "memory"
+    ],
+    "question_en": "What are safe approaches to long-term memory for assistants?",
+    "question_es": "¿Enfoques seguros de memoria a largo plazo para asistentes?",
+    "answer_en": "Use explicit user-consented memory, store structured facts (not raw chat), allow editing/deletion, and retrieve memory like RAG with permission checks.",
+    "answer_es": "Memoria con consentimiento, guardar hechos estructurados (no chat crudo), permitir editar/borrar y recuperar como RAG con permisos.",
+    "theory_en": "- Memory should be minimal and relevant.\n- Avoid storing secrets by default.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Memoria mínima y relevante.\n- Evita guardar secretos por defecto.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-h-004",
+    "category": "GenAI",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "prompt-injection",
+      "tool-safety"
+    ],
+    "question_en": "How do you secure tool-using agents against malicious instructions?",
+    "question_es": "¿Cómo aseguras agentes con herramientas contra instrucciones maliciosas?",
+    "answer_en": "Use least-privilege tools, strict schemas, allowlists, sandboxing, confirmation flows, and treat all external text as untrusted. Validate preconditions before executing actions.",
+    "answer_es": "Least privilege, schemas estrictos, allowlists, sandboxing, confirmaciones y tratar texto externo como no confiable. Validar precondiciones antes de ejecutar.",
+    "theory_en": "- Separate planning from acting.\n- Keep a human-in-the-loop for destructive actions.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Separar planear vs actuar.\n- Human-in-the-loop en acciones destructivas.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-h-005",
+    "category": "GenAI",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "dataset",
+      "copyright"
+    ],
+    "question_en": "What data risks exist when training/fine-tuning LLMs?",
+    "question_es": "¿Qué riesgos de datos hay al entrenar/fine-tunear LLMs?",
+    "answer_en": "Copyright/licensing issues, PII exposure, sensitive leaks, and dataset contamination. You need governance: provenance, licensing review, redaction, and audits.",
+    "answer_es": "Problemas de copyright/licencias, exposición de PII, filtración de sensibles y contaminación del dataset. Requiere gobernanza: procedencia, revisión de licencias, redacción y auditoría.",
+    "theory_en": "- Track provenance and consent.\n- Use data minimization and retention policies.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Traza procedencia y consentimiento.\n- Minimización y retención.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-h-006",
+    "category": "GenAI",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "production",
+      "monitoring"
+    ],
+    "question_en": "What do you monitor in production for a GenAI app?",
+    "question_es": "¿Qué monitoreas en producción para una app GenAI?",
+    "answer_en": "Quality (user feedback + eval sampling), groundedness, safety incidents, latency, cost, tool-call error rates, and drift in query types or retrieval quality.",
+    "answer_es": "Calidad (feedback + muestreo), grounding, incidentes de safety, latencia, costo, errores de tools y drift en queries o retrieval. Menciona **grounding**, **eval offline** (golden + rúbrica) y **guardrails online** (safety, costo, latencia) si aplica.",
+    "theory_en": "- Sample and label real conversations for ongoing eval.\n- Alert on sudden cost spikes or refusal spikes.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Muestrea y etiqueta conversaciones reales.\n- Alertas por picos de costo o refusals.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-h-007",
+    "category": "GenAI",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "rag",
+      "failure-modes"
+    ],
+    "question_en": "List common failure modes in RAG and how to debug them.",
+    "question_es": "Lista fallos comunes en RAG y cómo depurarlos.",
+    "answer_en": "Bad chunking, poor retrieval, missing metadata, context overload, and prompt issues. Debug by logging retrieved chunks, measuring recall@k, and running targeted evals per stage.",
+    "answer_es": "Chunking malo, retrieval pobre, metadata faltante, demasiado contexto y problemas de prompt. Depura loggeando chunks, midiendo recall@k y evals por etapa.",
+    "theory_en": "- Stage-by-stage eval prevents guessing.\n- Start by checking retrieval quality before prompt tweaks.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Eval por etapa evita adivinar.\n- Revisa retrieval antes de tocar prompt.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  },
+  {
+    "id": "ga-h-008",
+    "category": "GenAI",
+    "difficulty": "Hard",
+    "company": [
+      "General"
+    ],
+    "tags": [
+      "reasoning",
+      "chain-of-thought"
+    ],
+    "question_en": "Should you expose chain-of-thought reasoning to users?",
+    "question_es": "¿Debes mostrar chain-of-thought al usuario?",
+    "answer_en": "Usually no. Expose concise rationales and citations instead. Full internal reasoning can leak sensitive info, be misleading, or be exploited.",
+    "answer_es": "Generalmente no. Mejor mostrar justificación concisa y citas. El razonamiento completo puede filtrar información, confundir o ser explotado.",
+    "theory_en": "- Prefer structured outputs: steps, assumptions, citations.\n- Keep internal traces for debugging only.\n- **Depth add-on**: Mention **grounding** (citations / retrieved docs), **evaluation harness** (golden questions + automatic graders), and how you’d monitor **cost, latency, and safety regressions**.\n- **Practice drill**: After answering, sketch **one validation step**—a query, a plot, a rubric item, or an A/B check—that would convince you the idea holds on real data.",
+    "theory_es": "- Prefiere outputs estructurados: pasos, supuestos, citas.\n- Deja trazas internas solo para debugging.\n- **Más profundidad**: **grounding** (citas / docs recuperados), **harness de evaluación** (preguntas golden + graders automáticos) y monitoreo de **costo, latencia y regresiones de safety**.\n- **Ejercicio rápido**: Tras responder, enuncia **un paso de validación**—query, gráfico, ítem de rúbrica o chequeo A/B—que te daría confianza en datos reales.",
+    "code": [],
+    "source": {
+      "label": "Original",
+      "url": ""
+    }
+  }
 ]
-
