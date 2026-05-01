@@ -176,7 +176,7 @@ const I18N = {
       s4b: "←/→ navigate, Space flip, S shuffle.",
       s5t: "Language & theme",
       s5b:
-        'Use the **EN** / **ES** button next to “Language” to switch the whole app. Use the **Theme** button next to “Theme” to cycle **Dark → Light → Pink**. Your choices are saved in this browser.',
+        'At the **top right**, use **EN** / **ES** (under “Language”) for the whole app, and **Theme** to cycle **Dark → Light → Pink**. Your choices are saved in this browser.',
     },
     sources: {
       title: "Sources",
@@ -291,7 +291,7 @@ const I18N = {
       s4b: "←/→ navegar, Espacio voltear, S barajar.",
       s5t: "Idioma y tema",
       s5b:
-        'Usa el botón **EN** / **ES** junto a “Idioma” para cambiar toda la app. Usa el botón **Tema** junto a “Tema” para alternar **Oscuro → Claro → Rosa**. Se guarda en este navegador.',
+        'Arriba a la **derecha**, usa **EN** / **ES** (bajo “Idioma”) para toda la app, y **Tema** para alternar **Oscuro → Claro → Rosa**. Se guarda en este navegador.',
     },
     sources: {
       title: "Fuentes",
